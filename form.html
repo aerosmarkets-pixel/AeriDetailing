@@ -767,7 +767,10 @@
       });
     } catch (e) {}
 
-    window.location.href = '/book';
+    const bookUrl = '/book?email=' + encodeURIComponent(femail)
+      + '&name=' + encodeURIComponent(fname + ' ' + flname)
+      + '&phone=' + encodeURIComponent(fphone);
+    window.location.href = bookUrl;
   });
 </script>
 

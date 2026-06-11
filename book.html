@@ -290,5 +290,21 @@
   <a href="/book" class="btn-primary">Book My Detail</a>
 </div>
 
+<script>
+  (function() {
+    const p = new URLSearchParams(window.location.search);
+    const email = p.get('email');
+    const name  = p.get('name');
+    const phone = p.get('phone');
+    if (email || name || phone) {
+      const iframe = document.getElementById('KwKnI2kAIQ2jybl3Rrn1_1781154867319');
+      let src = 'https://api.leadconnectorhq.com/widget/booking/KwKnI2kAIQ2jybl3Rrn1?';
+      if (name)  src += 'name='  + encodeURIComponent(name)  + '&';
+      if (email) src += 'email=' + encodeURIComponent(email) + '&';
+      if (phone) src += 'phone=' + encodeURIComponent(phone) + '&';
+      iframe.src = src.replace(/&$/, '');
+    }
+  })();
+</script>
 </body>
 </html>
