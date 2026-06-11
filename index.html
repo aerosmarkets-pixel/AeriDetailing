@@ -1502,10 +1502,7 @@
   goTo(0);
 
   // ── FORM SUBMIT ──
-  // Using FormSubmit.co as a temporary bridge until GHL is set up.
-  // First submission triggers a one-time confirmation email to aerodetailing.us@gmail.com — click it to activate.
-  // When GHL is ready: replace WEBHOOK with your GHL webhook URL and change Content-Type to application/json.
-  const WEBHOOK = 'https://formsubmit.co/ajax/aerodetailing.us@gmail.com';
+  const WEBHOOK = 'https://services.leadconnectorhq.com/hooks/acunfnwDS929TNnWHNgx/webhook-trigger/16f8b4c6-1e85-4803-8ce0-05c9ba30294e';
 
   document.getElementById('submitBtn').addEventListener('click', async () => {
     const fname = document.getElementById('fname').value.trim();
