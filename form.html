@@ -15,7 +15,6 @@
       --bg:            #0A1220;
       --bg-deep:       #060D18;
       --card:          #0F1B35;
-      --card-hi:       #152244;
       --accent:        #1E5FCC;
       --accent-hover:  #2E6FDC;
       --accent-glow:   rgba(30,95,204,0.22);
@@ -88,7 +87,7 @@
     }
     .hdr-phone-icon { color: var(--accent); width: 16px; height: 16px; flex-shrink: 0; }
     @media (max-width: 600px) { .hdr-phone-num { display: none; } }
-    .hdr-cta { padding: 10px 20px; font-size: 0.9rem; }
+    .hdr-cta { padding: 10px 20px; font-size: 0.9rem; width: auto; }
     @keyframes hdr-pulse {
       0%   { box-shadow: 0 0 0 0 rgba(30,95,204,0.6), 0 4px 14px rgba(30,95,204,0.35); }
       65%  { box-shadow: 0 0 0 10px rgba(30,95,204,0), 0 4px 14px rgba(30,95,204,0.35); }
@@ -107,16 +106,11 @@
     .page-head h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 10px; }
     .page-head p { font-size: 1.05rem; color: var(--body); max-width: 480px; margin: 0 auto; }
 
-    /* FORM CARD */
-    .form-card {
-      max-width: 640px;
+    /* FORM SHELL */
+    .form-shell {
+      max-width: 920px;
       margin: 0 auto;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 40px 36px;
     }
-    @media (max-width: 600px) { .form-card { padding: 28px 20px; } }
 
     .form-section-label {
       font-size: 0.72rem;
@@ -125,21 +119,187 @@
       text-transform: uppercase;
       color: var(--muted);
       margin-bottom: 16px;
-      margin-top: 28px;
+      margin-top: 0;
     }
-    .form-section-label:first-of-type { margin-top: 0; }
 
+    /* TAB SWITCHER */
+    .pkg-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .pkg-tab {
+      padding: 9px 24px;
+      border-radius: 8px;
+      border: 1.5px solid var(--border-hi);
+      background: transparent;
+      color: var(--body);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.92rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .pkg-tab.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    /* PACKAGE GRID */
+    .pkg-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 4px;
+    }
+    @media (max-width: 720px) { .pkg-grid { grid-template-columns: 1fr; } }
+    .pkg-grid.hidden { display: none; }
+
+    /* PACKAGE CARD */
+    .pkg-card {
+      background: #0A1220;
+      border: 1.5px solid var(--border-hi);
+      border-radius: 12px;
+      padding: 20px 18px;
+      position: relative;
+      transition: border-color 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .pkg-card.selected {
+      border-color: var(--accent);
+      background: rgba(30,95,204,0.07);
+    }
+    .pkg-badge {
+      position: absolute;
+      top: -1px; right: 16px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 0 0 6px 6px;
+    }
+    .pkg-tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .pkg-name {
+      font-family: var(--font-head);
+      font-size: 1.2rem;
+      color: var(--heading);
+      margin-bottom: 4px;
+    }
+    .pkg-starting {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    .pkg-starting strong { color: var(--heading); font-size: 1rem; }
+
+    /* PRICING TABLE */
+    .pkg-price-head {
+      font-size: 0.64rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+      padding: 0 8px;
+    }
+    .pkg-price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 7px 8px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.15s;
+      font-size: 0.88rem;
+      user-select: none;
+    }
+    .pkg-price-row:hover { background: rgba(30,95,204,0.1); }
+    .pkg-price-row.selected { background: rgba(30,95,204,0.18); }
+    .pkg-price-row.selected .pkg-price-size { color: var(--heading); }
+    .pkg-price-row.selected .pkg-price-val { color: var(--accent); font-weight: 700; }
+    .pkg-price-size { color: var(--body); }
+    .pkg-price-val { color: var(--heading); font-weight: 600; }
+
+    /* FEATURE LIST */
+    .pkg-features {
+      list-style: none;
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex: 1;
+    }
+    .pkg-features li {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      font-size: 0.81rem;
+      color: var(--body);
+      line-height: 1.4;
+    }
+    .pkg-features li::before {
+      content: '✓';
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* DIVIDER */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 32px 0;
+    }
+
+    /* ADD-ONS */
+    .addon-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .addon-opt { position: relative; }
+    .addon-opt input { position: absolute; opacity: 0; width: 0; height: 0; }
+    .addon-btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 14px 16px;
+      border: 1.5px solid var(--border-hi);
+      border-radius: 8px;
+      cursor: pointer;
+      background: #0A1220;
+      transition: border-color 0.2s, background 0.2s;
+      gap: 12px;
+    }
+    .addon-opt input:checked + .addon-btn {
+      border-color: var(--accent);
+      background: rgba(30,95,204,0.08);
+    }
+    .addon-info { flex: 1; }
+    .addon-name { font-size: 0.92rem; font-weight: 600; color: var(--heading); margin-bottom: 3px; }
+    .addon-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.4; }
+    .addon-price { font-size: 0.95rem; font-weight: 700; color: var(--accent); flex-shrink: 0; padding-top: 1px; }
+
+    /* CONTACT FIELDS */
     .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     @media (max-width: 500px) { .frow { grid-template-columns: 1fr; } }
 
     .fgrp { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
-    .fgrp:last-child { margin-bottom: 0; }
+    .fgrp:last-of-type { margin-bottom: 0; }
 
-    .flbl {
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--heading);
-    }
+    .flbl { font-size: 0.88rem; font-weight: 600; color: var(--heading); }
 
     .finp, .fsel {
       background: #0A1220;
@@ -154,46 +314,10 @@
       outline: none;
       -webkit-appearance: none;
     }
-    .fsel { cursor: pointer; }
     .finp:focus, .fsel:focus { border-color: var(--accent); }
     .finp::placeholder { color: var(--muted); }
 
-    .svc-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 10px;
-      margin-bottom: 16px;
-    }
-    @media (max-width: 500px) { .svc-grid { grid-template-columns: 1fr 1fr; } }
-
-    .svc-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
-
-    .svc-opt {
-      position: relative;
-    }
-    .svc-opt input { position: absolute; opacity: 0; width: 0; height: 0; }
-    .svc-btn {
-      display: flex; flex-direction: column; align-items: flex-start;
-      padding: 12px 14px;
-      border: 1.5px solid var(--border-hi);
-      border-radius: 8px;
-      cursor: pointer;
-      transition: border-color 0.2s, background 0.2s;
-      background: #0A1220;
-    }
-    .svc-btn-name { font-size: 0.88rem; font-weight: 600; color: var(--heading); }
-    .svc-btn-price { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
-    .svc-opt input:checked + .svc-btn {
-      border-color: var(--accent);
-      background: rgba(30,95,204,0.10);
-    }
-
-    .divider {
-      height: 1px;
-      background: var(--border);
-      margin: 28px 0;
-    }
-
+    /* SUBMIT */
     .submit-area { margin-top: 28px; }
     .submit-note {
       text-align: center;
@@ -202,6 +326,21 @@
       margin-top: 12px;
     }
 
+    /* SELECTION SUMMARY */
+    .selection-summary {
+      background: rgba(30,95,204,0.08);
+      border: 1px solid rgba(30,95,204,0.2);
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 0.88rem;
+      color: var(--body);
+      margin-top: 16px;
+      display: none;
+    }
+    .selection-summary.visible { display: block; }
+    .selection-summary strong { color: var(--heading); }
+
+    /* ERROR */
     .error-msg {
       background: rgba(220,50,50,0.10);
       border: 1px solid rgba(220,50,50,0.3);
@@ -209,7 +348,7 @@
       color: #F87171;
       font-size: 0.88rem;
       padding: 10px 14px;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
       display: none;
     }
 
@@ -233,7 +372,7 @@
       padding: 12px 16px;
       gap: 10px;
     }
-    .mobile-sticky a { flex: 1; text-align: center; font-size: 0.92rem; padding: 12px 16px; }
+    .mobile-sticky a { flex: 1; text-align: center; font-size: 0.92rem; padding: 12px 16px; width: auto; }
     @media (max-width: 640px) { .mobile-sticky { display: flex; } }
   </style>
 </head>
@@ -248,100 +387,262 @@
       <svg class="hdr-phone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.1a16 16 0 006 6l.66-.66a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
       <span class="hdr-phone-num">(248) 877-9060</span>
     </a>
-    <a href="tel:+12488779060" class="btn-outline hdr-cta">Call (248) 877-9060</a>
+    <a href="tel:+12488779060" class="btn-primary hdr-cta">Call (248) 877-9060</a>
   </div>
 </header>
 
 <div class="page-wrap">
-  <div class="page-head">
-    <h1>Book Your Detail</h1>
-    <p>Takes 2 minutes. We'll confirm your slot and send you the date link to pick your time.</p>
-  </div>
+  <div class="wrap">
 
-  <div class="form-card">
-
-    <div id="errorMsg" class="error-msg">Please fill in all required fields.</div>
-
-    <div class="form-section-label">What service do you need?</div>
-
-    <div class="svc-label">Exterior</div>
-    <div class="svc-grid">
-      <label class="svc-opt">
-        <input type="radio" name="svc" value="Basic Exterior">
-        <div class="svc-btn"><span class="svc-btn-name">Basic</span><span class="svc-btn-price">From $60</span></div>
-      </label>
-      <label class="svc-opt">
-        <input type="radio" name="svc" value="Premium Exterior">
-        <div class="svc-btn"><span class="svc-btn-name">Premium</span><span class="svc-btn-price">From $90</span></div>
-      </label>
-      <label class="svc-opt">
-        <input type="radio" name="svc" value="Elite Exterior">
-        <div class="svc-btn"><span class="svc-btn-name">Elite</span><span class="svc-btn-price">From $105</span></div>
-      </label>
+    <div class="page-head">
+      <h1>Book Your Detail</h1>
+      <p>Pick your package, select your vehicle size, and choose any add-ons. Takes 2 minutes.</p>
     </div>
 
-    <div class="svc-label" style="margin-top:12px">Interior</div>
-    <div class="svc-grid">
-      <label class="svc-opt">
-        <input type="radio" name="svc" value="Basic Interior">
-        <div class="svc-btn"><span class="svc-btn-name">Basic</span><span class="svc-btn-price">From $75</span></div>
-      </label>
-      <label class="svc-opt">
-        <input type="radio" name="svc" value="Premium Interior">
-        <div class="svc-btn"><span class="svc-btn-name">Premium</span><span class="svc-btn-price">From $105</span></div>
-      </label>
-      <label class="svc-opt">
-        <input type="radio" name="svc" value="Elite Interior">
-        <div class="svc-btn"><span class="svc-btn-name">Elite</span><span class="svc-btn-price">From $150</span></div>
-      </label>
-    </div>
+    <div class="form-shell">
 
-    <div class="fgrp" style="margin-top:20px">
-      <label class="flbl" for="vsize">Vehicle Size <span style="color:var(--accent)">*</span></label>
-      <select id="vsize" name="vehicle_size" class="fsel">
-        <option value="" disabled selected>Select your vehicle size</option>
-        <option value="Sedan">Sedan</option>
-        <option value="Mid-Size SUV">Mid-Size SUV</option>
-        <option value="Large SUV / Truck">Large SUV / Truck</option>
-        <option value="Van / Minivan">Van / Minivan</option>
-      </select>
-    </div>
+      <div id="errorMsg" class="error-msg"></div>
 
-    <div class="divider"></div>
+      <!-- STEP 1: PACKAGE -->
+      <div class="form-section-label" style="margin-bottom:16px">Select your package</div>
 
-    <div class="form-section-label">Your Info</div>
-
-    <div class="frow">
-      <div class="fgrp">
-        <label class="flbl" for="fname">First Name <span style="color:var(--accent)">*</span></label>
-        <input type="text" id="fname" name="first_name" class="finp" placeholder="Alex" />
+      <div class="pkg-tabs">
+        <button class="pkg-tab active" data-tab="exterior" type="button">Exterior</button>
+        <button class="pkg-tab" data-tab="interior" type="button">Interior</button>
       </div>
-      <div class="fgrp">
-        <label class="flbl" for="flname">Last Name <span style="color:var(--accent)">*</span></label>
-        <input type="text" id="flname" name="last_name" class="finp" placeholder="Johnson" />
+
+      <!-- Exterior -->
+      <div class="pkg-grid" id="tab-exterior">
+
+        <div class="pkg-card" data-pkg="Basic Exterior">
+          <div class="pkg-tag">Exterior</div>
+          <div class="pkg-name">Basic Wash</div>
+          <div class="pkg-starting"><strong>$60</strong> Sedan / up to $95 Large SUV</div>
+          <div class="pkg-price-head">Click your vehicle size</div>
+          <div class="pkg-price-row" data-size="Sedan" data-price="$60"><span class="pkg-price-size">Sedan</span><span class="pkg-price-val">$60</span></div>
+          <div class="pkg-price-row" data-size="Mid-Size SUV" data-price="$75"><span class="pkg-price-size">Mid-SUV</span><span class="pkg-price-val">$75</span></div>
+          <div class="pkg-price-row" data-size="Truck" data-price="$85"><span class="pkg-price-size">Truck</span><span class="pkg-price-val">$85</span></div>
+          <div class="pkg-price-row" data-size="Large SUV" data-price="$95"><span class="pkg-price-size">Large SUV</span><span class="pkg-price-val">$95</span></div>
+          <ul class="pkg-features">
+            <li>Pre-rinse pressure wash</li>
+            <li>Two-bucket hand wash with Meguiar's Gold Class</li>
+            <li>Wheels + tires with Hot Rims cleaner</li>
+            <li>Woolie brush on wheel faces + wells rinsed</li>
+            <li>Hand dry + Hot Shine Foam tire shine</li>
+          </ul>
+        </div>
+
+        <div class="pkg-card" data-pkg="Premium Exterior">
+          <div class="pkg-badge">Most Popular</div>
+          <div class="pkg-tag">Exterior</div>
+          <div class="pkg-name">Premium Wash</div>
+          <div class="pkg-starting"><strong>$90</strong> Sedan / up to $125 Large SUV</div>
+          <div class="pkg-price-head">Click your vehicle size</div>
+          <div class="pkg-price-row" data-size="Sedan" data-price="$90"><span class="pkg-price-size">Sedan</span><span class="pkg-price-val">$90</span></div>
+          <div class="pkg-price-row" data-size="Mid-Size SUV" data-price="$105"><span class="pkg-price-size">Mid-SUV</span><span class="pkg-price-val">$105</span></div>
+          <div class="pkg-price-row" data-size="Truck" data-price="$115"><span class="pkg-price-size">Truck</span><span class="pkg-price-val">$115</span></div>
+          <div class="pkg-price-row" data-size="Large SUV" data-price="$125"><span class="pkg-price-size">Large SUV</span><span class="pkg-price-val">$125</span></div>
+          <ul class="pkg-features">
+            <li>Everything in Basic Wash</li>
+            <li>Foam cannon pre-soak (3–5 min dwell time)</li>
+            <li>Koch Chemie Green Star on door jambs + lower panels</li>
+            <li>Bug + tar treatment on front bumper</li>
+            <li>Meguiar's Ultimate Liquid Wax by hand</li>
+            <li>Exterior windows cleaned + trim wiped</li>
+          </ul>
+        </div>
+
+        <div class="pkg-card" data-pkg="Elite Exterior">
+          <div class="pkg-tag">Exterior</div>
+          <div class="pkg-name">Elite Detail</div>
+          <div class="pkg-starting"><strong>$105</strong> Sedan / up to $150 Large SUV</div>
+          <div class="pkg-price-head">Click your vehicle size</div>
+          <div class="pkg-price-row" data-size="Sedan" data-price="$105"><span class="pkg-price-size">Sedan</span><span class="pkg-price-val">$105</span></div>
+          <div class="pkg-price-row" data-size="Mid-Size SUV" data-price="$130"><span class="pkg-price-size">Mid-SUV</span><span class="pkg-price-val">$130</span></div>
+          <div class="pkg-price-row" data-size="Truck" data-price="$140"><span class="pkg-price-size">Truck</span><span class="pkg-price-val">$140</span></div>
+          <div class="pkg-price-row" data-size="Large SUV" data-price="$150"><span class="pkg-price-size">Large SUV</span><span class="pkg-price-val">$150</span></div>
+          <ul class="pkg-features">
+            <li>Everything in Premium Wash</li>
+            <li>Koch Chemie ProtectorWax applied by hand</li>
+            <li>Suds.lab CP Ceramic Wash final rinse (hydrophobic protection)</li>
+            <li>Full wheel detail: faces, barrels, and wells</li>
+            <li>Maximum paint protection without a full correction</li>
+          </ul>
+        </div>
+
       </div>
-    </div>
 
-    <div class="fgrp">
-      <label class="flbl" for="fphone">Phone Number <span style="color:var(--accent)">*</span></label>
-      <input type="tel" id="fphone" name="phone" class="finp" placeholder="(248) 555-0000" />
-    </div>
+      <!-- Interior -->
+      <div class="pkg-grid hidden" id="tab-interior">
 
-    <div class="fgrp">
-      <label class="flbl" for="femail">Email Address <span style="color:var(--accent)">*</span></label>
-      <input type="email" id="femail" name="email" class="finp" placeholder="you@email.com" />
-    </div>
+        <div class="pkg-card" data-pkg="Basic Interior">
+          <div class="pkg-tag">Interior</div>
+          <div class="pkg-name">Basic Interior</div>
+          <div class="pkg-starting"><strong>$75</strong> Sedan / up to $105 Large SUV</div>
+          <div class="pkg-price-head">Click your vehicle size</div>
+          <div class="pkg-price-row" data-size="Sedan" data-price="$75"><span class="pkg-price-size">Sedan</span><span class="pkg-price-val">$75</span></div>
+          <div class="pkg-price-row" data-size="Mid-Size SUV" data-price="$90"><span class="pkg-price-size">Mid-SUV</span><span class="pkg-price-val">$90</span></div>
+          <div class="pkg-price-row" data-size="Truck" data-price="$95"><span class="pkg-price-size">Truck</span><span class="pkg-price-val">$95</span></div>
+          <div class="pkg-price-row" data-size="Large SUV" data-price="$105"><span class="pkg-price-size">Large SUV</span><span class="pkg-price-val">$105</span></div>
+          <ul class="pkg-features">
+            <li>Full vacuum of all surfaces</li>
+            <li>Dashboard + door panels wiped down</li>
+            <li>Interior windows cleaned</li>
+            <li>Trash removal</li>
+            <li>Cup holders + console wiped</li>
+          </ul>
+        </div>
 
-    <div class="fgrp">
-      <label class="flbl" for="faddress">Your Address <span style="color:var(--accent)">*</span></label>
-      <input type="text" id="faddress" name="address" class="finp" placeholder="123 Main St, South Lyon, MI" />
-    </div>
+        <div class="pkg-card" data-pkg="Premium Interior">
+          <div class="pkg-badge">Most Popular</div>
+          <div class="pkg-tag">Interior</div>
+          <div class="pkg-name">Premium Interior</div>
+          <div class="pkg-starting"><strong>$105</strong> Sedan / up to $140 Large SUV</div>
+          <div class="pkg-price-head">Click your vehicle size</div>
+          <div class="pkg-price-row" data-size="Sedan" data-price="$105"><span class="pkg-price-size">Sedan</span><span class="pkg-price-val">$105</span></div>
+          <div class="pkg-price-row" data-size="Mid-Size SUV" data-price="$120"><span class="pkg-price-size">Mid-SUV</span><span class="pkg-price-val">$120</span></div>
+          <div class="pkg-price-row" data-size="Truck" data-price="$130"><span class="pkg-price-size">Truck</span><span class="pkg-price-val">$130</span></div>
+          <div class="pkg-price-row" data-size="Large SUV" data-price="$140"><span class="pkg-price-size">Large SUV</span><span class="pkg-price-val">$140</span></div>
+          <ul class="pkg-features">
+            <li>Everything in Basic Interior</li>
+            <li>Carpet + upholstery spot-treated with Bissell</li>
+            <li>Dashboard deep cleaned + dressed</li>
+            <li>Door jambs wiped down</li>
+            <li>Interior glass polished</li>
+            <li>Seat rails + under-seat cleaned</li>
+          </ul>
+        </div>
 
-    <div class="submit-area">
-      <button class="btn-primary" id="submitBtn">Next — Pick Your Date &amp; Time &rarr;</button>
-      <p class="submit-note">We'll send you a confirmation by phone or text.</p>
-    </div>
+        <div class="pkg-card" data-pkg="Elite Interior">
+          <div class="pkg-tag">Interior</div>
+          <div class="pkg-name">Elite Interior</div>
+          <div class="pkg-starting"><strong>$150</strong> Sedan / up to $185 Large SUV</div>
+          <div class="pkg-price-head">Click your vehicle size</div>
+          <div class="pkg-price-row" data-size="Sedan" data-price="$150"><span class="pkg-price-size">Sedan</span><span class="pkg-price-val">$150</span></div>
+          <div class="pkg-price-row" data-size="Mid-Size SUV" data-price="$165"><span class="pkg-price-size">Mid-SUV</span><span class="pkg-price-val">$165</span></div>
+          <div class="pkg-price-row" data-size="Truck" data-price="$175"><span class="pkg-price-size">Truck</span><span class="pkg-price-val">$175</span></div>
+          <div class="pkg-price-row" data-size="Large SUV" data-price="$185"><span class="pkg-price-size">Large SUV</span><span class="pkg-price-val">$185</span></div>
+          <ul class="pkg-features">
+            <li>Everything in Premium Interior</li>
+            <li>Full carpet extraction — every inch with Bissell</li>
+            <li>Koch Chemie Leather Star clean + condition</li>
+            <li>Koch Chemie Top Star on all plastic + rubber</li>
+            <li>Full odor elimination: OdoBan + steam + Dark Ice</li>
+            <li>Headliner spot cleaning</li>
+          </ul>
+        </div>
 
+      </div>
+
+      <!-- Selection feedback -->
+      <div id="selectionSummary" class="selection-summary">
+        Selected: <strong id="summaryText"></strong>
+      </div>
+
+      <!-- Hidden fields -->
+      <input type="hidden" id="selectedPkg" value="">
+      <input type="hidden" id="selectedSize" value="">
+      <input type="hidden" id="selectedPrice" value="">
+
+      <div class="divider"></div>
+
+      <!-- STEP 2: ADD-ONS -->
+      <div class="form-section-label" style="margin-bottom:4px">
+        Add-ons
+        <span style="font-size:0.75rem;font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted);margin-left:8px">Optional</span>
+      </div>
+      <p style="font-size:0.85rem;color:var(--muted);margin-bottom:16px">Select any extras you want added to your service.</p>
+
+      <div class="addon-grid">
+        <label class="addon-opt">
+          <input type="checkbox" name="addons" value="Pet Hair Removal (+$30)">
+          <div class="addon-btn">
+            <div class="addon-info">
+              <div class="addon-name">Pet Hair Removal</div>
+              <div class="addon-desc">Full pet hair extraction — rubber brush, drill brush, vacuum combo.</div>
+            </div>
+            <div class="addon-price">+$30</div>
+          </div>
+        </label>
+        <label class="addon-opt">
+          <input type="checkbox" name="addons" value="Full Carpet Extraction (+$40)">
+          <div class="addon-btn">
+            <div class="addon-info">
+              <div class="addon-name">Full Carpet Extraction</div>
+              <div class="addon-desc">Bissell on every inch of carpet + upholstery, not just spot areas.</div>
+            </div>
+            <div class="addon-price">+$40</div>
+          </div>
+        </label>
+        <label class="addon-opt">
+          <input type="checkbox" name="addons" value="Odor Elimination Treatment (+$25)">
+          <div class="addon-btn">
+            <div class="addon-info">
+              <div class="addon-name">Odor Elimination Treatment</div>
+              <div class="addon-desc">OdoBan + steam + Dark Ice — for smoker cars or serious odors.</div>
+            </div>
+            <div class="addon-price">+$25</div>
+          </div>
+        </label>
+        <label class="addon-opt">
+          <input type="checkbox" name="addons" value="Leather Deep Condition (+$20)">
+          <div class="addon-btn">
+            <div class="addon-info">
+              <div class="addon-name">Leather Deep Condition</div>
+              <div class="addon-desc">Clean + condition all leather surfaces with 3D Leather Cleaner + conditioner.</div>
+            </div>
+            <div class="addon-price">+$20</div>
+          </div>
+        </label>
+        <label class="addon-opt">
+          <input type="checkbox" name="addons" value="Steam Clean Upgrade (+$20)">
+          <div class="addon-btn">
+            <div class="addon-info">
+              <div class="addon-name">Steam Clean Upgrade</div>
+              <div class="addon-desc">Steam on all surfaces including vents, buttons, and tight spots.</div>
+            </div>
+            <div class="addon-price">+$20</div>
+          </div>
+        </label>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- STEP 3: CONTACT INFO -->
+      <div class="form-section-label" style="margin-bottom:20px">Your Info</div>
+
+      <div class="frow">
+        <div class="fgrp">
+          <label class="flbl" for="fname">First Name <span style="color:var(--accent)">*</span></label>
+          <input type="text" id="fname" name="first_name" class="finp" placeholder="Alex" />
+        </div>
+        <div class="fgrp">
+          <label class="flbl" for="flname">Last Name <span style="color:var(--accent)">*</span></label>
+          <input type="text" id="flname" name="last_name" class="finp" placeholder="Johnson" />
+        </div>
+      </div>
+
+      <div class="fgrp">
+        <label class="flbl" for="fphone">Phone Number <span style="color:var(--accent)">*</span></label>
+        <input type="tel" id="fphone" name="phone" class="finp" placeholder="(248) 555-0000" />
+      </div>
+
+      <div class="fgrp">
+        <label class="flbl" for="femail">Email Address <span style="color:var(--accent)">*</span></label>
+        <input type="email" id="femail" name="email" class="finp" placeholder="you@email.com" />
+      </div>
+
+      <div class="fgrp">
+        <label class="flbl" for="faddress">Your Address <span style="color:var(--accent)">*</span></label>
+        <input type="text" id="faddress" name="address" class="finp" placeholder="123 Main St, South Lyon, MI" />
+      </div>
+
+      <div class="submit-area">
+        <button class="btn-primary" id="submitBtn" type="button">Next — Pick Your Date &amp; Time &rarr;</button>
+        <p class="submit-note">We'll confirm your slot by phone or text.</p>
+      </div>
+
+    </div>
   </div>
 </div>
 
@@ -357,32 +658,85 @@
 <script>
   const WEBHOOK = 'https://services.leadconnectorhq.com/hooks/acunfnwDS929TNnWHNgx/webhook-trigger/16f8b4c6-1e85-4803-8ce0-05c9ba30294e';
 
+  let selectedPkg  = '';
+  let selectedSize = '';
+  let selectedPrice = '';
+
+  // TAB SWITCHING
+  document.querySelectorAll('.pkg-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.pkg-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      document.querySelectorAll('.pkg-grid').forEach(g => g.classList.add('hidden'));
+      document.getElementById('tab-' + tab.dataset.tab).classList.remove('hidden');
+      clearSelection();
+    });
+  });
+
+  function clearSelection() {
+    document.querySelectorAll('.pkg-card').forEach(c => c.classList.remove('selected'));
+    document.querySelectorAll('.pkg-price-row').forEach(r => r.classList.remove('selected'));
+    selectedPkg = ''; selectedSize = ''; selectedPrice = '';
+    document.getElementById('selectionSummary').classList.remove('visible');
+  }
+
+  function updateSummary() {
+    const el = document.getElementById('selectionSummary');
+    if (selectedPkg && selectedSize) {
+      document.getElementById('summaryText').textContent = selectedPkg + ' — ' + selectedSize + ' (' + selectedPrice + ')';
+      el.classList.add('visible');
+    } else {
+      el.classList.remove('visible');
+    }
+  }
+
+  // VEHICLE SIZE ROW CLICK — selects package + size
+  document.querySelectorAll('.pkg-price-row').forEach(row => {
+    row.addEventListener('click', () => {
+      document.querySelectorAll('.pkg-card').forEach(c => c.classList.remove('selected'));
+      document.querySelectorAll('.pkg-price-row').forEach(r => r.classList.remove('selected'));
+
+      const card = row.closest('.pkg-card');
+      card.classList.add('selected');
+      row.classList.add('selected');
+
+      selectedPkg   = card.dataset.pkg;
+      selectedSize  = row.dataset.size;
+      selectedPrice = row.dataset.price;
+
+      document.getElementById('errorMsg').style.display = 'none';
+      updateSummary();
+    });
+  });
+
+  // SUBMIT
   document.getElementById('submitBtn').addEventListener('click', async () => {
-    const svc     = document.querySelector('input[name="svc"]:checked');
-    const vsize   = document.getElementById('vsize').value;
-    const fname   = document.getElementById('fname').value.trim();
-    const flname  = document.getElementById('flname').value.trim();
-    const fphone  = document.getElementById('fphone').value.trim();
-    const femail  = document.getElementById('femail').value.trim();
+    const fname    = document.getElementById('fname').value.trim();
+    const flname   = document.getElementById('flname').value.trim();
+    const fphone   = document.getElementById('fphone').value.trim();
+    const femail   = document.getElementById('femail').value.trim();
     const faddress = document.getElementById('faddress').value.trim();
+    const addons   = [...document.querySelectorAll('input[name="addons"]:checked')].map(i => i.value);
 
     const errEl = document.getElementById('errorMsg');
 
-    if (!svc || !vsize || !fname || !flname || !fphone || !femail || !faddress) {
+    if (!selectedPkg || !selectedSize) {
+      errEl.textContent = 'Please select a package and vehicle size above.';
       errEl.style.display = 'block';
-      errEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      if (!svc) {
-        document.querySelectorAll('.svc-btn').forEach(b => {
-          b.style.borderColor = 'rgba(220,50,50,0.5)';
-          setTimeout(() => b.style.borderColor = '', 2000);
-        });
-      }
-      [!vsize && 'vsize', !fname && 'fname', !flname && 'flname', !fphone && 'fphone', !femail && 'femail', !faddress && 'faddress']
+      document.querySelector('.pkg-tabs').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    if (!fname || !flname || !fphone || !femail || !faddress) {
+      errEl.textContent = 'Please fill in all required fields.';
+      errEl.style.display = 'block';
+      [!fname && 'fname', !flname && 'flname', !fphone && 'fphone', !femail && 'femail', !faddress && 'faddress']
         .filter(Boolean)
         .forEach(id => {
           const el = document.getElementById(id);
           if (el) { el.style.borderColor = 'rgba(220,50,50,0.5)'; setTimeout(() => el.style.borderColor = '', 2000); }
         });
+      errEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
       return;
     }
 
@@ -393,8 +747,10 @@
     btn.disabled = true;
 
     const payload = {
-      service:      svc.value,
-      vehicle_size: vsize,
+      service:      selectedPkg,
+      vehicle_size: selectedSize,
+      price:        selectedPrice,
+      addons:       addons.length ? addons.join(', ') : 'None',
       name:         fname + ' ' + flname,
       first_name:   fname,
       last_name:    flname,
@@ -409,9 +765,7 @@
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(payload)
       });
-    } catch (e) {
-      // proceed regardless
-    }
+    } catch (e) {}
 
     window.location.href = '/book';
   });

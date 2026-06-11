@@ -446,6 +446,43 @@
       margin-bottom: 16px;
     }
 
+    /* ── ADD-ONS ── */
+    .addons-section { padding: 80px 0; background: var(--bg-deep); }
+    .addon-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 40px;
+    }
+    @media (max-width: 760px) { .addon-cards { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .addon-cards { grid-template-columns: 1fr; } }
+    .addon-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 20px 22px;
+    }
+    .addon-card-name {
+      font-family: var(--font-head);
+      font-size: 0.95rem;
+      color: var(--heading);
+      margin-bottom: 6px;
+    }
+    .addon-card-desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .addon-cta {
+      text-align: center;
+      margin-top: 36px;
+    }
+    .addon-cta p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
     /* ── BEFORE / AFTER ── */
     .ba-section { padding: 96px 0; background: var(--card); }
     .ba-grid {
@@ -1026,6 +1063,42 @@
           <a href="/form" class="btn-primary">Book This Package</a>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ADD-ONS ── -->
+<section class="addons-section">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title reveal">Add-Ons Available with Any Package</h2>
+      <p class="sec-sub reveal" data-delay="1">Select any of these when you book. Each one gets added to your service at the same appointment.</p>
+    </div>
+    <div class="addon-cards">
+      <div class="addon-card reveal">
+        <div class="addon-card-name">Pet Hair Removal</div>
+        <div class="addon-card-desc">Full pet hair extraction using a rubber brush, drill brush, and vacuum combo. Never included free — always charged separately.</div>
+      </div>
+      <div class="addon-card reveal" data-delay="1">
+        <div class="addon-card-name">Full Carpet Extraction</div>
+        <div class="addon-card-desc">Bissell deep extraction on every inch of carpet and upholstery — not just the stained spots.</div>
+      </div>
+      <div class="addon-card reveal" data-delay="2">
+        <div class="addon-card-name">Odor Elimination Treatment</div>
+        <div class="addon-card-desc">OdoBan + steam + Dark Ice applied throughout the interior. Built for smoker cars and serious odor situations.</div>
+      </div>
+      <div class="addon-card reveal" data-delay="3">
+        <div class="addon-card-name">Leather Deep Condition</div>
+        <div class="addon-card-desc">All leather surfaces cleaned and conditioned with 3D Leather Cleaner + conditioner. Restores suppleness and protects against cracking.</div>
+      </div>
+      <div class="addon-card reveal" data-delay="4">
+        <div class="addon-card-name">Steam Clean Upgrade</div>
+        <div class="addon-card-desc">Steam on every surface — vents, buttons, seams, and tight spots that cloths and brushes can't reach.</div>
+      </div>
+    </div>
+    <div class="addon-cta reveal" data-delay="2">
+      <a href="/form" class="btn-primary" style="display:inline-flex;width:auto;padding:14px 36px;">Add These When You Book &rarr;</a>
+      <p>Select add-ons directly on the booking form.</p>
     </div>
   </div>
 </section>
