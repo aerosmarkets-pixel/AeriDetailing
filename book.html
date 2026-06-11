@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Your Detail — Aero Detailing South Lyon, MI</title>
+  <meta name="description" content="Book your auto detail in South Lyon, MI. Same-week availability. Hand wash, professional-grade products. Interior and exterior packages." />
+  <link rel="icon" href="AeroDetailing-png/icon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:            #0A1220;
+      --bg-deep:       #060D18;
+      --card:          #0F1B35;
+      --accent:        #1E5FCC;
+      --accent-hover:  #2E6FDC;
+      --accent-glow:   rgba(30,95,204,0.22);
+      --heading:       #F1F5F9;
+      --body:          #8AABD4;
+      --muted:         #4B6FA8;
+      --border:        rgba(30,95,204,0.14);
+      --radius:        10px;
+      --radius-btn:    10px;
+      --font-head:     'Space Grotesk', sans-serif;
+      --font-body:     'DM Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    h1,h2,h3,h4 { font-family: var(--font-head); color: var(--heading); line-height: 1.1; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; height: auto; }
+
+    .btn-primary {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      background: var(--accent); color: #fff; border: none; cursor: pointer;
+      font-family: var(--font-body); font-weight: 600; font-size: 1rem;
+      padding: 14px 28px; border-radius: var(--radius-btn);
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      min-height: 48px; text-decoration: none;
+    }
+    .btn-outline {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      background: transparent; color: var(--heading);
+      border: 2px solid rgba(139,171,212,0.28); cursor: pointer;
+      font-family: var(--font-body); font-weight: 600; font-size: 1rem;
+      padding: 14px 28px; border-radius: var(--radius-btn);
+      transition: border-color 0.2s, background 0.2s;
+      min-height: 48px;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 8px 24px var(--accent-glow); }
+      .btn-outline:hover { border-color: var(--accent); background: rgba(30,95,204,0.07); color: #F1F5F9; }
+    }
+
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* HEADER */
+    .hdr {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      height: 64px;
+      background: #0A1220;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; padding: 0 24px;
+    }
+    .hdr-inner {
+      max-width: 1200px; margin: 0 auto; width: 100%;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .hdr-logo { display: flex; align-items: center; flex-shrink: 0; }
+    .hdr-logo img { display: block; height: 38px; width: auto; }
+    .hdr-phone {
+      display: flex; align-items: center; gap: 7px;
+      font-weight: 600; font-size: 0.95rem; color: var(--heading);
+    }
+    .hdr-phone-icon { color: var(--accent); width: 16px; height: 16px; flex-shrink: 0; }
+    @media (max-width: 600px) { .hdr-phone-num { display: none; } }
+    .hdr-cta { padding: 10px 20px; font-size: 0.9rem; }
+    @keyframes hdr-pulse {
+      0%   { box-shadow: 0 0 0 0 rgba(30,95,204,0.6), 0 4px 14px rgba(30,95,204,0.35); }
+      65%  { box-shadow: 0 0 0 10px rgba(30,95,204,0), 0 4px 14px rgba(30,95,204,0.35); }
+      100% { box-shadow: 0 0 0 0 rgba(30,95,204,0), 0 4px 14px rgba(30,95,204,0.35); }
+    }
+    .hdr-cta { animation: hdr-pulse 2.6s ease-out infinite; }
+    .hdr-cta:hover { animation-play-state: paused; }
+
+    /* PAGE */
+    .page-wrap {
+      padding-top: 100px;
+      padding-bottom: 80px;
+      min-height: 100vh;
+    }
+    .page-head {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .page-head h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 12px;
+    }
+    .page-head p {
+      font-size: 1.1rem;
+      color: var(--body);
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    .calendar-wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 24px;
+      min-height: 600px;
+    }
+    .prep-note {
+      max-width: 820px;
+      margin: 32px auto 0;
+      background: rgba(30,95,204,0.08);
+      border: 1px solid rgba(30,95,204,0.2);
+      border-radius: 12px;
+      padding: 24px 28px;
+    }
+    .prep-note h3 {
+      font-size: 1rem;
+      margin-bottom: 12px;
+      color: var(--heading);
+    }
+    .prep-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .prep-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+      color: var(--body);
+    }
+    .prep-list li::before {
+      content: '';
+      display: block;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: var(--bg-deep);
+      border-top: 1px solid var(--border);
+      padding: 48px 0 24px;
+      margin-top: 80px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 760px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } }
+    .footer-tag { font-size: 0.88rem; color: var(--muted); margin-bottom: 16px; max-width: 280px; line-height: 1.5; }
+    .footer-contact { display: flex; flex-direction: column; gap: 8px; }
+    .footer-contact a { display: flex; align-items: center; gap: 8px; font-size: 0.88rem; color: var(--body); transition: color 0.2s; }
+    .footer-contact a:hover { color: var(--heading); }
+    .fc-icon { font-size: 1rem; }
+    .footer-col-head { font-family: var(--font-head); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    .footer-links a { font-size: 0.88rem; color: var(--body); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--heading); }
+    .footer-hours { font-size: 0.88rem; color: var(--body); line-height: 1.7; }
+    .footer-bottom { border-top: 1px solid var(--border); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 0.8rem; color: var(--muted); }
+
+    /* MOBILE STICKY */
+    .mobile-sticky {
+      display: none;
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 300;
+      background: var(--bg-deep);
+      border-top: 1px solid var(--border);
+      padding: 12px 16px;
+      gap: 10px;
+    }
+    .mobile-sticky a { flex: 1; text-align: center; font-size: 0.92rem; padding: 12px 16px; }
+    @media (max-width: 640px) { .mobile-sticky { display: flex; } }
+  </style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr-inner">
+    <a href="/" class="hdr-logo">
+      <img src="AeroDetailing-png/aero-logo-horizontal.png" alt="Aero Detailing">
+    </a>
+    <a href="tel:+12488779060" class="hdr-phone">
+      <svg class="hdr-phone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.1a16 16 0 006 6l.66-.66a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+      <span class="hdr-phone-num">(248) 877-9060</span>
+    </a>
+    <a href="tel:+12488779060" class="btn-primary hdr-cta">Call to Book</a>
+  </div>
+</header>
+
+<div class="page-wrap">
+  <div class="wrap">
+
+    <div class="page-head">
+      <h1>Book Your Detail</h1>
+      <p>Pick a time that works for you. We'll confirm by phone or text within a few hours.</p>
+    </div>
+
+    <div class="calendar-wrap">
+      <iframe src="https://api.leadconnectorhq.com/widget/booking/KwKnI2kAIQ2jybl3Rrn1" style="width:100%;border:none;overflow:hidden;min-height:600px;" scrolling="no" id="KwKnI2kAIQ2jybl3Rrn1_1781154867319"></iframe>
+      <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+    </div>
+
+    <div class="prep-note">
+      <h3>Before we arrive — have these ready:</h3>
+      <ul class="prep-list">
+        <li>An outdoor power outlet we can plug into</li>
+        <li>Access to a hose or water source nearby</li>
+        <li>All personal items removed from the car</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <img src="AeroDetailing-png/aero-logo-horizontal.png" alt="Aero Detailing" style="height:52px;width:auto;margin-bottom:14px">
+        <p class="footer-tag">Above the Rest. Below the Surface. Serving South Lyon and surrounding Michigan communities.</p>
+        <div class="footer-contact">
+          <a href="tel:+12488779060"><span class="fc-icon">📞</span> (248) 877-9060</a>
+          <a href="mailto:aerodetailing.us@gmail.com"><span class="fc-icon">✉️</span> aerodetailing.us@gmail.com</a>
+          <a href="https://maps.google.com/?q=South+Lyon,+MI+48178"><span class="fc-icon">📍</span> South Lyon, MI 48178</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-head">Services</div>
+        <ul class="footer-links">
+          <li><a href="/book">Basic Exterior ($60+)</a></li>
+          <li><a href="/book">Premium Exterior ($90+)</a></li>
+          <li><a href="/book">Elite Exterior ($105+)</a></li>
+          <li><a href="/book">Basic Interior ($75+)</a></li>
+          <li><a href="/book">Premium Interior ($105+)</a></li>
+          <li><a href="/book">Elite Interior ($150+)</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-head">Book From Your City</div>
+        <ul class="footer-links">
+          <li><a href="/book">South Lyon</a></li>
+          <li><a href="/book">Brighton</a></li>
+          <li><a href="/book">Milford</a></li>
+          <li><a href="/book">Novi</a></li>
+          <li><a href="/book">Northville</a></li>
+          <li><a href="/book">Commerce Township</a></li>
+        </ul>
+        <div class="footer-col-head" style="margin-top:20px">Hours</div>
+        <div class="footer-hours">
+          Monday – Friday<br>
+          Sat–Sun: Closed
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Aero Detailing. All rights reserved.</span>
+      <span>South Lyon, MI Auto Detailing</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-sticky">
+  <a href="tel:+12488779060" class="btn-outline">📞 Call Now</a>
+  <a href="/book" class="btn-primary">Book My Detail</a>
+</div>
+
+</body>
+</html>
