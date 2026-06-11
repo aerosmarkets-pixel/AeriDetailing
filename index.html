@@ -1108,153 +1108,16 @@
   </div>
 </section>
 
-<!-- ── LEAD FORM ── -->
+<!-- ── BOOK CTA ── -->
 <section class="form-section" id="form">
   <div class="wrap">
     <div class="sec-head">
-      <h2 class="sec-title reveal">Book Your Detail</h2>
-      <p class="sec-sub reveal" data-delay="1">Takes 90 seconds. We'll confirm your slot by phone or text.</p>
+      <h2 class="sec-title reveal">Ready to Book?</h2>
+      <p class="sec-sub reveal" data-delay="1">Takes 2 minutes. Pick your service, drop your info, then choose your time.</p>
     </div>
-
-
-    <div class="form-wrap reveal">
-      <div class="form-head">
-        <div class="form-head-title">Book Your Detail</div>
-        <div class="form-head-sub">Free quote included. No commitment.</div>
-        <div class="form-head-urgency">⚡ Same-week slots available — weekdays book fast</div>
-        <div class="form-prog-track">
-          <div class="form-prog-bar" id="formProg"></div>
-        </div>
-      </div>
-
-      <div id="formBody">
-        <!-- STEP 1 -->
-        <div class="form-body">
-          <div class="form-step active" id="step0">
-            <p class="step-tag">Step 1 of 3</p>
-            <p class="step-title">What service are you looking for?</p>
-            <div class="fgrp">
-              <label class="flbl">Service type</label>
-              <div class="svc-opts">
-                <div class="svc-group">
-                  <div class="svc-group-label">Exterior</div>
-                  <div class="svc-group-cards">
-                    <input type="radio" name="svc" id="s1" value="Basic Exterior" class="svc-radio">
-                    <label for="s1" class="svc-radio-lbl"><span class="svc-radio-name">Basic</span><span class="svc-radio-price">From $60</span></label>
-                    <input type="radio" name="svc" id="s2" value="Premium Exterior" class="svc-radio">
-                    <label for="s2" class="svc-radio-lbl"><span class="svc-radio-name">Premium</span><span class="svc-radio-price">From $90</span></label>
-                    <input type="radio" name="svc" id="s3" value="Elite Exterior" class="svc-radio">
-                    <label for="s3" class="svc-radio-lbl"><span class="svc-radio-name">Elite</span><span class="svc-radio-price">From $105</span></label>
-                  </div>
-                </div>
-                <div class="svc-group">
-                  <div class="svc-group-label">Interior</div>
-                  <div class="svc-group-cards">
-                    <input type="radio" name="svc" id="s4" value="Basic Interior" class="svc-radio">
-                    <label for="s4" class="svc-radio-lbl"><span class="svc-radio-name">Basic</span><span class="svc-radio-price">From $75</span></label>
-                    <input type="radio" name="svc" id="s5" value="Premium Interior" class="svc-radio">
-                    <label for="s5" class="svc-radio-lbl"><span class="svc-radio-name">Premium</span><span class="svc-radio-price">From $105</span></label>
-                    <input type="radio" name="svc" id="s6" value="Elite Interior" class="svc-radio">
-                    <label for="s6" class="svc-radio-lbl"><span class="svc-radio-name">Elite</span><span class="svc-radio-price">From $150</span></label>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="fgrp">
-              <label class="flbl" for="vsize">Vehicle size</label>
-              <select id="vsize" name="vehicle_size" class="fsel">
-                <option value="" disabled selected>Select your vehicle</option>
-                <option value="Sedan">Sedan</option>
-                <option value="Mid-SUV">Mid-Size SUV / Crossover</option>
-                <option value="Truck">Truck</option>
-                <option value="Large SUV">Large SUV / Full-Size Van</option>
-              </select>
-            </div>
-            <div class="form-actions form-actions-end">
-              <button type="button" class="btn-primary btn-next">Next: Vehicle Details</button>
-            </div>
-          </div>
-
-          <!-- STEP 2 -->
-          <div class="form-step" id="step1">
-            <p class="step-tag">Step 2 of 3</p>
-            <p class="step-title">Tell us about your vehicle.</p>
-            <div class="f2col">
-              <div class="fgrp">
-                <label class="flbl" for="vmake">Make</label>
-                <input type="text" id="vmake" name="vehicle_make" class="finp" placeholder="Toyota">
-              </div>
-              <div class="fgrp">
-                <label class="flbl" for="vmodel">Model + Year</label>
-                <input type="text" id="vmodel" name="vehicle_model" class="finp" placeholder="Camry 2021">
-              </div>
-            </div>
-            <div class="fgrp">
-              <label class="flbl" for="vcolor">Color</label>
-              <input type="text" id="vcolor" name="vehicle_color" class="finp" placeholder="Silver">
-            </div>
-            <div class="fgrp">
-              <label class="flbl" for="notes">Anything specific you want addressed?</label>
-              <textarea id="notes" name="notes" class="ftxt" placeholder="Heavy stain on back seat, water spots on hood, dog hair in carpet..."></textarea>
-            </div>
-            <div class="form-actions">
-              <button type="button" class="btn-back">Back</button>
-              <button type="button" class="btn-primary btn-next">Next: Your Info</button>
-            </div>
-          </div>
-
-          <!-- STEP 3 -->
-          <div class="form-step" id="step2">
-            <p class="step-tag">Step 3 of 3</p>
-            <p class="step-title">How do we reach you?</p>
-            <div class="f2col">
-              <div class="fgrp">
-                <label class="flbl" for="fname">First Name</label>
-                <input type="text" id="fname" name="first_name" class="finp" placeholder="Marcus" required>
-              </div>
-              <div class="fgrp">
-                <label class="flbl" for="lname">Last Name</label>
-                <input type="text" id="lname" name="last_name" class="finp" placeholder="Thompson" required>
-              </div>
-            </div>
-            <div class="fgrp">
-              <label class="flbl" for="fphone">Phone Number</label>
-              <input type="tel" id="fphone" name="phone" class="finp" placeholder="(248) 555-0100" required>
-            </div>
-            <div class="fgrp">
-              <label class="flbl" for="femail">Email Address</label>
-              <input type="email" id="femail" name="email" class="finp" placeholder="you@example.com" required>
-            </div>
-            <div class="fgrp">
-              <label class="flbl" for="faddress">Your Address <span style="color:var(--accent)">*</span></label>
-              <input type="text" id="faddress" name="address" class="finp" placeholder="123 Main St, South Lyon, MI" required>
-            </div>
-            <div class="fgrp">
-              <label class="flbl" for="fdate">Preferred Date</label>
-              <input type="date" id="fdate" name="preferred_date" class="finp">
-            </div>
-            <!-- UTM fields -->
-            <input type="hidden" name="utm_source"   id="utm_source">
-            <input type="hidden" name="utm_medium"   id="utm_medium">
-            <input type="hidden" name="utm_campaign" id="utm_campaign">
-            <input type="hidden" name="utm_content"  id="utm_content">
-            <div class="form-actions">
-              <button type="button" class="btn-back">Back</button>
-              <button type="button" id="submitBtn" class="btn-primary">Request My Booking</button>
-            </div>
-            <p class="form-fine">We'll reach out within a few hours to lock in your date. No spam, ever.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Success state -->
-      <div class="form-success" id="formSuccess">
-        <span class="fs-icon">✅</span>
-        <h3 class="fs-title">Request Received</h3>
-        <p class="fs-body">We'll reach out within a few hours to confirm your slot. Keep an eye on your phone.</p>
-      </div>
+    <div style="text-align:center;padding:40px 0;">
+      <a href="/form" class="btn-primary" style="font-size:1.1rem;padding:18px 40px;display:inline-flex;">Book My Detail &rarr;</a>
     </div>
-
   </div>
 </section>
 
