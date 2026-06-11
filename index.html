@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aero Detailing — South Lyon, MI | Auto Detailing | Book Now</title>
+  <meta name="description" content="Auto detailing in South Lyon, MI. Hand wash, professional-grade products, free come-back guarantee. Interior and exterior packages from $60. Book this week." />
+  <meta property="og:title" content="Aero Detailing — South Lyon Auto Detailing" />
+  <meta property="og:description" content="Auto detailing in South Lyon, MI. Hand wash, professional-grade products, free come-back guarantee. Interior and exterior packages from $60. Book this week." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://aerodetailing.us/AeroDetailing-png/hero-bg.jpg" />
+  <meta property="og:url" content="https://aerodetailing.us/" />
+  <link rel="icon" href="AeroDetailing-png/icon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Aero Detailing",
+    "telephone": "+12488779060",
+    "email": "aerodetailing.us@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "South Lyon",
+      "addressRegion": "MI",
+      "addressCountry": "US",
+      "postalCode": "48178"
+    },
+    "priceRange": "$$"
+  }
+  </script>
+
+  <!-- GTM: uncomment and replace GTM-XXXXXXX when ready -->
+  <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script> -->
+  <!-- META PIXEL: uncomment and add real pixel ID when running ads -->
+  <!-- <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','PIXEL_ID');fbq('track','PageView');</script> -->
+
+  <style>
+    :root {
+      --bg:            #0A1220;
+      --bg-deep:       #060D18;
+      --card:          #0F1B35;
+      --card-hi:       #152244;
+      --accent:        #1E5FCC;
+      --accent-hover:  #2E6FDC;
+      --accent-glow:   rgba(30,95,204,0.22);
+      --heading:       #F1F5F9;
+      --body:          #8AABD4;
+      --muted:         #4B6FA8;
+      --border:        rgba(30,95,204,0.14);
+      --border-hi:     rgba(30,95,204,0.3);
+      --radius:        10px;
+      --radius-btn:    10px;
+      --shadow:        0 4px 24px rgba(0,0,0,0.4);
+      --font-head:     'Space Grotesk', sans-serif;
+      --font-body:     'DM Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    h1,h2,h3,h4 { font-family: var(--font-head); color: var(--heading); line-height: 1.1; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; height: auto; }
+
+    /* ANIMATION SYSTEM */
+    @media (prefers-reduced-motion: no-preference) {
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.55s cubic-bezier(0.23,1,0.32,1),
+                    transform 0.55s cubic-bezier(0.23,1,0.32,1);
+      }
+      .reveal.visible { opacity: 1; transform: none; }
+      .reveal[data-delay="1"] { transition-delay: 60ms; }
+      .reveal[data-delay="2"] { transition-delay: 120ms; }
+      .reveal[data-delay="3"] { transition-delay: 180ms; }
+      .reveal[data-delay="4"] { transition-delay: 240ms; }
+      .reveal[data-delay="5"] { transition-delay: 300ms; }
+      .reveal-left  { opacity: 0; transform: translateX(-56px); transition: opacity 0.75s cubic-bezier(0.23,1,0.32,1), transform 0.75s cubic-bezier(0.23,1,0.32,1); }
+      .reveal-right { opacity: 0; transform: translateX(56px);  transition: opacity 0.75s cubic-bezier(0.23,1,0.32,1), transform 0.75s cubic-bezier(0.23,1,0.32,1); transition-delay: 100ms; }
+      .reveal-left.visible, .reveal-right.visible { opacity: 1; transform: none; }
+    }
+
+    /* BUTTONS */
+    .btn-primary {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      background: var(--accent); color: #fff; border: none; cursor: pointer;
+      font-family: var(--font-body); font-weight: 600; font-size: 1rem;
+      padding: 14px 28px; border-radius: var(--radius-btn);
+      transition: background 0.2s cubic-bezier(0.23,1,0.32,1),
+                  transform 0.2s cubic-bezier(0.23,1,0.32,1),
+                  box-shadow 0.2s cubic-bezier(0.23,1,0.32,1);
+      min-height: 48px; text-decoration: none;
+    }
+    .btn-outline {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      background: transparent; color: var(--heading);
+      border: 2px solid rgba(139,171,212,0.28); cursor: pointer;
+      font-family: var(--font-body); font-weight: 600; font-size: 1rem;
+      padding: 14px 28px; border-radius: var(--radius-btn);
+      transition: border-color 0.2s cubic-bezier(0.23,1,0.32,1),
+                  background 0.2s cubic-bezier(0.23,1,0.32,1);
+      min-height: 48px;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .btn-primary:hover {
+        background: var(--accent-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px var(--accent-glow);
+      }
+      .btn-outline:hover {
+        border-color: var(--accent);
+        background: rgba(30,95,204,0.07);
+        color: #F1F5F9;
+      }
+    }
+    .btn-primary:active { transform: scale(0.97); transition-duration: 100ms; }
+    .btn-outline:active  { transform: scale(0.97); transition-duration: 100ms; }
+
+    /* ── CTA MOTION ── */
+    @keyframes hdr-pulse {
+      0%   { box-shadow: 0 0 0 0 rgba(30,95,204,0.6), 0 4px 14px rgba(30,95,204,0.35); }
+      65%  { box-shadow: 0 0 0 10px rgba(30,95,204,0), 0 4px 14px rgba(30,95,204,0.35); }
+      100% { box-shadow: 0 0 0 0 rgba(30,95,204,0), 0 4px 14px rgba(30,95,204,0.35); }
+    }
+    .hdr-cta { animation: hdr-pulse 2.6s ease-out infinite; }
+    .hdr-cta:hover, .hdr-cta:focus { animation-play-state: paused; }
+
+    @keyframes cta-shake {
+      0%   { transform: translateX(0) rotate(0); }
+      15%  { transform: translateX(-5px) rotate(-1.2deg); }
+      30%  { transform: translateX(5px) rotate(1.2deg); }
+      45%  { transform: translateX(-4px) rotate(-0.6deg); }
+      60%  { transform: translateX(4px) rotate(0.6deg); }
+      75%  { transform: translateX(-2px) rotate(0); }
+      100% { transform: translateX(0) rotate(0); }
+    }
+    .cta-shake { animation: cta-shake 0.65s cubic-bezier(0.36,0.07,0.19,0.97) both; }
+
+    /* LAYOUT */
+    .wrap    { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .wrap-sm { max-width: 840px;  margin: 0 auto; padding: 0 24px; }
+
+    /* ── STICKY HEADER ── */
+    .hdr {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      height: 64px;
+      background: #0A1220;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; padding: 0 24px;
+    }
+    .hdr-inner {
+      max-width: 1200px; margin: 0 auto; width: 100%;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .hdr-logo {
+      display: flex; align-items: center;
+      flex-shrink: 0;
+    }
+    .hdr-logo img { display: block; height: 38px; width: auto; }
+    .hdr-phone {
+      display: flex; align-items: center; gap: 7px;
+      font-weight: 600; font-size: 0.95rem; color: var(--heading);
+    }
+    .hdr-phone-icon { color: var(--accent); width: 16px; height: 16px; flex-shrink: 0; }
+    @media (max-width: 600px) { .hdr-phone-num { display: none; } }
+    .hdr-cta { padding: 10px 20px; font-size: 0.9rem; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100dvh;
+      position: relative; overflow: hidden;
+      padding-top: 64px;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 55% 65% at 72% 50%, rgba(30,95,204,0.16) 0%, transparent 68%),
+        radial-gradient(ellipse 35% 45% at 78% 18%, rgba(75,130,232,0.10) 0%, transparent 60%),
+        linear-gradient(140deg, #060D18 0%, #0A1220 55%, #0F1B35 100%);
+    }
+    .hero-glow {
+      position: absolute; right: -80px; top: 50%; transform: translateY(-50%);
+      width: 580px; height: 580px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(30,95,204,0.10) 0%, transparent 68%);
+      pointer-events: none;
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 55% 45%;
+      width: 100%; min-height: calc(100dvh - 64px);
+      position: relative; z-index: 1;
+    }
+    .hero-content {
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 64px 48px 64px max(24px, calc((100vw - 1100px) / 2 + 24px));
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      align-self: flex-start;
+      background: rgba(30,95,204,0.14);
+      border: 1px solid rgba(30,95,204,0.28);
+      border-radius: 100px; padding: 5px 14px;
+      font-size: 0.78rem; font-weight: 700;
+      color: #4B82E8; letter-spacing: 0.05em; text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+    .hero-h1 {
+      font-size: clamp(2.1rem, 4.8vw, 3.7rem);
+      font-weight: 800; letter-spacing: -0.03em;
+      line-height: 1.06; margin-bottom: 20px;
+    }
+    .hero-h1 .blue { color: var(--accent); }
+    .hero-sub {
+      font-size: 1.05rem; color: var(--body);
+      max-width: 460px; margin-bottom: 32px; line-height: 1.65;
+    }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px; align-items: center; }
+    .hero-ctas .btn-primary { padding: 16px 36px; font-size: 1.05rem; }
+    .hero-ctas .btn-outline  { padding: 14px 24px; font-size: 0.95rem; opacity: 0.82; }
+
+    /* Stats bar */
+    .stats-bar {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      background: rgba(15,27,53,0.55); overflow: hidden;
+    }
+    .stat {
+      padding: 12px 14px;
+      border-right: 1px solid var(--border);
+    }
+    .stat:last-child { border-right: none; }
+    .stat-val {
+      font-family: var(--font-head); font-size: 1.05rem;
+      font-weight: 700; color: var(--heading); line-height: 1; margin-bottom: 3px;
+    }
+    .stat-lbl {
+      font-size: 0.68rem; font-weight: 600; color: var(--muted);
+      text-transform: uppercase; letter-spacing: 0.04em;
+    }
+
+    /* Hero visual */
+    .hero-visual {
+      position: relative; overflow: hidden;
+    }
+    .hero-car-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center 45%;
+      display: block;
+    }
+    /* Gradient fade blending photo into the dark left side */
+    .hero-visual::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, #0A1220 0%, rgba(10,18,32,0.35) 30%, transparent 60%);
+      pointer-events: none;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid { grid-template-columns: 1fr; min-height: unset; }
+      .hero-content { text-align: center; padding: 48px 24px 40px; order: 2; }
+      .hero-sub { margin-left: auto; margin-right: auto; }
+      .hero-ctas { justify-content: center; }
+      .hero-visual { order: 1; height: 60vw; max-height: 360px; min-height: 220px; }
+      .stats-bar { grid-template-columns: 1fr 1fr; }
+      .stat:nth-child(2) { border-right: none; }
+      .stat:nth-child(3) { border-top: 1px solid var(--border); }
+      .stat:nth-child(4) { border-top: 1px solid var(--border); }
+    }
+    @media (max-width: 460px) {
+      .stats-bar { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* ── TRUST BAR ── */
+    .trust {
+      background: var(--card);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 0;
+      overflow: hidden;
+    }
+    @keyframes trust-scroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .trust-inner {
+      display: flex; align-items: center;
+      width: max-content;
+      animation: trust-scroll 22s linear infinite;
+    }
+    .trust:hover .trust-inner { animation-play-state: paused; }
+    .trust-item {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.85rem; font-weight: 600; color: var(--heading);
+      white-space: nowrap; padding: 0 36px;
+    }
+    .trust-icon { color: var(--accent); }
+
+    /* ── BRAND TRUST STRIP ── */
+    .brand-strip {
+      background: var(--bg); border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex; flex-wrap: wrap; align-items: center;
+      justify-content: center; gap: 10px 20px;
+    }
+    .brand-strip-label {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--muted); white-space: nowrap;
+    }
+    .brand-strip-logos { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .brand-pill {
+      font-size: 0.75rem; font-weight: 600; color: var(--body);
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 20px; padding: 4px 13px; white-space: nowrap;
+      letter-spacing: 0.01em;
+    }
+
+    /* ── SECTION HEADERS ── */
+    .sec-head { text-align: center; margin-bottom: 48px; }
+    .sec-head.left { text-align: left; }
+    .sec-title {
+      font-size: clamp(1.7rem, 3.2vw, 2.6rem);
+      font-weight: 800; letter-spacing: -0.02em; margin-bottom: 12px;
+    }
+    .sec-sub {
+      font-size: 1rem; color: var(--body);
+      max-width: 500px; margin: 0 auto; line-height: 1.6;
+    }
+
+    /* ── SERVICES ── */
+    .services { padding: 96px 0; background: var(--bg); }
+    .tab-row {
+      display: flex; justify-content: center; gap: 0;
+      margin-bottom: 48px;
+    }
+    .tab-wrap {
+      display: flex; background: var(--card);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 4px; gap: 4px;
+    }
+    .tab-btn {
+      padding: 10px 28px; border: none; background: transparent; cursor: pointer;
+      font-family: var(--font-body); font-weight: 600; font-size: 0.95rem;
+      color: var(--body); border-radius: 8px;
+      transition: background 0.2s, color 0.2s;
+      min-height: 42px;
+    }
+    .tab-btn.active { background: var(--accent); color: #fff; }
+    @media (hover: hover) and (pointer: fine) {
+      .tab-btn:not(.active):hover { background: rgba(30,95,204,0.09); color: var(--heading); }
+    }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    .svc-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    }
+    @media (max-width: 860px) { .svc-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .svc-grid { grid-template-columns: 1fr; } }
+
+    .svc-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 26px;
+      display: flex; flex-direction: column;
+      position: relative; overflow: hidden;
+      transition: border-color 0.2s, transform 0.22s cubic-bezier(0.23,1,0.32,1);
+    }
+    .svc-card.pop {
+      border-color: var(--accent);
+      background: linear-gradient(140deg, var(--card) 0%, rgba(30,95,204,0.07) 100%);
+    }
+    .svc-card.pop::before {
+      content: 'Most Popular';
+      position: absolute; top: 0; right: 0;
+      background: var(--accent); color: #fff;
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; padding: 5px 13px;
+      border-bottom-left-radius: var(--radius);
+    }
+    .svc-card::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.06) 50%, transparent 60%);
+      background-size: 200% 100%; background-position: 200% 0;
+      transition: background-position 0.55s ease; pointer-events: none;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .svc-card:hover { border-color: var(--accent-hover); transform: translateY(-4px); }
+      .svc-card:hover::after { background-position: -200% 0; }
+    }
+    .svc-tier {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 6px;
+    }
+    .svc-name {
+      font-size: 1.3rem; font-weight: 800; color: var(--heading);
+      margin-bottom: 6px; letter-spacing: -0.01em;
+    }
+    .svc-price {
+      font-size: 0.875rem; color: var(--body); margin-bottom: 18px; font-weight: 500;
+    }
+    .svc-price strong { font-size: 1.15rem; font-weight: 700; color: var(--heading); }
+
+    .price-table {
+      background: rgba(30,95,204,0.05);
+      border: 1px solid var(--border); border-radius: 8px;
+      padding: 11px 13px; margin-bottom: 18px;
+    }
+    .price-table-head {
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.06em; color: var(--muted); margin-bottom: 8px;
+    }
+    .price-table-grid {
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 4px 12px; font-size: 0.78rem; color: var(--body);
+    }
+    .price-table-grid span { font-weight: 700; color: var(--heading); text-align: right; }
+
+    .svc-features {
+      list-style: none; display: flex; flex-direction: column; gap: 9px;
+      margin-bottom: 24px; flex: 1;
+    }
+    .svc-features li {
+      display: flex; align-items: flex-start; gap: 9px;
+      font-size: 0.875rem; line-height: 1.45;
+    }
+    .svc-features li::before {
+      content: '✓'; color: var(--accent); font-weight: 700;
+      flex-shrink: 0; margin-top: 1px;
+    }
+    .svc-note {
+      background: rgba(30,95,204,0.05); border: 1px solid var(--border);
+      border-radius: 7px; padding: 9px 11px;
+      font-size: 0.75rem; color: var(--muted); line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    /* ── BEFORE / AFTER ── */
+    .ba-section { padding: 96px 0; background: var(--card); }
+    .ba-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 3px; border-radius: var(--radius);
+      overflow: hidden; border: 1px solid var(--border-hi);
+      max-width: 880px; margin: 0 auto;
+    }
+    .ba-panel {
+      aspect-ratio: 3/4;
+      position: relative; overflow: hidden;
+    }
+    .ba-photo {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center center;
+      display: block;
+    }
+    .ba-label {
+      position: absolute; top: 14px; left: 14px; z-index: 2;
+      border-radius: 6px; padding: 4px 11px;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.07em;
+      text-transform: uppercase; color: #fff;
+    }
+    .ba-before .ba-label { background: rgba(40,40,40,0.85); backdrop-filter: blur(4px); }
+    .ba-after  .ba-label { background: rgba(30,95,204,0.9); backdrop-filter: blur(4px); }
+    @media (max-width: 580px) {
+      .ba-grid { grid-template-columns: 1fr; }
+      .ba-panel { aspect-ratio: 4/3; }
+    }
+
+    /* ── GUARANTEE ── */
+    .guarantee {
+      padding: 80px 0;
+      background: linear-gradient(150deg, var(--bg-deep) 0%, rgba(30,95,204,0.07) 50%, var(--bg-deep) 100%);
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      text-align: center; position: relative; overflow: hidden;
+    }
+    .guarantee::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 65% 100% at 50% 50%, rgba(30,95,204,0.07) 0%, transparent 70%);
+    }
+    .guar-inner { position: relative; z-index: 1; }
+    .guar-icon { font-size: 2.4rem; margin-bottom: 16px; display: block; }
+    .guar-h2 {
+      font-size: clamp(1.75rem, 3.8vw, 2.9rem); font-weight: 800;
+      letter-spacing: -0.025em; margin-bottom: 16px;
+      max-width: 760px; margin-left: auto; margin-right: auto;
+    }
+    .guar-sub {
+      font-size: 1.05rem; color: var(--body);
+      max-width: 540px; margin: 0 auto 28px; line-height: 1.65;
+    }
+
+    /* ── SOCIAL PROOF ── */
+    .proof { padding: 96px 0; background: var(--bg); }
+    .proof-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    }
+    @media (max-width: 860px) { .proof-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .proof-grid { grid-template-columns: 1fr; } }
+    .proof-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 26px;
+      display: flex; flex-direction: column; gap: 14px;
+      transition: border-color 0.2s, transform 0.22s cubic-bezier(0.23,1,0.32,1);
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .proof-card:hover { border-color: var(--border-hi); transform: translateY(-3px); }
+    }
+    .proof-stars { display: flex; gap: 2px; color: #F59E0B; font-size: 1rem; }
+    .proof-body  { font-size: 0.9rem; line-height: 1.65; color: var(--body); flex: 1; }
+    .proof-name  { font-weight: 700; font-size: 0.92rem; color: var(--heading); }
+    .proof-city  { font-size: 0.78rem; color: var(--muted); }
+
+    /* ── WHY US ── */
+    .why { padding: 96px 0; background: var(--card); }
+    .why-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    }
+    @media (max-width: 860px) { .why-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .why-grid { grid-template-columns: 1fr; } }
+    .why-card {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 22px;
+      transition: border-color 0.2s, transform 0.22s cubic-bezier(0.23,1,0.32,1);
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .why-card:hover { border-color: var(--border-hi); transform: translateY(-3px); }
+    }
+    .why-icon {
+      width: 38px; height: 38px;
+      background: rgba(30,95,204,0.11); border: 1px solid rgba(30,95,204,0.2);
+      border-radius: 8px; display: flex; align-items: center; justify-content: center;
+      font-size: 1.15rem; margin-bottom: 13px;
+    }
+    .why-title {
+      font-size: 0.975rem; font-weight: 700; color: var(--heading);
+      margin-bottom: 7px; line-height: 1.3;
+    }
+    .why-body { font-size: 0.855rem; color: var(--body); line-height: 1.55; }
+
+    /* ── FORM ── */
+    .form-section { padding: 96px 0; background: var(--bg); }
+    .form-wrap {
+      max-width: 660px; margin: 0 auto;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 14px; overflow: hidden;
+    }
+    .form-head {
+      background: linear-gradient(130deg, var(--accent) 0%, #2860D8 100%);
+      padding: 26px 30px; text-align: center;
+    }
+    .form-head-title {
+      font-family: var(--font-head); font-size: 1.35rem; font-weight: 800;
+      color: #fff; margin-bottom: 5px;
+    }
+    .form-head-sub { font-size: 0.875rem; color: rgba(255,255,255,0.82); }
+    .form-head-urgency {
+      font-size: 0.78rem; font-weight: 600; margin-top: 8px;
+      color: rgba(255,255,255,0.65); letter-spacing: 0.01em;
+    }
+    .form-prog-track { height: 4px; background: rgba(255,255,255,0.2); }
+    .form-prog-bar   { height: 100%; background: #fff; width: 33.33%; transition: width 0.4s cubic-bezier(0.23,1,0.32,1); }
+    .form-body { padding: 28px 30px; }
+    .form-step { display: none; }
+    .form-step.active { display: block; }
+    .step-tag {
+      font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.07em; color: var(--accent); margin-bottom: 5px;
+    }
+    .step-title { font-size: 1.15rem; font-weight: 800; color: var(--heading); margin-bottom: 22px; }
+    .fgrp { margin-bottom: 14px; }
+    .flbl { display: block; font-size: 0.82rem; font-weight: 600; color: var(--heading); margin-bottom: 5px; }
+    .finp, .fsel, .ftxt {
+      width: 100%; background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 11px 13px;
+      font-family: var(--font-body); font-size: 0.93rem; color: var(--heading);
+      outline: none; transition: border-color 0.2s, box-shadow 0.2s;
+      min-height: 48px; -webkit-appearance: none; appearance: none;
+    }
+    .fsel {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%238AABD4'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 12px center; background-size: 16px;
+      padding-right: 36px; cursor: pointer;
+    }
+    .ftxt { min-height: 96px; resize: vertical; line-height: 1.5; }
+    .finp:focus, .fsel:focus, .ftxt:focus {
+      border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+    .finp::placeholder, .ftxt::placeholder { color: var(--muted); }
+    .svc-opts { display: flex; flex-direction: column; gap: 14px; }
+    .svc-group-label {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 6px;
+    }
+    .svc-group-cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+    .svc-radio { display: none; }
+    .svc-radio-lbl {
+      display: flex; flex-direction: column; gap: 2px;
+      background: var(--bg); border: 2px solid var(--border);
+      border-radius: var(--radius); padding: 13px;
+      cursor: pointer; transition: border-color 0.2s, background 0.2s;
+    }
+    .svc-radio:checked + .svc-radio-lbl { border-color: var(--accent); background: rgba(30,95,204,0.06); }
+    @media (hover: hover) and (pointer: fine) {
+      .svc-radio-lbl:hover { border-color: var(--accent-hover); }
+    }
+    .svc-radio-name  { font-weight: 700; font-size: 0.875rem; color: var(--heading); }
+    .svc-radio-price { font-size: 0.75rem; color: var(--body); }
+    .f2col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 560px) { .svc-group-cards { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .f2col { grid-template-columns: 1fr; } .svc-group-cards { grid-template-columns: 1fr; } }
+    .form-actions {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-top: 22px; gap: 12px;
+    }
+    .form-actions-end { justify-content: flex-end; }
+    .btn-back {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: none; border: none; cursor: pointer;
+      font-family: var(--font-body); font-weight: 600; font-size: 0.9rem;
+      color: var(--body); padding: 10px 0; min-height: 48px;
+    }
+    @media (hover: hover) and (pointer: fine) { .btn-back:hover { color: var(--heading); } }
+    .form-fine {
+      font-size: 0.75rem; color: var(--muted); text-align: center;
+      margin-top: 14px; line-height: 1.5;
+    }
+    .form-success { display: none; text-align: center; padding: 44px 30px; }
+    .form-success.show { display: block; }
+    .fs-icon  { font-size: 2.8rem; margin-bottom: 14px; display: block; }
+    .fs-title { font-size: 1.3rem; font-weight: 800; color: var(--heading); margin-bottom: 8px; }
+    .fs-body  { color: var(--body); line-height: 1.6; }
+
+
+    /* ── SERVICE AREAS ── */
+    .areas { padding: 96px 0; background: var(--card); }
+    .areas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    @media (max-width: 700px) { .areas-grid { grid-template-columns: 1fr; gap: 32px; } }
+    .pills { display: flex; flex-wrap: wrap; gap: 9px; margin-bottom: 26px; }
+    .pill {
+      background: rgba(30,95,204,0.10); border: 1px solid rgba(30,95,204,0.2);
+      border-radius: 100px; padding: 6px 15px;
+      font-size: 0.855rem; font-weight: 600; color: var(--heading);
+    }
+    .map-box {
+      aspect-ratio: 4/3; background: var(--bg);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 11px; color: var(--muted); font-size: 0.82rem; text-align: center; padding: 20px;
+    }
+    .map-box-icon { font-size: 2.4rem; }
+    .nap {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 22px; margin-top: 24px;
+    }
+    .nap h4 { font-size: 0.975rem; font-weight: 700; margin-bottom: 14px; }
+    .nap-row {
+      display: flex; gap: 9px; align-items: flex-start;
+      font-size: 0.855rem; margin-bottom: 10px; color: var(--body);
+    }
+    .nap-row:last-child { margin-bottom: 0; }
+    .nap-icon { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+    .nap-row a { color: var(--heading); font-weight: 600; }
+    @media (hover: hover) and (pointer: fine) { .nap-row a:hover { color: var(--accent); } }
+
+    /* ── FAQ ── */
+    .faq-sec { padding: 96px 0; background: var(--bg); }
+    .faq-list { max-width: 740px; margin: 0 auto; display: flex; flex-direction: column; gap: 8px; }
+    .faq-item {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius); overflow: hidden; transition: border-color 0.2s;
+    }
+    .faq-item.open { border-color: var(--border-hi); }
+    .faq-q {
+      display: flex; align-items: center; justify-content: space-between; gap: 14px;
+      padding: 18px 22px; cursor: pointer;
+      font-weight: 700; font-size: 0.95rem; color: var(--heading);
+      user-select: none;
+    }
+    .faq-chev {
+      flex-shrink: 0; width: 18px; height: 18px; color: var(--accent);
+      transition: transform 0.3s cubic-bezier(0.23,1,0.32,1);
+    }
+    .faq-item.open .faq-chev { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.38s cubic-bezier(0.23,1,0.32,1);
+      padding: 0 22px;
+    }
+    .faq-a-in {
+      font-size: 0.875rem; color: var(--body); line-height: 1.7; padding-bottom: 18px;
+    }
+    .faq-item.open .faq-a { max-height: 400px; }
+
+    /* ── FINAL CTA ── */
+    .final {
+      padding: 96px 0; text-align: center;
+      background: linear-gradient(150deg, var(--bg-deep) 0%, #0A1220 45%, rgba(30,95,204,0.05) 100%);
+      border-top: 1px solid var(--border);
+    }
+    .final-h2 {
+      font-size: clamp(1.75rem, 3.8vw, 2.9rem); font-weight: 800;
+      letter-spacing: -0.02em; margin-bottom: 12px;
+    }
+    .final-sub { font-size: 1rem; color: var(--body); max-width: 440px; margin: 0 auto 28px; }
+    .final-btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    .urgency { font-size: 0.82rem; color: var(--accent); font-weight: 600; margin-top: 18px; }
+
+    /* ── FOOTER ── */
+    .footer { background: #060D18; border-top: 1px solid var(--border); padding: 56px 0 28px; }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 44px;
+    }
+    @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; } }
+    @media (max-width: 440px) { .footer-grid { grid-template-columns: 1fr; gap: 24px; } }
+    .footer-brand {
+      font-family: var(--font-head); font-size: 1.25rem; font-weight: 800;
+      color: var(--heading); margin-bottom: 12px;
+    }
+    .footer-brand span { color: var(--accent); }
+    .footer-tag { font-size: 0.855rem; color: var(--muted); line-height: 1.6; margin-bottom: 18px; max-width: 260px; }
+    .footer-contact a {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.875rem; color: var(--body); font-weight: 500; margin-bottom: 8px;
+    }
+    @media (hover: hover) and (pointer: fine) { .footer-contact a:hover { color: var(--heading); } }
+    .fc-icon { color: var(--accent); font-size: 0.9rem; }
+    .footer-col-head {
+      font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.06em; color: var(--muted); margin-bottom: 14px;
+    }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .footer-links li a { font-size: 0.855rem; color: var(--body); transition: color 0.2s; }
+    @media (hover: hover) and (pointer: fine) { .footer-links li a:hover { color: var(--heading); } }
+    .footer-hours { font-size: 0.855rem; color: var(--body); line-height: 1.7; margin-top: 20px; }
+    .footer-bottom {
+      border-top: 1px solid var(--border); padding-top: 22px;
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+      font-size: 0.78rem; color: var(--muted);
+    }
+
+    /* ── MOBILE STICKY BAR ── */
+    @media (max-width: 768px) {
+      .mobile-sticky {
+        position: fixed; bottom: 0; left: 0; right: 0; z-index: 999;
+        display: flex;
+        background: rgba(10,18,32,0.97);
+        border-top: 1px solid var(--border);
+        padding: 10px 16px;
+        padding-bottom: calc(10px + env(safe-area-inset-bottom));
+        gap: 10px;
+      }
+      .mobile-sticky a { flex: 1; min-height: 48px; font-size: 0.88rem; }
+      body { padding-bottom: 80px; }
+    }
+    @media (min-width: 769px) { .mobile-sticky { display: none; } }
+  </style>
+</head>
+<body>
+
+<!-- ── STICKY HEADER ── -->
+<header class="hdr">
+  <div class="hdr-inner">
+    <a href="#" class="hdr-logo">
+      <img src="PFPs/Aerosdetailing/aero-logo-horizontal.png" alt="Aero Detailing">
+    </a>
+    <a href="tel:+12488779060" class="hdr-phone">
+      <svg class="hdr-phone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.1a16 16 0 006 6l.66-.66a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+      <span class="hdr-phone-num">(248) 877-9060</span>
+    </a>
+    <a href="#form" class="btn-primary hdr-cta">Book My Detail</a>
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-grid">
+    <div class="hero-content">
+      <div class="hero-badge reveal">South Lyon, MI</div>
+      <h1 class="hero-h1 reveal" data-delay="1">
+        Drive-Through Washes<br>
+        <span class="blue">Damage Your Paint.</span><br>
+        We Restore It.
+      </h1>
+      <p class="hero-sub reveal" data-delay="2">
+        Hand wash. Professional-grade products. A free come-back guarantee on every service. Spot something we missed? Call us and we return at no charge.
+      </p>
+      <div class="hero-ctas reveal" data-delay="3">
+        <a href="#form" class="btn-primary" id="hero-cta">Book My Detail</a>
+        <a href="tel:+12488779060" class="btn-outline">Call (248) 877-9060</a>
+      </div>
+      <div class="stats-bar reveal" data-delay="4">
+        <div class="stat">
+          <div class="stat-val">No</div>
+          <div class="stat-lbl">Shortcuts. Ever.</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">Free</div>
+          <div class="stat-lbl">Come-Back Guarantee</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">Mobile</div>
+          <div class="stat-lbl">We Come to You</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">0</div>
+          <div class="stat-lbl">Complaints. Ever.</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual reveal" data-delay="2">
+      <img src="AeroDetailing-png/hero-bg.jpg" alt="BMW being detailed with professional foam wash at Aero Detailing South Lyon MI" class="hero-car-img" loading="eager">
+    </div>
+  </div>
+</section>
+
+<!-- ── TRUST BAR ── -->
+<div class="trust">
+  <div class="trust-inner">
+    <div class="trust-item"><span class="trust-icon">🤚</span> Hand Wash Only — No Machines</div>
+    <div class="trust-item"><span class="trust-icon">🛡️</span> Free Come-Back Guarantee</div>
+    <div class="trust-item"><span class="trust-icon">📍</span> South Lyon, Brighton, Milford + More</div>
+    <div class="trust-item"><span class="trust-icon">🪪</span> Licensed &amp; Insured</div>
+    <div class="trust-item"><span class="trust-icon">⚡</span> Same-Week Availability</div>
+    <div class="trust-item"><span class="trust-icon">🚗</span> Mobile — We Come to You</div>
+    <div class="trust-item"><span class="trust-icon">✋</span> No Shortcuts. Ever.</div>
+    <!-- duplicate for seamless loop -->
+    <div class="trust-item"><span class="trust-icon">🤚</span> Hand Wash Only — No Machines</div>
+    <div class="trust-item"><span class="trust-icon">🛡️</span> Free Come-Back Guarantee</div>
+    <div class="trust-item"><span class="trust-icon">📍</span> South Lyon, Brighton, Milford + More</div>
+    <div class="trust-item"><span class="trust-icon">🪪</span> Licensed &amp; Insured</div>
+    <div class="trust-item"><span class="trust-icon">⚡</span> Same-Week Availability</div>
+    <div class="trust-item"><span class="trust-icon">🚗</span> Mobile — We Come to You</div>
+    <div class="trust-item"><span class="trust-icon">✋</span> No Shortcuts. Ever.</div>
+  </div>
+</div>
+
+<!-- ── PRODUCT TRUST STRIP ── -->
+<div class="brand-strip">
+  <span class="brand-strip-label">Products we use</span>
+  <div class="brand-strip-logos">
+    <span class="brand-pill">Koch Chemie</span>
+    <span class="brand-pill">Meguiar's Gold Class</span>
+    <span class="brand-pill">Suds.lab</span>
+    <span class="brand-pill">Bissell SpotClean</span>
+    <span class="brand-pill">Hot Shine Foam</span>
+  </div>
+</div>
+
+<!-- ── SERVICES ── -->
+<section class="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title reveal">Exterior &amp; Interior Packages</h2>
+      <p class="sec-sub reveal" data-delay="1">Every package uses name-brand products. Prices vary by vehicle size.</p>
+    </div>
+
+    <div class="tab-row reveal">
+      <div class="tab-wrap">
+        <button class="tab-btn active" data-tab="exterior">Exterior</button>
+        <button class="tab-btn" data-tab="interior">Interior</button>
+      </div>
+    </div>
+
+    <!-- EXTERIOR -->
+    <div class="tab-panel active" id="tab-exterior">
+      <div class="svc-grid">
+        <div class="svc-card reveal">
+          <div class="svc-tier">Exterior</div>
+          <div class="svc-name">Basic Wash</div>
+          <div class="svc-price"><strong>$60</strong> Sedan / up to $95 Large SUV</div>
+          <div class="price-table">
+            <div class="price-table-head">Pricing by vehicle size</div>
+            <div class="price-table-grid">
+              <div>Sedan</div><span>$60</span>
+              <div>Mid-SUV</div><span>$75</span>
+              <div>Truck</div><span>$85</span>
+              <div>Large SUV</div><span>$95</span>
+            </div>
+          </div>
+          <ul class="svc-features">
+            <li>Pre-rinse pressure wash</li>
+            <li>Two-bucket hand wash with Meguiar's Gold Class</li>
+            <li>Wheels + tires cleaned with Hot Rims cleaner</li>
+            <li>Woolie brush on wheel faces, wheel wells rinsed</li>
+            <li>Hand dry + Hot Shine Foam tire shine</li>
+          </ul>
+          <a href="#form" class="btn-primary">Book This Package</a>
+        </div>
+
+        <div class="svc-card pop reveal" data-delay="1">
+          <div class="svc-tier">Exterior</div>
+          <div class="svc-name">Premium Wash</div>
+          <div class="svc-price"><strong>$90</strong> Sedan / up to $125 Large SUV</div>
+          <div class="price-table">
+            <div class="price-table-head">Pricing by vehicle size</div>
+            <div class="price-table-grid">
+              <div>Sedan</div><span>$90</span>
+              <div>Mid-SUV</div><span>$105</span>
+              <div>Truck</div><span>$115</span>
+              <div>Large SUV</div><span>$125</span>
+            </div>
+          </div>
+          <ul class="svc-features">
+            <li>Everything in Basic Wash</li>
+            <li>Foam cannon pre-soak (3-5 min dwell time)</li>
+            <li>Koch Chemie Green Star on door jambs + lower panels</li>
+            <li>Bug + tar treatment on front bumper</li>
+            <li>Meguiar's Ultimate Liquid Wax by hand</li>
+            <li>Exterior windows cleaned + trim wiped</li>
+          </ul>
+          <a href="#form" class="btn-primary">Book This Package</a>
+        </div>
+
+        <div class="svc-card reveal" data-delay="2">
+          <div class="svc-tier">Exterior</div>
+          <div class="svc-name">Elite Detail</div>
+          <div class="svc-price"><strong>$105</strong> Sedan / up to $150 Large SUV</div>
+          <div class="price-table">
+            <div class="price-table-head">Pricing by vehicle size</div>
+            <div class="price-table-grid">
+              <div>Sedan</div><span>$105</span>
+              <div>Mid-SUV</div><span>$130</span>
+              <div>Truck</div><span>$140</span>
+              <div>Large SUV</div><span>$150</span>
+            </div>
+          </div>
+          <ul class="svc-features">
+            <li>Everything in Premium Wash</li>
+            <li>Koch Chemie ProtectorWax applied by hand</li>
+            <li>Suds.lab CP Ceramic Wash final rinse (hydrophobic protection)</li>
+            <li>Full wheel detail: faces, barrels, and wells</li>
+            <li>Maximum paint protection without a full correction</li>
+          </ul>
+          <a href="#form" class="btn-primary">Book This Package</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTERIOR -->
+    <div class="tab-panel" id="tab-interior">
+      <div class="svc-grid">
+        <div class="svc-card reveal">
+          <div class="svc-tier">Interior</div>
+          <div class="svc-name">Basic Clean</div>
+          <div class="svc-price"><strong>$75</strong> Sedan / up to $105 Large SUV</div>
+          <div class="price-table">
+            <div class="price-table-head">Pricing by vehicle size</div>
+            <div class="price-table-grid">
+              <div>Sedan</div><span>$75</span>
+              <div>Mid-SUV</div><span>$85</span>
+              <div>Truck</div><span>$95</span>
+              <div>Large SUV</div><span>$105</span>
+            </div>
+          </div>
+          <ul class="svc-features">
+            <li>Air compressor blowout of all vents, crevices + seat rails</li>
+            <li>Full vacuum with Vacmaster (seats, carpets, trunk)</li>
+            <li>Koch Chemie Pol Star wipe-down of dash, console + door panels</li>
+            <li>Floor mats cleaned with T2D Rubber Mat Cleaner</li>
+            <li>Sprayway glass cleaner on all interior windows</li>
+            <li>Blackline Dark Ice air freshener finish</li>
+          </ul>
+          <a href="#form" class="btn-primary">Book This Package</a>
+        </div>
+
+        <div class="svc-card pop reveal" data-delay="1">
+          <div class="svc-tier">Interior</div>
+          <div class="svc-name">Premium Clean</div>
+          <div class="svc-price"><strong>$105</strong> Sedan / up to $140 Large SUV</div>
+          <div class="price-table">
+            <div class="price-table-head">Pricing by vehicle size</div>
+            <div class="price-table-grid">
+              <div>Sedan</div><span>$105</span>
+              <div>Mid-SUV</div><span>$120</span>
+              <div>Truck</div><span>$130</span>
+              <div>Large SUV</div><span>$140</span>
+            </div>
+          </div>
+          <ul class="svc-features">
+            <li>Everything in Basic Clean</li>
+            <li>Koch Chemie Leather Star on all leather surfaces</li>
+            <li>Koch Chemie Pol Star deep clean of door pockets, cup holders + all surfaces</li>
+            <li>Detail brush on vents, buttons + tight spots</li>
+            <li>Drill brush agitation + Bissell SpotClean extraction on stains</li>
+            <li>Steam on stubborn spots + OdoBan odor treatment</li>
+          </ul>
+          <a href="#form" class="btn-primary">Book This Package</a>
+        </div>
+
+        <div class="svc-card reveal" data-delay="2">
+          <div class="svc-tier">Interior</div>
+          <div class="svc-name">Elite Clean</div>
+          <div class="svc-price"><strong>$150</strong> Sedan / up to $185 Large SUV</div>
+          <div class="price-table">
+            <div class="price-table-head">Pricing by vehicle size</div>
+            <div class="price-table-grid">
+              <div>Sedan</div><span>$150</span>
+              <div>Mid-SUV</div><span>$165</span>
+              <div>Truck</div><span>$175</span>
+              <div>Large SUV</div><span>$185</span>
+            </div>
+          </div>
+          <ul class="svc-features">
+            <li>Everything in Premium Clean</li>
+            <li>Full Bissell extraction on ALL carpets + upholstery</li>
+            <li>Drill brush full carpet agitation before extraction</li>
+            <li>Deep seat rail + under-seat clean (air compressor + vacuum)</li>
+            <li>Headliner spot cleaning</li>
+            <li>Koch Chemie Leather Star clean + condition on all leather</li>
+            <li>Koch Chemie Top Star on all interior plastic + rubber surfaces</li>
+            <li>Full odor elimination: OdoBan + steam + Dark Ice</li>
+          </ul>
+          <a href="#form" class="btn-primary">Book This Package</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BEFORE / AFTER ── -->
+<section class="ba-section">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title reveal">The Aero Difference</h2>
+      <p class="sec-sub reveal" data-delay="1">This is what happens when you stop settling for a $12 machine wash.</p>
+    </div>
+    <div class="ba-grid">
+      <div class="ba-panel ba-before reveal-left">
+        <div class="ba-label">Before</div>
+        <img src="AeroDetailing-png/before-web.jpg" alt="Car interior before detailing — dirty floor mats and grime" class="ba-photo" loading="lazy">
+      </div>
+      <div class="ba-panel ba-after reveal-right">
+        <div class="ba-label">After</div>
+        <img src="AeroDetailing-png/after-web.jpg" alt="Car interior after Aero Detailing — clean seats and floor" class="ba-photo" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── GUARANTEE ── -->
+<section class="guarantee">
+  <div class="wrap-sm">
+    <div class="guar-inner">
+      <span class="guar-icon">🛡️</span>
+      <h2 class="guar-h2 reveal">
+        Spot Something We Missed?<br>Call Us. We Come Back Free.
+      </h2>
+      <p class="guar-sub reveal" data-delay="1">
+        Send a photo, point out what we missed, and we return at no charge. No arguing. No runaround. Every service at Aero is backed by this.
+      </p>
+      <a href="#form" class="btn-primary reveal" data-delay="2">Book Risk-Free</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── WHY US ── -->
+<section class="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title reveal">What Sets Aero Apart</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon">🧼</div>
+        <div class="why-title">Meguiar's Gold Class on Every Basic Service</div>
+        <p class="why-body">Not a generic soap. Meguiar's Gold Class is the hand-wash formula used in top-tier detailing shops. It's standard here, not an upgrade.</p>
+      </div>
+      <div class="why-card reveal" data-delay="1">
+        <div class="why-icon">🔬</div>
+        <div class="why-title">Koch Chemie + Suds.lab Products</div>
+        <p class="why-body">The same professional lines used by competition detailers and ceramic coating shops. Not the stuff you find at an auto parts store.</p>
+      </div>
+      <div class="why-card reveal" data-delay="2">
+        <div class="why-icon">🔄</div>
+        <div class="why-title">Free Come-Back Guarantee on Every Job</div>
+        <p class="why-body">Spot anything we missed, send a photo, and we return at zero cost. No questions asked. No scheduling hassle.</p>
+      </div>
+      <div class="why-card reveal" data-delay="3">
+        <div class="why-icon">💧</div>
+        <div class="why-title">Bissell SpotClean Extraction on Premium+</div>
+        <p class="why-body">Premium and Elite interiors use a Bissell SpotClean extractor on stained areas, not just chemicals and a microfiber wipe-down.</p>
+      </div>
+      <div class="why-card reveal" data-delay="4">
+        <div class="why-icon">🛡️</div>
+        <div class="why-title">Ceramic Wash Protection Built Into Elite</div>
+        <p class="why-body">Suds.lab CP Ceramic Wash gives your paint hydrophobic protection built into the rinse. Real protection, not a marketing claim.</p>
+      </div>
+      <div class="why-card reveal" data-delay="5">
+        <div class="why-icon">📅</div>
+        <div class="why-title">Same-Week Slots, South Lyon Area</div>
+        <p class="why-body">No 3-week waitlists. Most bookings in South Lyon, Brighton, and Milford are confirmed within the same week.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LEAD FORM ── -->
+<section class="form-section" id="form">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title reveal">Book Your Detail</h2>
+      <p class="sec-sub reveal" data-delay="1">Takes 90 seconds. We'll confirm your slot by phone or text.</p>
+    </div>
+
+
+    <div class="form-wrap reveal">
+      <div class="form-head">
+        <div class="form-head-title">Book Your Detail</div>
+        <div class="form-head-sub">Free quote included. No commitment.</div>
+        <div class="form-head-urgency">⚡ Same-week slots available — weekdays book fast</div>
+        <div class="form-prog-track">
+          <div class="form-prog-bar" id="formProg"></div>
+        </div>
+      </div>
+
+      <div id="formBody">
+        <!-- STEP 1 -->
+        <div class="form-body">
+          <div class="form-step active" id="step0">
+            <p class="step-tag">Step 1 of 3</p>
+            <p class="step-title">What service are you looking for?</p>
+            <div class="fgrp">
+              <label class="flbl">Service type</label>
+              <div class="svc-opts">
+                <div class="svc-group">
+                  <div class="svc-group-label">Exterior</div>
+                  <div class="svc-group-cards">
+                    <input type="radio" name="svc" id="s1" value="Basic Exterior" class="svc-radio">
+                    <label for="s1" class="svc-radio-lbl"><span class="svc-radio-name">Basic</span><span class="svc-radio-price">From $60</span></label>
+                    <input type="radio" name="svc" id="s2" value="Premium Exterior" class="svc-radio">
+                    <label for="s2" class="svc-radio-lbl"><span class="svc-radio-name">Premium</span><span class="svc-radio-price">From $90</span></label>
+                    <input type="radio" name="svc" id="s3" value="Elite Exterior" class="svc-radio">
+                    <label for="s3" class="svc-radio-lbl"><span class="svc-radio-name">Elite</span><span class="svc-radio-price">From $105</span></label>
+                  </div>
+                </div>
+                <div class="svc-group">
+                  <div class="svc-group-label">Interior</div>
+                  <div class="svc-group-cards">
+                    <input type="radio" name="svc" id="s4" value="Basic Interior" class="svc-radio">
+                    <label for="s4" class="svc-radio-lbl"><span class="svc-radio-name">Basic</span><span class="svc-radio-price">From $75</span></label>
+                    <input type="radio" name="svc" id="s5" value="Premium Interior" class="svc-radio">
+                    <label for="s5" class="svc-radio-lbl"><span class="svc-radio-name">Premium</span><span class="svc-radio-price">From $105</span></label>
+                    <input type="radio" name="svc" id="s6" value="Elite Interior" class="svc-radio">
+                    <label for="s6" class="svc-radio-lbl"><span class="svc-radio-name">Elite</span><span class="svc-radio-price">From $150</span></label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="fgrp">
+              <label class="flbl" for="vsize">Vehicle size</label>
+              <select id="vsize" name="vehicle_size" class="fsel">
+                <option value="" disabled selected>Select your vehicle</option>
+                <option value="Sedan">Sedan</option>
+                <option value="Mid-SUV">Mid-Size SUV / Crossover</option>
+                <option value="Truck">Truck</option>
+                <option value="Large SUV">Large SUV / Full-Size Van</option>
+              </select>
+            </div>
+            <div class="form-actions form-actions-end">
+              <button type="button" class="btn-primary btn-next">Next: Vehicle Details</button>
+            </div>
+          </div>
+
+          <!-- STEP 2 -->
+          <div class="form-step" id="step1">
+            <p class="step-tag">Step 2 of 3</p>
+            <p class="step-title">Tell us about your vehicle.</p>
+            <div class="f2col">
+              <div class="fgrp">
+                <label class="flbl" for="vmake">Make</label>
+                <input type="text" id="vmake" name="vehicle_make" class="finp" placeholder="Toyota">
+              </div>
+              <div class="fgrp">
+                <label class="flbl" for="vmodel">Model + Year</label>
+                <input type="text" id="vmodel" name="vehicle_model" class="finp" placeholder="Camry 2021">
+              </div>
+            </div>
+            <div class="fgrp">
+              <label class="flbl" for="vcolor">Color</label>
+              <input type="text" id="vcolor" name="vehicle_color" class="finp" placeholder="Silver">
+            </div>
+            <div class="fgrp">
+              <label class="flbl" for="notes">Anything specific you want addressed?</label>
+              <textarea id="notes" name="notes" class="ftxt" placeholder="Heavy stain on back seat, water spots on hood, dog hair in carpet..."></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="button" class="btn-back">Back</button>
+              <button type="button" class="btn-primary btn-next">Next: Your Info</button>
+            </div>
+          </div>
+
+          <!-- STEP 3 -->
+          <div class="form-step" id="step2">
+            <p class="step-tag">Step 3 of 3</p>
+            <p class="step-title">How do we reach you?</p>
+            <div class="f2col">
+              <div class="fgrp">
+                <label class="flbl" for="fname">First Name</label>
+                <input type="text" id="fname" name="first_name" class="finp" placeholder="Marcus" required>
+              </div>
+              <div class="fgrp">
+                <label class="flbl" for="lname">Last Name</label>
+                <input type="text" id="lname" name="last_name" class="finp" placeholder="Thompson" required>
+              </div>
+            </div>
+            <div class="fgrp">
+              <label class="flbl" for="fphone">Phone Number</label>
+              <input type="tel" id="fphone" name="phone" class="finp" placeholder="(248) 555-0100" required>
+            </div>
+            <div class="fgrp">
+              <label class="flbl" for="femail">Email Address</label>
+              <input type="email" id="femail" name="email" class="finp" placeholder="you@example.com" required>
+            </div>
+            <div class="fgrp">
+              <label class="flbl" for="faddress">Your Address <span style="color:var(--accent)">*</span></label>
+              <input type="text" id="faddress" name="address" class="finp" placeholder="123 Main St, South Lyon, MI" required>
+            </div>
+            <div class="fgrp">
+              <label class="flbl" for="fdate">Preferred Date</label>
+              <input type="date" id="fdate" name="preferred_date" class="finp">
+            </div>
+            <!-- UTM fields -->
+            <input type="hidden" name="utm_source"   id="utm_source">
+            <input type="hidden" name="utm_medium"   id="utm_medium">
+            <input type="hidden" name="utm_campaign" id="utm_campaign">
+            <input type="hidden" name="utm_content"  id="utm_content">
+            <div class="form-actions">
+              <button type="button" class="btn-back">Back</button>
+              <button type="button" id="submitBtn" class="btn-primary">Request My Booking</button>
+            </div>
+            <p class="form-fine">We'll reach out within a few hours to lock in your date. No spam, ever.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Success state -->
+      <div class="form-success" id="formSuccess">
+        <span class="fs-icon">✅</span>
+        <h3 class="fs-title">Request Received</h3>
+        <p class="fs-body">We'll reach out within a few hours to confirm your slot. Keep an eye on your phone.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── SERVICE AREAS ── -->
+<section class="areas">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title reveal">Service Areas</h2>
+      <p class="sec-sub reveal" data-delay="1">Based in South Lyon. Serving the surrounding communities.</p>
+    </div>
+    <div class="areas-grid">
+      <div>
+        <div class="pills reveal">
+          <span class="pill">South Lyon</span>
+          <span class="pill">Brighton</span>
+          <span class="pill">Milford</span>
+          <span class="pill">Novi</span>
+          <span class="pill">Northville</span>
+          <span class="pill">Wixom</span>
+          <span class="pill">Highland</span>
+          <span class="pill">Commerce Township</span>
+        </div>
+        <div class="nap reveal" data-delay="1">
+          <h4>Aero Detailing</h4>
+          <div class="nap-row">
+            <span class="nap-icon">📍</span>
+            <span>South Lyon, Michigan 48178</span>
+          </div>
+          <div class="nap-row">
+            <span class="nap-icon">📞</span>
+            <a href="tel:+12488779060">(248) 877-9060</a>
+          </div>
+          <div class="nap-row">
+            <span class="nap-icon">✉️</span>
+            <a href="mailto:aerodetailing.us@gmail.com">aerodetailing.us@gmail.com</a>
+          </div>
+          <div class="nap-row">
+            <span class="nap-icon">🕐</span>
+            <span>Monday – Friday</span>
+          </div>
+        </div>
+      </div>
+      <div class="reveal" data-delay="2">
+        <div class="map-box" style="text-align:left;padding:28px 30px;">
+          <div class="map-box-icon" style="font-size:2rem;margin-bottom:16px;">🚗</div>
+          <div style="font-size:0.82rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">Fully Mobile</div>
+          <p style="font-size:0.97rem;color:var(--heading);font-weight:600;line-height:1.5;margin:0 0 10px;">We come to you.</p>
+          <p style="font-size:0.93rem;color:var(--body);line-height:1.6;margin:0;">Give us your address at booking and we show up at your home, driveway, or workplace. No drop-off, no waiting around at a shop.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="faq-sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title reveal">Answers to the Most Common Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <div class="faq-q">
+          How long does a detail take?
+          <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="faq-a"><div class="faq-a-in">A Basic Exterior takes about 1.5 to 2 hours. Premium and Elite packages run 2.5 to 3.5 hours depending on vehicle size and condition. Elite Interior on a heavily soiled vehicle can run up to 4 hours. You'll get a realistic time estimate at booking.</div></div>
+      </div>
+      <div class="faq-item reveal" data-delay="1">
+        <div class="faq-q">
+          Do you come to me, or do I bring the car somewhere?
+          <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="faq-a"><div class="faq-a-in">We come to you. Give us your address at booking and we show up at your home, driveway, or workplace. No drop-off, no waiting around at a shop.</div></div>
+      </div>
+      <div class="faq-item reveal" data-delay="2">
+        <div class="faq-q">
+          What's the real difference between Premium and Elite?
+          <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="faq-a"><div class="faq-a-in">On exteriors, Elite adds Koch Chemie ProtectorWax and a Suds.lab CP Ceramic Wash rinse that gives your paint actual hydrophobic protection. On interiors, Elite adds full Bissell extraction on every carpet and upholstery surface, Koch Chemie Leather Star conditioning on all leather, and Koch Chemie Top Star dressing on every plastic and rubber surface. Premium hits the stains. Elite hits everything. If your car hasn't been detailed in a while, Elite is the right call.</div></div>
+      </div>
+      <div class="faq-item reveal" data-delay="3">
+        <div class="faq-q">
+          What happens if I'm not happy with the result?
+          <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="faq-a"><div class="faq-a-in">Send a photo showing what was missed. We'll schedule a return visit at no charge. No pushback about whether it qualifies. If we missed something, we come back and fix it. That's the guarantee on every service.</div></div>
+      </div>
+      <div class="faq-item reveal" data-delay="4">
+        <div class="faq-q">
+          Do you offer anything for regular customers?
+          <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="faq-a"><div class="faq-a-in">We're working on recurring packages for clients who want to keep their car on a regular schedule. Reach out directly after your first booking and we'll put something together that works for you.</div></div>
+      </div>
+      <div class="faq-item reveal" data-delay="5">
+        <div class="faq-q">
+          Are you insured?
+          <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="faq-a"><div class="faq-a-in">Yes, we're licensed and insured. If you want specifics before booking, call us at (248) 877-9060 and we'll answer any questions directly.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FINAL CTA ── -->
+<section class="final">
+  <div class="wrap-sm">
+    <h2 class="final-h2 reveal">Your Car Is Ready When You Are.</h2>
+    <p class="final-sub reveal" data-delay="1">Most slots fill within the week. Lock in your date now and we'll take care of the rest.</p>
+    <div class="final-btns reveal" data-delay="2">
+      <a href="#form" class="btn-primary">Book My Detail</a>
+      <a href="tel:+12488779060" class="btn-outline">Call (248) 877-9060</a>
+    </div>
+    <p class="urgency reveal" data-delay="3">Free come-back guarantee on every service. No risk.</p>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <img src="PFPs/Aerosdetailing/aero-logo-horizontal.png" alt="Aero Detailing" style="height:52px;width:auto;margin-bottom:14px">
+        <p class="footer-tag">Above the Rest. Below the Surface. Serving South Lyon and surrounding Michigan communities.</p>
+        <div class="footer-contact">
+          <a href="tel:+12488779060"><span class="fc-icon">📞</span> (248) 877-9060</a>
+          <a href="mailto:aerodetailing.us@gmail.com"><span class="fc-icon">✉️</span> aerodetailing.us@gmail.com</a>
+          <a href="https://maps.google.com/?q=South+Lyon,+MI+48178"><span class="fc-icon">📍</span> South Lyon, MI 48178</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-head">Services</div>
+        <ul class="footer-links">
+          <li><a href="#form">Basic Exterior ($60+)</a></li>
+          <li><a href="#form">Premium Exterior ($90+)</a></li>
+          <li><a href="#form">Elite Exterior ($105+)</a></li>
+          <li><a href="#form">Basic Interior ($75+)</a></li>
+          <li><a href="#form">Premium Interior ($105+)</a></li>
+          <li><a href="#form">Elite Interior ($150+)</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-head">Book From Your City</div>
+        <ul class="footer-links">
+          <li><a href="#form">South Lyon</a></li>
+          <li><a href="#form">Brighton</a></li>
+          <li><a href="#form">Milford</a></li>
+          <li><a href="#form">Novi</a></li>
+          <li><a href="#form">Northville</a></li>
+          <li><a href="#form">Commerce Township</a></li>
+        </ul>
+        <div class="footer-col-head" style="margin-top:20px">Hours</div>
+        <div class="footer-hours">
+          Monday – Friday<br>
+          Sat–Sun: Closed
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Aero Detailing. All rights reserved.</span>
+      <span>South Lyon, MI Auto Detailing</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ── MOBILE STICKY BAR ── -->
+<div class="mobile-sticky">
+  <a href="tel:+12488779060" class="btn-outline">📞 Call Now</a>
+  <a href="#form" class="btn-primary">Book My Detail</a>
+</div>
+
+<script>
+  // ── SCROLL REVEAL ──
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  document.querySelectorAll('.reveal-left, .reveal-right').forEach(el => io.observe(el));
+
+  // ── HERO CTA SHAKE — fires once after 4s ──
+  setTimeout(() => {
+    const heroCta = document.getElementById('hero-cta');
+    if (!heroCta) return;
+    heroCta.classList.add('cta-shake');
+    heroCta.addEventListener('animationend', () => heroCta.classList.remove('cta-shake'), { once: true });
+  }, 4000);
+
+
+  // ── SERVICE TABS ──
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.tab;
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + id).classList.add('active');
+    });
+  });
+
+  // ── FAQ ──
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const open = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!open) item.classList.add('open');
+    });
+  });
+
+  // ── MULTI-STEP FORM ──
+  const steps = document.querySelectorAll('.form-step');
+  const prog  = document.getElementById('formProg');
+  let cur = 0;
+  function goTo(n) {
+    steps.forEach((s, i) => s.classList.toggle('active', i === n));
+    if (prog) prog.style.width = ((n + 1) / steps.length * 100) + '%';
+    cur = n;
+  }
+  document.querySelectorAll('.btn-next').forEach(b => b.addEventListener('click', () => {
+    if (cur === 0 && !document.querySelector('input[name="svc"]:checked')) {
+      const tip = document.getElementById('step0');
+      tip.style.outline = '2px solid var(--accent)';
+      tip.style.borderRadius = '8px';
+      setTimeout(() => { tip.style.outline = ''; tip.style.borderRadius = ''; }, 1200);
+      return;
+    }
+    if (cur === 1) {
+      const make = document.getElementById('vmake').value.trim();
+      if (!make) {
+        const el = document.getElementById('vmake');
+        el.style.borderColor = '#e05';
+        el.focus();
+        setTimeout(() => el.style.borderColor = '', 1500);
+        return;
+      }
+    }
+    if (cur < steps.length - 1) goTo(cur + 1);
+  }));
+  document.querySelectorAll('.btn-back').forEach(b => b.addEventListener('click', () => { if (cur > 0) goTo(cur - 1); }));
+  goTo(0);
+
+  // ── FORM SUBMIT ──
+  // Using FormSubmit.co as a temporary bridge until GHL is set up.
+  // First submission triggers a one-time confirmation email to aerodetailing.us@gmail.com — click it to activate.
+  // When GHL is ready: replace WEBHOOK with your GHL webhook URL and change Content-Type to application/json.
+  const WEBHOOK = 'https://formsubmit.co/ajax/aerodetailing.us@gmail.com';
+
+  document.getElementById('submitBtn').addEventListener('click', async () => {
+    const fname = document.getElementById('fname').value.trim();
+    const fphone = document.getElementById('fphone').value.trim();
+    const femail = document.getElementById('femail').value.trim();
+    const faddress = document.getElementById('faddress').value.trim();
+    if (!fname || !fphone || !femail || !faddress) {
+      [['fname',fname],['fphone',fphone],['femail',femail],['faddress',faddress]].forEach(([id,val]) => {
+        const el = document.getElementById(id);
+        if (!val) { el.style.borderColor = '#e05'; setTimeout(() => el.style.borderColor = '', 1500); }
+      });
+      return;
+    }
+    const btn = document.getElementById('submitBtn');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    const payload = {
+      service:        document.querySelector('input[name="svc"]:checked')?.value || '',
+      vehicle_size:   document.getElementById('vsize').value,
+      vehicle_make:   document.getElementById('vmake').value,
+      vehicle_model:  document.getElementById('vmodel').value,
+      vehicle_color:  document.getElementById('vcolor').value,
+      notes:          document.getElementById('notes').value,
+      first_name:     document.getElementById('fname').value,
+      last_name:      document.getElementById('lname').value,
+      phone:          document.getElementById('fphone').value,
+      email:          document.getElementById('femail').value,
+      address:        document.getElementById('faddress').value,
+      preferred_date: document.getElementById('fdate').value,
+      utm_source:     document.getElementById('utm_source').value,
+      utm_medium:     document.getElementById('utm_medium').value,
+      utm_campaign:   document.getElementById('utm_campaign').value,
+      utm_content:    document.getElementById('utm_content').value,
+    };
+
+    try {
+      await fetch(WEBHOOK, { method: 'POST', headers: {'Content-Type':'application/json', 'Accept':'application/json'}, body: JSON.stringify(payload) });
+      if (typeof fbq !== 'undefined') fbq('track', 'Lead');
+      document.getElementById('formBody').style.display = 'none';
+      document.getElementById('formSuccess').classList.add('show');
+    } catch {
+      btn.textContent = 'Request My Booking';
+      btn.disabled = false;
+      alert('Something went wrong. Please call us at (248) 877-9060.');
+    }
+  });
+
+  // ── DATE MIN ──
+  const dateEl = document.getElementById('fdate');
+  if (dateEl) dateEl.min = new Date().toISOString().split('T')[0];
+
+  // ── UTM CAPTURE ──
+  const p = new URLSearchParams(window.location.search);
+  ['utm_source','utm_medium','utm_campaign','utm_content'].forEach(k => {
+    const el = document.getElementById(k);
+    if (el) el.value = p.get(k) || '';
+  });
+</script>
+</body>
+</html>
