@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms &amp; Conditions — Aero Detailing</title>
+  <meta name="description" content="Terms and conditions for booking and using Aero Detailing's mobile auto detailing services in South Lyon, MI, including our SMS messaging program terms." />
+  <link rel="icon" href="AeroDetailing-png/icon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:            #0A1220;
+      --bg-deep:       #060D18;
+      --card:          #0F1B35;
+      --card-hi:       #152244;
+      --accent:        #1E5FCC;
+      --accent-hover:  #2E6FDC;
+      --accent-glow:   rgba(30,95,204,0.22);
+      --heading:       #F1F5F9;
+      --body:          #8AABD4;
+      --muted:         #4B6FA8;
+      --border:        rgba(30,95,204,0.14);
+      --border-hi:     rgba(30,95,204,0.3);
+      --radius:        10px;
+      --radius-btn:    10px;
+      --shadow:        0 4px 24px rgba(0,0,0,0.4);
+      --font-head:     'Space Grotesk', sans-serif;
+      --font-body:     'DM Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    h1,h2,h3,h4 { font-family: var(--font-head); color: var(--heading); line-height: 1.15; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; height: auto; }
+
+    .btn-primary {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      background: var(--accent); color: #fff; border: none; cursor: pointer;
+      font-family: var(--font-body); font-weight: 600; font-size: 1rem;
+      padding: 14px 28px; border-radius: var(--radius-btn);
+      transition: background 0.2s cubic-bezier(0.23,1,0.32,1),
+                  transform 0.2s cubic-bezier(0.23,1,0.32,1),
+                  box-shadow 0.2s cubic-bezier(0.23,1,0.32,1);
+      min-height: 48px; text-decoration: none;
+    }
+    .btn-outline {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      background: transparent; color: var(--heading);
+      border: 2px solid rgba(139,171,212,0.28); cursor: pointer;
+      font-family: var(--font-body); font-weight: 600; font-size: 1rem;
+      padding: 14px 28px; border-radius: var(--radius-btn);
+      transition: border-color 0.2s cubic-bezier(0.23,1,0.32,1),
+                  background 0.2s cubic-bezier(0.23,1,0.32,1);
+      min-height: 48px;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 8px 24px var(--accent-glow); }
+      .btn-outline:hover { border-color: var(--accent); background: rgba(30,95,204,0.07); color: #F1F5F9; }
+    }
+    .btn-primary:active { transform: scale(0.97); transition-duration: 100ms; }
+
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── STICKY HEADER ── */
+    .hdr {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      height: 64px;
+      background: #0A1220;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; padding: 0 24px;
+    }
+    .hdr-inner {
+      max-width: 1200px; margin: 0 auto; width: 100%;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .hdr-logo { display: flex; align-items: center; flex-shrink: 0; }
+    .hdr-logo img { display: block; height: 38px; width: auto; }
+    .hdr-phone {
+      display: flex; align-items: center; gap: 7px;
+      font-weight: 600; font-size: 0.95rem; color: var(--heading);
+    }
+    .hdr-phone-icon { color: var(--accent); width: 16px; height: 16px; flex-shrink: 0; }
+    @media (max-width: 600px) { .hdr-phone-num { display: none; } }
+    .hdr-cta { padding: 10px 20px; font-size: 0.9rem; }
+    @keyframes hdr-pulse {
+      0%   { box-shadow: 0 0 0 0 rgba(30,95,204,0.6), 0 4px 14px rgba(30,95,204,0.35); }
+      65%  { box-shadow: 0 0 0 10px rgba(30,95,204,0), 0 4px 14px rgba(30,95,204,0.35); }
+      100% { box-shadow: 0 0 0 0 rgba(30,95,204,0), 0 4px 14px rgba(30,95,204,0.35); }
+    }
+    .hdr-cta { animation: hdr-pulse 2.6s ease-out infinite; }
+    .hdr-cta:hover, .hdr-cta:focus { animation-play-state: paused; }
+
+    /* ── LEGAL CONTENT ── */
+    .legal-wrap { max-width: 760px; margin: 0 auto; padding: 140px 24px 100px; }
+    .legal-header { margin-bottom: 36px; }
+    .legal-header h1 { font-size: clamp(1.9rem, 4.2vw, 2.6rem); letter-spacing: -0.02em; margin-bottom: 10px; }
+    .legal-updated { font-size: 0.85rem; color: var(--muted); font-weight: 600; }
+
+    .legal-toc { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 24px; margin-bottom: 44px; }
+    .legal-toc-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+    .legal-toc ol { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px; counter-reset: toc; }
+    @media (max-width: 560px) { .legal-toc ol { grid-template-columns: 1fr; } }
+    .legal-toc li { counter-increment: toc; font-size: 0.9rem; }
+    .legal-toc li::before { content: counter(toc) ". "; color: var(--accent); font-weight: 700; }
+    .legal-toc a { color: var(--body); }
+    @media (hover: hover) and (pointer: fine) { .legal-toc a:hover { color: var(--heading); } }
+
+    .legal-body h2 { font-size: 1.3rem; letter-spacing: -0.01em; margin-top: 46px; margin-bottom: 14px; scroll-margin-top: 90px; }
+    .legal-body h2:first-of-type { margin-top: 0; }
+    .legal-body p { font-size: 0.98rem; color: var(--body); line-height: 1.8; margin-bottom: 16px; }
+    .legal-body ul { margin: 0 0 18px 22px; color: var(--body); line-height: 1.8; font-size: 0.98rem; }
+    .legal-body li { margin-bottom: 8px; }
+    .legal-body a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+    .legal-body strong { color: var(--heading); }
+
+    .legal-callout {
+      background: rgba(30,95,204,0.08); border: 1px solid rgba(30,95,204,0.25);
+      border-radius: var(--radius); padding: 22px 24px; margin: 18px 0 28px;
+    }
+    .legal-callout p { margin-bottom: 0; color: var(--heading); font-weight: 600; font-size: 0.98rem; line-height: 1.7; }
+
+    .legal-contact { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 26px; margin-top: 12px; }
+    .legal-contact p { margin-bottom: 6px; color: var(--body); font-size: 0.95rem; }
+    .legal-contact p:last-child { margin-bottom: 0; }
+    .legal-contact strong { color: var(--heading); }
+
+    /* ── FOOTER ── */
+    .footer { background: #060D18; border-top: 1px solid var(--border); padding: 56px 0 28px; margin-top: 40px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 44px; }
+    @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; } }
+    @media (max-width: 440px) { .footer-grid { grid-template-columns: 1fr; gap: 24px; } }
+    .footer-tag { font-size: 0.855rem; color: var(--muted); line-height: 1.6; margin-bottom: 18px; max-width: 260px; }
+    .footer-contact a { display: flex; align-items: center; gap: 8px; font-size: 0.875rem; color: var(--body); font-weight: 500; margin-bottom: 8px; }
+    @media (hover: hover) and (pointer: fine) { .footer-contact a:hover { color: var(--heading); } }
+    .fc-icon { color: var(--accent); font-size: 0.9rem; }
+    .footer-col-head { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 14px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .footer-links li a { font-size: 0.855rem; color: var(--body); transition: color 0.2s; }
+    @media (hover: hover) and (pointer: fine) { .footer-links li a:hover { color: var(--heading); } }
+    .footer-hours { font-size: 0.855rem; color: var(--body); line-height: 1.7; margin-top: 20px; }
+    .footer-bottom {
+      border-top: 1px solid var(--border); padding-top: 22px;
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+      font-size: 0.78rem; color: var(--muted);
+    }
+    .footer-legal-links { display: flex; gap: 16px; flex-wrap: wrap; }
+    .footer-legal-links a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
+    @media (hover: hover) and (pointer: fine) { .footer-legal-links a:hover { color: var(--body); } }
+  </style>
+</head>
+<body>
+
+<!-- ── STICKY HEADER ── -->
+<header class="hdr">
+  <div class="hdr-inner">
+    <a href="/" class="hdr-logo">
+      <img src="AeroDetailing-png/aero-logo-horizontal.png" alt="Aero Detailing">
+    </a>
+    <a href="tel:+12488779060" class="hdr-phone">
+      <svg class="hdr-phone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.1a16 16 0 006 6l.66-.66a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+      <span class="hdr-phone-num">(248) 877-9060</span>
+    </a>
+    <a href="/form" class="btn-primary hdr-cta">Book My Detail</a>
+  </div>
+</header>
+
+<div class="legal-wrap">
+
+  <div class="legal-header">
+    <h1>Terms &amp; Conditions</h1>
+    <p class="legal-updated">Last updated: August 4, 2026</p>
+  </div>
+
+  <nav class="legal-toc" aria-label="Table of contents">
+    <div class="legal-toc-label">On this page</div>
+    <ol>
+      <li><a href="#services">Our Services</a></li>
+      <li><a href="#booking">Booking &amp; Appointments</a></li>
+      <li><a href="#pricing">Quotes &amp; Pricing</a></li>
+      <li><a href="#cancellations">Cancellations &amp; Rescheduling</a></li>
+      <li><a href="#payment">Payment Terms</a></li>
+      <li><a href="#responsibilities">Your Responsibilities</a></li>
+      <li><a href="#access">Access Requirements for Mobile Service</a></li>
+      <li><a href="#preexisting">Pre-Existing Vehicle Condition</a></li>
+      <li><a href="#liability">Limitation of Liability</a></li>
+      <li><a href="#sms">SMS Terms &amp; Messaging Program</a></li>
+      <li><a href="#law">Governing Law</a></li>
+      <li><a href="#changes">Changes to These Terms</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <div class="legal-body">
+    <p>These Terms &amp; Conditions ("Terms") govern your use of the Aero Detailing website and your booking of services with Aero Detailing, a mobile auto detailing business owned and operated by Alex Hatem, based in South Lyon, Michigan. By submitting a booking request, calling, texting, or otherwise engaging our services, you agree to these Terms.</p>
+
+    <h2 id="services">Our Services</h2>
+    <p>Aero Detailing provides mobile auto detailing services, including interior detailing, exterior detailing, and full detail packages, at a location of your choosing within our service area: South Lyon, Brighton, Milford, New Hudson, and Whitmore Lake, Michigan. We come to you rather than requiring drop-off at a shop.</p>
+
+    <h2 id="booking">Booking &amp; Appointments</h2>
+    <p>You can request an appointment through our online booking form, by phone, or by text. All appointment requests are subject to availability and are confirmed by phone or text before your service date. We reserve the right to decline or reschedule a booking if we are unable to reasonably accommodate it.</p>
+
+    <h2 id="pricing">Quotes &amp; Pricing</h2>
+    <p>Prices listed on our website and booking form are estimates based on standard vehicle size and condition. Final pricing may vary depending on the actual condition and size of your vehicle, including but not limited to excess dirt, pet hair, staining, or odor beyond what is typical. If we determine that additional work or an add-on is needed once we see your vehicle, we will let you know before proceeding.</p>
+
+    <h2 id="cancellations">Cancellations &amp; Rescheduling</h2>
+    <p>We ask that you give us as much notice as possible, ideally at least 24 hours, if you need to cancel or reschedule your appointment. This allows us to offer that time slot to another customer. Repeated last-minute cancellations or no-shows may affect your ability to book future appointments with us.</p>
+
+    <h2 id="payment">Payment Terms</h2>
+    <p>Payment is due upon completion of service unless other arrangements have been made in advance. We process payments through our booking and CRM platform, GoHighLevel. Accepted payment methods will be confirmed at the time of booking.</p>
+
+    <h2 id="responsibilities">Your Responsibilities</h2>
+    <p>You are responsible for removing valuables, personal items, and anything you do not want handled during the detailing service from your vehicle before we arrive. Aero Detailing is not responsible for personal items left inside the vehicle.</p>
+
+    <h2 id="access">Access Requirements for Mobile Service</h2>
+    <p>Because we provide mobile service, you are responsible for providing reasonable access to your vehicle at the agreed location, including parking space and, where needed for the selected service, access to an outdoor power outlet and a nearby water source. If access is not available, we may need to limit the scope of service, reschedule, or apply an additional fee.</p>
+
+    <h2 id="preexisting">Pre-Existing Vehicle Condition</h2>
+    <p>Please tell us about any pre-existing damage, worn or fragile trim, aftermarket modifications, or areas of concern on your vehicle before we begin service. We use professional-grade products and reasonable care on every vehicle, but we are not responsible for pre-existing damage, and we cannot guarantee that every stain, odor, or condition will be fully removed, as results depend on the vehicle's individual condition.</p>
+
+    <h2 id="liability">Limitation of Liability</h2>
+    <p>To the fullest extent permitted by law, Aero Detailing's liability for any claim arising from our services is limited to the amount you paid for that service. Aero Detailing is not liable for indirect, incidental, or consequential damages. Nothing in these Terms limits any liability that cannot be limited under Michigan law.</p>
+
+    <h2 id="sms">SMS Terms &amp; Messaging Program</h2>
+    <p><strong>Program name:</strong> Aero Detailing</p>
+    <p>By opting in to text messages through our booking form, or by providing your phone number and consenting to be contacted, you agree to receive text messages from Aero Detailing related to appointment confirmations, reminders, service updates, review requests, and occasional promotions.</p>
+    <ul>
+      <li>Message frequency varies depending on your activity with us.</li>
+      <li>Message and data rates may apply.</li>
+      <li>Reply STOP at any time to opt out of text messages.</li>
+      <li>Reply HELP for help, or contact us directly at <a href="tel:+12488779060">(248) 877-9060</a> or <a href="mailto:aerodetailing.us@gmail.com">aerodetailing.us@gmail.com</a>.</li>
+      <li>Carriers are not liable for delayed or undelivered messages.</li>
+    </ul>
+    <div class="legal-callout">
+      <p>Consenting to receive text messages is never a condition of purchasing any service from Aero Detailing.</p>
+    </div>
+
+    <h2 id="law">Governing Law</h2>
+    <p>These Terms are governed by the laws of the State of Michigan, without regard to its conflict of law principles.</p>
+
+    <h2 id="changes">Changes to These Terms</h2>
+    <p>We may update these Terms from time to time. Any changes will be posted on this page with an updated "Last updated" date. Continued use of our services after changes are posted means you accept the updated Terms.</p>
+
+    <h2 id="contact">Contact Us</h2>
+    <p>Questions about these Terms? Reach out:</p>
+    <div class="legal-contact">
+      <p><strong>Aero Detailing</strong></p>
+      <p>South Lyon, MI 48178</p>
+      <p>Phone: <a href="tel:+12488779060">(248) 877-9060</a></p>
+      <p>Email: <a href="mailto:aerodetailing.us@gmail.com">aerodetailing.us@gmail.com</a></p>
+    </div>
+  </div>
+
+</div>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <img src="AeroDetailing-png/aero-logo-horizontal.png" alt="Aero Detailing" style="height:52px;width:auto;margin-bottom:14px">
+        <p class="footer-tag">Above the Rest. Below the Surface. Serving South Lyon and surrounding Michigan communities.</p>
+        <div class="footer-contact">
+          <a href="tel:+12488779060"><span class="fc-icon">📞</span> (248) 877-9060</a>
+          <a href="mailto:aerodetailing.us@gmail.com"><span class="fc-icon">✉️</span> aerodetailing.us@gmail.com</a>
+          <a href="https://maps.google.com/?q=South+Lyon,+MI+48178"><span class="fc-icon">📍</span> South Lyon, MI 48178</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-head">Services</div>
+        <ul class="footer-links">
+          <li><a href="/form">Basic Exterior ($60+)</a></li>
+          <li><a href="/form">Premium Exterior ($90+)</a></li>
+          <li><a href="/form">Elite Exterior ($105+)</a></li>
+          <li><a href="/form">Basic Interior ($75+)</a></li>
+          <li><a href="/form">Premium Interior ($105+)</a></li>
+          <li><a href="/form">Elite Interior ($150+)</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-head">Book From Your City</div>
+        <ul class="footer-links">
+          <li><a href="/form">South Lyon</a></li>
+          <li><a href="/form">Brighton</a></li>
+          <li><a href="/form">Milford</a></li>
+          <li><a href="/form">New Hudson</a></li>
+          <li><a href="/form">Whitmore Lake</a></li>
+        </ul>
+        <div class="footer-col-head" style="margin-top:20px">Hours</div>
+        <div class="footer-hours">
+          Monday – Friday<br>
+          Sat–Sun: Closed
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Aero Detailing. All rights reserved.</span>
+      <div class="footer-legal-links">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

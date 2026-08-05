@@ -8,8 +8,8 @@
   <meta property="og:title" content="Aero Detailing — South Lyon Auto Detailing" />
   <meta property="og:description" content="Auto detailing in South Lyon, MI. Hand wash, professional-grade products, free come-back guarantee. Interior and exterior packages from $60. Book this week." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://aerodetailing.us/AeroDetailing-png/hero-bg.jpg" />
-  <meta property="og:url" content="https://aerodetailing.us/" />
+  <meta property="og:image" content="https://aerodetailing.org/AeroDetailing-png/hero-bg.jpg" />
+  <meta property="og:url" content="https://aerodetailing.org/" />
   <link rel="icon" href="AeroDetailing-png/icon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -785,6 +785,9 @@
       display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
       font-size: 0.78rem; color: var(--muted);
     }
+    .footer-legal-links { display: flex; gap: 16px; flex-wrap: wrap; }
+    .footer-legal-links a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
+    @media (hover: hover) and (pointer: fine) { .footer-legal-links a:hover { color: var(--body); } }
 
     /* ── MOBILE STICKY BAR ── */
     @media (max-width: 768px) {
@@ -1355,6 +1358,10 @@
     <div class="footer-bottom">
       <span>© 2026 Aero Detailing. All rights reserved.</span>
       <span>South Lyon, MI Auto Detailing</span>
+      <div class="footer-legal-links">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms &amp; Conditions</a>
+      </div>
     </div>
   </div>
 </footer>
