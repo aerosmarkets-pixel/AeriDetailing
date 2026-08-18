@@ -351,11 +351,11 @@
       padding: 4px; gap: 4px;
     }
     .tab-btn {
-      padding: 10px 28px; border: none; background: transparent; cursor: pointer;
-      font-family: var(--font-body); font-weight: 600; font-size: 0.95rem;
+      flex: 1; padding: 14px 28px; border: none; background: transparent; cursor: pointer;
+      font-family: var(--font-body); font-weight: 700; font-size: 1.12rem;
       color: var(--body); border-radius: 8px;
       transition: background 0.2s, color 0.2s;
-      min-height: 42px;
+      min-height: 52px;
     }
     .tab-btn.active { background: var(--accent); color: #fff; }
     @media (hover: hover) and (pointer: fine) {
@@ -385,7 +385,7 @@
       content: 'Most Popular';
       position: absolute; top: 0; right: 0;
       background: var(--accent); color: #fff;
-      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em;
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em;
       text-transform: uppercase; padding: 5px 13px;
       border-bottom-left-radius: var(--radius);
     }
@@ -400,30 +400,32 @@
       .svc-card:hover::after { background-position: -200% 0; }
     }
     .svc-tier {
-      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
-      text-transform: uppercase; color: var(--accent); margin-bottom: 6px;
+      display: inline-block; align-self: flex-start;
+      font-size: 0.88rem; font-weight: 800; letter-spacing: 0.07em;
+      text-transform: uppercase; color: #fff; background: var(--accent);
+      padding: 5px 12px; border-radius: 6px; margin-bottom: 10px;
     }
     .svc-name {
-      font-size: 1.3rem; font-weight: 800; color: var(--heading);
+      font-size: 1.5rem; font-weight: 800; color: var(--heading);
       margin-bottom: 6px; letter-spacing: -0.01em;
     }
     .svc-price {
-      font-size: 0.875rem; color: var(--body); margin-bottom: 18px; font-weight: 500;
+      font-size: 1.05rem; color: var(--body); margin-bottom: 18px; font-weight: 500; line-height: 1.45;
     }
-    .svc-price strong { font-size: 1.15rem; font-weight: 700; color: var(--heading); }
+    .svc-price strong { font-size: 1.35rem; font-weight: 700; color: var(--heading); }
 
     .price-table {
       background: rgba(30,95,204,0.05);
       border: 1px solid var(--border); border-radius: 8px;
-      padding: 11px 13px; margin-bottom: 18px;
+      padding: 14px 15px; margin-bottom: 18px;
     }
     .price-table-head {
-      font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
-      letter-spacing: 0.06em; color: var(--muted); margin-bottom: 8px;
+      font-size: 0.85rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.06em; color: var(--muted); margin-bottom: 10px;
     }
     .price-table-grid {
       display: grid; grid-template-columns: 1fr auto;
-      gap: 4px 12px; font-size: 0.78rem; color: var(--body);
+      gap: 10px 12px; font-size: 1rem; color: var(--body);
     }
     .price-table-grid span { font-weight: 700; color: var(--heading); text-align: right; }
 
@@ -433,7 +435,7 @@
     }
     .svc-features li {
       display: flex; align-items: flex-start; gap: 9px;
-      font-size: 0.875rem; line-height: 1.45;
+      font-size: 0.98rem; line-height: 1.55;
     }
     .svc-features li::before {
       content: '✓'; color: var(--accent); font-weight: 700;
@@ -441,8 +443,8 @@
     }
     .svc-note {
       background: rgba(30,95,204,0.05); border: 1px solid var(--border);
-      border-radius: 7px; padding: 9px 11px;
-      font-size: 0.75rem; color: var(--muted); line-height: 1.5;
+      border-radius: 7px; padding: 11px 13px;
+      font-size: 0.9rem; color: var(--muted); line-height: 1.55;
       margin-bottom: 16px;
     }
 
@@ -636,7 +638,7 @@
     .finp::placeholder, .ftxt::placeholder { color: var(--muted); }
     .svc-opts { display: flex; flex-direction: column; gap: 14px; }
     .svc-group-label {
-      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      font-size: 0.84rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
       color: var(--muted); margin-bottom: 6px;
     }
     .svc-group-cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
@@ -652,7 +654,7 @@
       .svc-radio-lbl:hover { border-color: var(--accent-hover); }
     }
     .svc-radio-name  { font-weight: 700; font-size: 0.875rem; color: var(--heading); }
-    .svc-radio-price { font-size: 0.75rem; color: var(--body); }
+    .svc-radio-price { font-size: 0.92rem; color: var(--body); }
     .f2col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     @media (max-width: 560px) { .svc-group-cards { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 480px) { .f2col { grid-template-columns: 1fr; } .svc-group-cards { grid-template-columns: 1fr; } }

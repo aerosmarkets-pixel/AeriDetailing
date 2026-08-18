@@ -113,7 +113,7 @@
     }
 
     .form-section-label {
-      font-size: 0.72rem;
+      font-size: 0.85rem;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -129,14 +129,16 @@
       margin-bottom: 20px;
     }
     .pkg-tab {
-      padding: 9px 24px;
-      border-radius: 8px;
-      border: 1.5px solid var(--border-hi);
+      flex: 1;
+      padding: 15px 24px;
+      border-radius: 10px;
+      border: 2px solid var(--border-hi);
       background: transparent;
       color: var(--body);
       font-family: var(--font-body);
-      font-weight: 600;
-      font-size: 0.92rem;
+      font-weight: 700;
+      font-size: 1.15rem;
+      min-height: 54px;
       cursor: pointer;
       transition: all 0.2s;
     }
@@ -144,6 +146,29 @@
       background: var(--accent);
       border-color: var(--accent);
       color: #fff;
+      box-shadow: 0 4px 16px rgba(30,95,204,0.35);
+    }
+
+    /* Keep the Exterior/Interior switcher visible while scrolling on phones,
+       so you always know which set of packages you're looking at. */
+    @media (max-width: 720px) {
+      .pkg-tabs {
+        position: sticky;
+        top: 64px;
+        z-index: 90;
+        background: var(--bg);
+        padding: 12px 0;
+        margin-bottom: 16px;
+      }
+      .pkg-tab { font-size: 1.1rem; padding: 14px 16px; }
+      .pkg-tag { font-size: 0.95rem; padding: 6px 14px; }
+      .pkg-name { font-size: 1.55rem; }
+      .pkg-starting { font-size: 1.05rem; }
+      .pkg-starting strong { font-size: 1.35rem; }
+      .pkg-price-row { font-size: 1.08rem; min-height: 50px; padding: 13px 12px; }
+      .pkg-price-head { font-size: 0.88rem; }
+      .pkg-features li { font-size: 1rem; }
+      .pkg-card { padding: 22px 18px; }
     }
 
     /* PACKAGE GRID */
@@ -176,7 +201,7 @@
       top: -1px; right: 16px;
       background: var(--accent);
       color: #fff;
-      font-size: 0.62rem;
+      font-size: 0.75rem;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -184,29 +209,35 @@
       border-radius: 0 0 6px 6px;
     }
     .pkg-tag {
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
+      display: inline-block;
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 6px;
+      color: #fff;
+      background: var(--accent);
+      padding: 5px 12px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      align-self: flex-start;
     }
     .pkg-name {
       font-family: var(--font-head);
-      font-size: 1.2rem;
+      font-size: 1.45rem;
       color: var(--heading);
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
     .pkg-starting {
-      font-size: 0.82rem;
-      color: var(--muted);
-      margin-bottom: 14px;
+      font-size: 1rem;
+      color: var(--body);
+      margin-bottom: 16px;
+      line-height: 1.45;
     }
-    .pkg-starting strong { color: var(--heading); font-size: 1rem; }
+    .pkg-starting strong { color: var(--heading); font-size: 1.25rem; }
 
     /* PRICING TABLE */
     .pkg-price-head {
-      font-size: 0.64rem;
+      font-size: 0.82rem;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -218,11 +249,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 7px 8px;
+      padding: 12px 10px;
       border-radius: 6px;
       cursor: pointer;
       transition: background 0.15s;
-      font-size: 0.88rem;
+      font-size: 1.02rem;
+      min-height: 46px;
       user-select: none;
     }
     .pkg-price-row:hover { background: rgba(30,95,204,0.1); }
@@ -245,9 +277,9 @@
       display: flex;
       gap: 8px;
       align-items: flex-start;
-      font-size: 0.81rem;
+      font-size: 0.95rem;
       color: var(--body);
-      line-height: 1.4;
+      line-height: 1.55;
     }
     .pkg-features li::before {
       content: '✓';
