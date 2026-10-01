@@ -3,32 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms &amp; Conditions — Aero Detailing</title>
+  <title>Terms &amp; Conditions | Aero Detailing</title>
   <meta name="description" content="Terms and conditions for booking and using Aero Detailing's mobile auto detailing services in South Lyon, MI, including our SMS messaging program terms." />
-  <link rel="icon" href="AeroDetailing-png/icon.png" type="image/png" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/AeroDetailing-png/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/AeroDetailing-png/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --bg:            #0A1220;
-      --bg-deep:       #060D18;
-      --card:          #0F1B35;
-      --card-hi:       #152244;
-      --accent:        #1E5FCC;
-      --accent-hover:  #2E6FDC;
-      --accent-glow:   rgba(30,95,204,0.22);
-      --heading:       #F1F5F9;
-      --body:          #8AABD4;
-      --muted:         #4B6FA8;
-      --border:        rgba(30,95,204,0.14);
-      --border-hi:     rgba(30,95,204,0.3);
-      --radius:        10px;
-      --radius-btn:    10px;
+      --bg:            #0D1B2A;
+      --bg-deep:       #091420;
+      --card:          #122335;
+      --card-hi:       #182C42;
+      --accent:        #4A7FD4;
+      --accent-hover:  #5E8FE0;
+      --accent-btn:    #3D6FBF;   /* logo swoosh. white text on it = 4.97, passes AA */
+      --accent-text:   #5D92E7;   /* lifted for small accent text = 4.55, passes AA */
+      --accent-glow:   rgba(74,127,212,0.10);
+      --heading:       #F4F5F7;
+      --body:          #A6ABB5;
+      --muted:         #8C929D;
+      --border:        rgba(255,255,255,0.09);
+      --border-hi:     rgba(255,255,255,0.18);
+      --radius:        4px;
+      --radius-btn:    4px;
       --shadow:        0 4px 24px rgba(0,0,0,0.4);
-      --font-head:     'Space Grotesk', sans-serif;
-      --font-body:     'DM Sans', sans-serif;
+      --font-head:     'Archivo', sans-serif;
+      --font-body:     'Archivo', sans-serif;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -47,7 +51,7 @@
 
     .btn-primary {
       display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      background: var(--accent); color: #fff; border: none; cursor: pointer;
+      background: var(--accent-btn); color: #fff; border: none; cursor: pointer;
       font-family: var(--font-body); font-weight: 600; font-size: 1rem;
       padding: 14px 28px; border-radius: var(--radius-btn);
       transition: background 0.2s cubic-bezier(0.23,1,0.32,1),
@@ -67,7 +71,7 @@
     }
     @media (hover: hover) and (pointer: fine) {
       .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 8px 24px var(--accent-glow); }
-      .btn-outline:hover { border-color: var(--accent); background: rgba(30,95,204,0.07); color: #F1F5F9; }
+      .btn-outline:hover { border-color: var(--accent-text); background: rgba(74,127,212,0.07); color: #F4F5F7; }
     }
     .btn-primary:active { transform: scale(0.97); transition-duration: 100ms; }
 
@@ -77,7 +81,7 @@
     .hdr {
       position: fixed; top: 0; left: 0; right: 0; z-index: 200;
       height: 64px;
-      background: #0A1220;
+      background: #0D1B2A;
       border-bottom: 1px solid var(--border);
       display: flex; align-items: center; padding: 0 24px;
     }
@@ -91,13 +95,13 @@
       display: flex; align-items: center; gap: 7px;
       font-weight: 600; font-size: 0.95rem; color: var(--heading);
     }
-    .hdr-phone-icon { color: var(--accent); width: 16px; height: 16px; flex-shrink: 0; }
+    .hdr-phone-icon { color: var(--accent-text); width: 16px; height: 16px; flex-shrink: 0; }
     @media (max-width: 600px) { .hdr-phone-num { display: none; } }
     .hdr-cta { padding: 10px 20px; font-size: 0.9rem; }
     @keyframes hdr-pulse {
-      0%   { box-shadow: 0 0 0 0 rgba(30,95,204,0.6), 0 4px 14px rgba(30,95,204,0.35); }
-      65%  { box-shadow: 0 0 0 10px rgba(30,95,204,0), 0 4px 14px rgba(30,95,204,0.35); }
-      100% { box-shadow: 0 0 0 0 rgba(30,95,204,0), 0 4px 14px rgba(30,95,204,0.35); }
+      0%   { box-shadow: 0 0 0 0 rgba(74,127,212,0.6), 0 4px 14px rgba(74,127,212,0.35); }
+      65%  { box-shadow: 0 0 0 10px rgba(74,127,212,0), 0 4px 14px rgba(74,127,212,0.35); }
+      100% { box-shadow: 0 0 0 0 rgba(74,127,212,0), 0 4px 14px rgba(74,127,212,0.35); }
     }
     .hdr-cta { animation: hdr-pulse 2.6s ease-out infinite; }
     .hdr-cta:hover, .hdr-cta:focus { animation-play-state: paused; }
@@ -113,7 +117,7 @@
     .legal-toc ol { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px; counter-reset: toc; }
     @media (max-width: 560px) { .legal-toc ol { grid-template-columns: 1fr; } }
     .legal-toc li { counter-increment: toc; font-size: 0.9rem; }
-    .legal-toc li::before { content: counter(toc) ". "; color: var(--accent); font-weight: 700; }
+    .legal-toc li::before { content: counter(toc) ". "; color: var(--accent-text); font-weight: 700; }
     .legal-toc a { color: var(--body); }
     @media (hover: hover) and (pointer: fine) { .legal-toc a:hover { color: var(--heading); } }
 
@@ -122,11 +126,11 @@
     .legal-body p { font-size: 0.98rem; color: var(--body); line-height: 1.8; margin-bottom: 16px; }
     .legal-body ul { margin: 0 0 18px 22px; color: var(--body); line-height: 1.8; font-size: 0.98rem; }
     .legal-body li { margin-bottom: 8px; }
-    .legal-body a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+    .legal-body a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 2px; }
     .legal-body strong { color: var(--heading); }
 
     .legal-callout {
-      background: rgba(30,95,204,0.08); border: 1px solid rgba(30,95,204,0.25);
+      background: rgba(74,127,212,0.08); border: 1px solid rgba(74,127,212,0.25);
       border-radius: var(--radius); padding: 22px 24px; margin: 18px 0 28px;
     }
     .legal-callout p { margin-bottom: 0; color: var(--heading); font-weight: 600; font-size: 0.98rem; line-height: 1.7; }
@@ -137,14 +141,14 @@
     .legal-contact strong { color: var(--heading); }
 
     /* ── FOOTER ── */
-    .footer { background: #060D18; border-top: 1px solid var(--border); padding: 56px 0 28px; margin-top: 40px; }
+    .footer { background: #091420; border-top: 1px solid var(--border); padding: 56px 0 28px; margin-top: 40px; }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 44px; }
     @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; } }
     @media (max-width: 440px) { .footer-grid { grid-template-columns: 1fr; gap: 24px; } }
     .footer-tag { font-size: 0.855rem; color: var(--muted); line-height: 1.6; margin-bottom: 18px; max-width: 260px; }
     .footer-contact a { display: flex; align-items: center; gap: 8px; font-size: 0.875rem; color: var(--body); font-weight: 500; margin-bottom: 8px; }
     @media (hover: hover) and (pointer: fine) { .footer-contact a:hover { color: var(--heading); } }
-    .fc-icon { color: var(--accent); font-size: 0.9rem; }
+    .fc-icon { color: var(--accent-text); font-size: 0.9rem; }
     .footer-col-head { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 14px; }
     .footer-links { list-style: none; display: flex; flex-direction: column; gap: 9px; }
     .footer-links li a { font-size: 0.855rem; color: var(--body); transition: color 0.2s; }
@@ -158,6 +162,12 @@
     .footer-legal-links { display: flex; gap: 16px; flex-wrap: wrap; }
     .footer-legal-links a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
     @media (hover: hover) and (pointer: fine) { .footer-legal-links a:hover { color: var(--body); } }
+    /* ── TYPE CALIBRATION for Archivo (anti-slop pass 2026-09-18) ──
+       One superfamily. Hierarchy from weight and tracking, not two fonts. */
+    h1, h2, h3, h4 { letter-spacing: -0.025em; font-weight: 800; }
+    body { font-weight: 400; letter-spacing: -0.005em; }
+    .btn-primary, .btn-ghost { font-weight: 700; letter-spacing: -0.005em; }
+
   </style>
 </head>
 <body>
@@ -240,7 +250,7 @@
       <li>Message frequency varies depending on your activity with us.</li>
       <li>Message and data rates may apply.</li>
       <li>Reply STOP at any time to opt out of text messages.</li>
-      <li>Reply HELP for help, or contact us directly at <a href="tel:+15172003253">(517) 200-3253</a> or <a href="mailto:aerodetailing.us@gmail.com">aerodetailing.us@gmail.com</a>.</li>
+      <li>Reply HELP for help, or contact us directly at <a href="tel:+15172003253">(517) 200-3253</a> or <a href="mailto:alex@aerodetailing.org">alex@aerodetailing.org</a>.</li>
       <li>Carriers are not liable for delayed or undelivered messages.</li>
       <li>You must be at least 18 years of age to opt in to our text messaging program.</li>
     </ul>
@@ -250,7 +260,7 @@
 
     <h2 id="age">Age Restriction</h2>
     <p>You must be at least 18 years old to use our services, book an appointment, or opt in to receive text messages from Aero Detailing. By booking a service or consenting to receive SMS messages, you confirm that you are 18 years of age or older.</p>
-    <p>We do not knowingly provide services to, or send text messages to, anyone under the age of 18. If we become aware that we have collected information or SMS consent from someone under 18, we will delete that information and remove the number from our messaging program. If you believe someone under 18 has provided us information or opted in to our messages, contact us at <a href="tel:+15172003253">(517) 200-3253</a> or <a href="mailto:aerodetailing.us@gmail.com">aerodetailing.us@gmail.com</a>.</p>
+    <p>We do not knowingly provide services to, or send text messages to, anyone under the age of 18. If we become aware that we have collected information or SMS consent from someone under 18, we will delete that information and remove the number from our messaging program. If you believe someone under 18 has provided us information or opted in to our messages, contact us at <a href="tel:+15172003253">(517) 200-3253</a> or <a href="mailto:alex@aerodetailing.org">alex@aerodetailing.org</a>.</p>
 
     <h2 id="law">Governing Law</h2>
     <p>These Terms are governed by the laws of the State of Michigan, without regard to its conflict of law principles.</p>
@@ -264,7 +274,7 @@
       <p><strong>Aero Detailing</strong></p>
       <p>South Lyon, MI 48178</p>
       <p>Phone: <a href="tel:+15172003253">(517) 200-3253</a></p>
-      <p>Email: <a href="mailto:aerodetailing.us@gmail.com">aerodetailing.us@gmail.com</a></p>
+      <p>Email: <a href="mailto:alex@aerodetailing.org">alex@aerodetailing.org</a></p>
     </div>
   </div>
 
@@ -279,19 +289,18 @@
         <p class="footer-tag">Above the Rest. Below the Surface. Serving South Lyon and surrounding Michigan communities.</p>
         <div class="footer-contact">
           <a href="tel:+15172003253"><span class="fc-icon">📞</span> (517) 200-3253</a>
-          <a href="mailto:aerodetailing.us@gmail.com"><span class="fc-icon">✉️</span> aerodetailing.us@gmail.com</a>
+          <a href="mailto:alex@aerodetailing.org"><span class="fc-icon">✉️</span> alex@aerodetailing.org</a>
           <a href="https://maps.google.com/?q=South+Lyon,+MI+48178"><span class="fc-icon">📍</span> South Lyon, MI 48178</a>
         </div>
       </div>
       <div>
         <div class="footer-col-head">Services</div>
         <ul class="footer-links">
-          <li><a href="/form">Basic Exterior ($60+)</a></li>
-          <li><a href="/form">Premium Exterior ($90+)</a></li>
-          <li><a href="/form">Elite Exterior ($105+)</a></li>
-          <li><a href="/form">Basic Interior ($75+)</a></li>
-          <li><a href="/form">Premium Interior ($105+)</a></li>
-          <li><a href="/form">Elite Interior ($150+)</a></li>
+          <li><a href="/form">Maintenance Interior</a></li>
+          <li><a href="/form">Premium Interior</a></li>
+          <li><a href="/form">Elite Interior</a></li>
+          <li><a href="/form">Premium Wash</a></li>
+          <li><a href="/form">Elite Detail</a></li>
         </ul>
       </div>
       <div>

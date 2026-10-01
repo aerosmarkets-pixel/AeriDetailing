@@ -3,28 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Booking Confirmed — Aero Detailing</title>
-  <link rel="icon" href="AeroDetailing-png/icon.png" type="image/png" />
+  <title>Booking Confirmed | Aero Detailing</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/AeroDetailing-png/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/AeroDetailing-png/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --bg:            #0A1220;
-      --bg-deep:       #060D18;
-      --card:          #0F1B35;
-      --accent:        #1E5FCC;
-      --accent-hover:  #2E6FDC;
-      --accent-glow:   rgba(30,95,204,0.22);
-      --heading:       #F1F5F9;
-      --body:          #8AABD4;
-      --muted:         #4B6FA8;
-      --border:        rgba(30,95,204,0.14);
-      --radius:        10px;
-      --radius-btn:    10px;
-      --font-head:     'Space Grotesk', sans-serif;
-      --font-body:     'DM Sans', sans-serif;
+      --bg:            #0D1B2A;
+      --bg-deep:       #091420;
+      --card:          #122335;
+      --accent:        #4A7FD4;
+      --accent-hover:  #5E8FE0;
+      --accent-btn:    #3D6FBF;   /* logo swoosh. white text on it = 4.97, passes AA */
+      --accent-text:   #5D92E7;   /* lifted for small accent text = 4.55, passes AA */
+      --accent-glow:   rgba(74,127,212,0.10);
+      --heading:       #F4F5F7;
+      --body:          #A6ABB5;
+      --muted:         #8C929D;
+      --border:        rgba(255,255,255,0.09);
+      --radius:        4px;
+      --radius-btn:    4px;
+      --font-head:     'Archivo', sans-serif;
+      --font-body:     'Archivo', sans-serif;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -44,7 +49,7 @@
 
     .btn-primary {
       display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      background: var(--accent); color: #fff; border: none; cursor: pointer;
+      background: var(--accent-btn); color: #fff; border: none; cursor: pointer;
       font-family: var(--font-body); font-weight: 600; font-size: 1rem;
       padding: 14px 28px; border-radius: var(--radius-btn);
       transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
@@ -61,7 +66,7 @@
     }
     @media (hover: hover) and (pointer: fine) {
       .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 8px 24px var(--accent-glow); }
-      .btn-outline:hover { border-color: var(--accent); background: rgba(30,95,204,0.07); color: #F1F5F9; }
+      .btn-outline:hover { border-color: var(--accent-text); background: rgba(74,127,212,0.07); color: #F4F5F7; }
     }
 
     .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
@@ -69,7 +74,7 @@
     /* HEADER */
     .hdr {
       position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-      height: 64px; background: #0A1220;
+      height: 64px; background: #0D1B2A;
       border-bottom: 1px solid var(--border);
       display: flex; align-items: center; padding: 0 24px;
     }
@@ -83,7 +88,7 @@
       display: flex; align-items: center; gap: 7px;
       font-weight: 600; font-size: 0.95rem; color: var(--heading);
     }
-    .hdr-phone-icon { color: var(--accent); width: 16px; height: 16px; }
+    .hdr-phone-icon { color: var(--accent-text); width: 16px; height: 16px; }
     @media (max-width: 600px) { .hdr-phone-num { display: none; } }
 
     /* MAIN */
@@ -101,8 +106,8 @@
     }
     .ty-icon {
       width: 72px; height: 72px;
-      background: rgba(30,95,204,0.12);
-      border: 2px solid rgba(30,95,204,0.3);
+      background: rgba(74,127,212,0.12);
+      border: 2px solid rgba(255,255,255,0.18);
       border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       margin: 0 auto 28px;
@@ -124,7 +129,7 @@
     .prep-card {
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 14px;
+      border-radius: 4px;
       padding: 28px 32px;
       text-align: left;
       margin-bottom: 36px;
@@ -147,7 +152,7 @@
     }
     .prep-num {
       width: 28px; height: 28px;
-      background: var(--accent);
+      background: var(--accent-btn);
       border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       font-family: var(--font-head);
@@ -184,6 +189,12 @@
       font-size: 0.82rem;
       color: var(--muted);
     }
+    /* ── TYPE CALIBRATION for Archivo (anti-slop pass 2026-09-18) ──
+       One superfamily. Hierarchy from weight and tracking, not two fonts. */
+    h1, h2, h3, h4 { letter-spacing: -0.025em; font-weight: 800; }
+    body { font-weight: 400; letter-spacing: -0.005em; }
+    .btn-primary, .btn-ghost { font-weight: 700; letter-spacing: -0.005em; }
+
   </style>
 </head>
 <body>
@@ -209,7 +220,7 @@
     <p>We'll confirm your slot by phone or text shortly. Here's what to have ready before we arrive.</p>
 
     <div class="prep-card">
-      <h2>Before we show up — have these ready:</h2>
+      <h2>Before we show up, have these ready:</h2>
       <ul class="prep-list">
         <li class="prep-item">
           <div class="prep-num">1</div>
@@ -237,7 +248,7 @@
 
     <div class="ty-actions">
       <a href="/" class="btn-outline">Back to Home</a>
-      <a href="tel:+15172003253" class="btn-primary">Call Us — (517) 200-3253</a>
+      <a href="tel:+15172003253" class="btn-primary">Call (517) 200-3253</a>
     </div>
 
   </div>

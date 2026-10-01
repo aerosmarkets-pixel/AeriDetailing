@@ -3,29 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book Your Detail — Aero Detailing South Lyon, MI</title>
+  <title>Book Your Detail | Aero Detailing South Lyon, MI</title>
   <meta name="description" content="Book your auto detail in South Lyon, MI. Same-week availability. Hand wash, professional-grade products. Interior and exterior packages." />
-  <link rel="icon" href="AeroDetailing-png/icon.png" type="image/png" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/AeroDetailing-png/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/AeroDetailing-png/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --bg:            #0A1220;
-      --bg-deep:       #060D18;
-      --card:          #0F1B35;
-      --accent:        #1E5FCC;
-      --accent-hover:  #2E6FDC;
-      --accent-glow:   rgba(30,95,204,0.22);
-      --heading:       #F1F5F9;
-      --body:          #8AABD4;
-      --muted:         #4B6FA8;
-      --border:        rgba(30,95,204,0.14);
-      --radius:        10px;
-      --radius-btn:    10px;
-      --font-head:     'Space Grotesk', sans-serif;
-      --font-body:     'DM Sans', sans-serif;
+      --bg:            #0D1B2A;
+      --bg-deep:       #091420;
+      --card:          #122335;
+      --accent:        #4A7FD4;
+      --accent-hover:  #5E8FE0;
+      --accent-btn:    #3D6FBF;   /* logo swoosh. white text on it = 4.97, passes AA */
+      --accent-text:   #5D92E7;   /* lifted for small accent text = 4.55, passes AA */
+      --accent-glow:   rgba(74,127,212,0.10);
+      --heading:       #F4F5F7;
+      --body:          #A6ABB5;
+      --muted:         #8C929D;
+      --border:        rgba(255,255,255,0.09);
+      --radius:        4px;
+      --radius-btn:    4px;
+      --font-head:     'Archivo', sans-serif;
+      --font-body:     'Archivo', sans-serif;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -44,7 +48,7 @@
 
     .btn-primary {
       display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      background: var(--accent); color: #fff; border: none; cursor: pointer;
+      background: var(--accent-btn); color: #fff; border: none; cursor: pointer;
       font-family: var(--font-body); font-weight: 600; font-size: 1rem;
       padding: 14px 28px; border-radius: var(--radius-btn);
       transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
@@ -61,7 +65,7 @@
     }
     @media (hover: hover) and (pointer: fine) {
       .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 8px 24px var(--accent-glow); }
-      .btn-outline:hover { border-color: var(--accent); background: rgba(30,95,204,0.07); color: #F1F5F9; }
+      .btn-outline:hover { border-color: var(--accent-text); background: rgba(74,127,212,0.07); color: #F4F5F7; }
     }
 
     .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
@@ -70,7 +74,7 @@
     .hdr {
       position: fixed; top: 0; left: 0; right: 0; z-index: 200;
       height: 64px;
-      background: #0A1220;
+      background: #0D1B2A;
       border-bottom: 1px solid var(--border);
       display: flex; align-items: center; padding: 0 24px;
     }
@@ -84,13 +88,13 @@
       display: flex; align-items: center; gap: 7px;
       font-weight: 600; font-size: 0.95rem; color: var(--heading);
     }
-    .hdr-phone-icon { color: var(--accent); width: 16px; height: 16px; flex-shrink: 0; }
+    .hdr-phone-icon { color: var(--accent-text); width: 16px; height: 16px; flex-shrink: 0; }
     @media (max-width: 600px) { .hdr-phone-num { display: none; } }
     .hdr-cta { padding: 10px 20px; font-size: 0.9rem; }
     @keyframes hdr-pulse {
-      0%   { box-shadow: 0 0 0 0 rgba(30,95,204,0.6), 0 4px 14px rgba(30,95,204,0.35); }
-      65%  { box-shadow: 0 0 0 10px rgba(30,95,204,0), 0 4px 14px rgba(30,95,204,0.35); }
-      100% { box-shadow: 0 0 0 0 rgba(30,95,204,0), 0 4px 14px rgba(30,95,204,0.35); }
+      0%   { box-shadow: 0 0 0 0 rgba(74,127,212,0.6), 0 4px 14px rgba(74,127,212,0.35); }
+      65%  { box-shadow: 0 0 0 10px rgba(74,127,212,0), 0 4px 14px rgba(74,127,212,0.35); }
+      100% { box-shadow: 0 0 0 0 rgba(74,127,212,0), 0 4px 14px rgba(74,127,212,0.35); }
     }
     .hdr-cta { animation: hdr-pulse 2.6s ease-out infinite; }
     .hdr-cta:hover { animation-play-state: paused; }
@@ -120,16 +124,16 @@
       margin: 0 auto;
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 16px;
+      border-radius: 4px;
       padding: 32px 24px;
       min-height: 600px;
     }
     .prep-note {
       max-width: 820px;
       margin: 32px auto 0;
-      background: rgba(30,95,204,0.08);
-      border: 1px solid rgba(30,95,204,0.2);
-      border-radius: 12px;
+      background: rgba(74,127,212,0.08);
+      border: 1px solid rgba(74,127,212,0.2);
+      border-radius: 4px;
       padding: 24px 28px;
     }
     .prep-note h3 {
@@ -153,7 +157,7 @@
     .prep-warn {
       margin-top: 14px;
       padding-top: 14px;
-      border-top: 1px solid rgba(30,95,204,0.2);
+      border-top: 1px solid rgba(74,127,212,0.2);
       font-size: 0.9rem;
       line-height: 1.6;
       color: var(--body);
@@ -163,7 +167,7 @@
       display: block;
       width: 6px; height: 6px;
       border-radius: 50%;
-      background: var(--accent);
+      background: var(--accent-btn);
       flex-shrink: 0;
     }
 
@@ -207,6 +211,12 @@
     }
     .mobile-sticky a { flex: 1; text-align: center; font-size: 0.92rem; padding: 12px 16px; }
     @media (max-width: 640px) { .mobile-sticky { display: flex; } }
+    /* ── TYPE CALIBRATION for Archivo (anti-slop pass 2026-09-18) ──
+       One superfamily. Hierarchy from weight and tracking, not two fonts. */
+    h1, h2, h3, h4 { letter-spacing: -0.025em; font-weight: 800; }
+    body { font-weight: 400; letter-spacing: -0.005em; }
+    .btn-primary, .btn-ghost { font-weight: 700; letter-spacing: -0.005em; }
+
   </style>
 </head>
 <body>
@@ -238,7 +248,7 @@
     </div>
 
     <div class="prep-note">
-      <h3>Before we arrive — have these ready:</h3>
+      <h3>Before we arrive, have these ready:</h3>
       <ul class="prep-list">
         <li>An outdoor power outlet we can plug into</li>
         <li>Access to a hose or water source nearby</li>
@@ -258,19 +268,18 @@
         <p class="footer-tag">Above the Rest. Below the Surface. Serving South Lyon and surrounding Michigan communities.</p>
         <div class="footer-contact">
           <a href="tel:+15172003253"><span class="fc-icon">📞</span> (517) 200-3253</a>
-          <a href="mailto:aerodetailing.us@gmail.com"><span class="fc-icon">✉️</span> aerodetailing.us@gmail.com</a>
+          <a href="mailto:alex@aerodetailing.org"><span class="fc-icon">✉️</span> alex@aerodetailing.org</a>
           <a href="https://maps.google.com/?q=South+Lyon,+MI+48178"><span class="fc-icon">📍</span> South Lyon, MI 48178</a>
         </div>
       </div>
       <div>
         <div class="footer-col-head">Services</div>
         <ul class="footer-links">
-          <li><a href="/book">Basic Exterior ($60+)</a></li>
-          <li><a href="/book">Premium Exterior ($90+)</a></li>
-          <li><a href="/book">Elite Exterior ($105+)</a></li>
-          <li><a href="/book">Basic Interior ($75+)</a></li>
-          <li><a href="/book">Premium Interior ($105+)</a></li>
-          <li><a href="/book">Elite Interior ($150+)</a></li>
+          <li><a href="/book">Maintenance Interior</a></li>
+          <li><a href="/book">Premium Interior</a></li>
+          <li><a href="/book">Elite Interior</a></li>
+          <li><a href="/book">Premium Wash</a></li>
+          <li><a href="/book">Elite Detail</a></li>
         </ul>
       </div>
       <div>

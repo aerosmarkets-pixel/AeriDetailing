@@ -3,30 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book Your Detail — Aero Detailing South Lyon, MI</title>
-  <meta name="description" content="Book your auto detail in South Lyon, MI. Hand wash, professional-grade products, free come-back guarantee." />
-  <link rel="icon" href="AeroDetailing-png/icon.png" type="image/png" />
+  <title>Book Your Detail | Aero Detailing South Lyon, MI</title>
+  <meta name="description" content="Book your auto detail in South Lyon, MI. Deep interior cleans and hand washes with professional-grade products. If it is not right we come back free." />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/AeroDetailing-png/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/AeroDetailing-png/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --bg:            #0A1220;
-      --bg-deep:       #060D18;
-      --card:          #0F1B35;
-      --accent:        #1E5FCC;
-      --accent-hover:  #2E6FDC;
-      --accent-glow:   rgba(30,95,204,0.22);
-      --heading:       #F1F5F9;
-      --body:          #8AABD4;
-      --muted:         #4B6FA8;
-      --border:        rgba(30,95,204,0.14);
-      --border-hi:     rgba(30,95,204,0.3);
-      --radius:        10px;
-      --radius-btn:    10px;
-      --font-head:     'Space Grotesk', sans-serif;
-      --font-body:     'DM Sans', sans-serif;
+      --bg:            #0D1B2A;
+      --bg-deep:       #091420;
+      --card:          #122335;
+      --accent:        #4A7FD4;
+      --accent-hover:  #5E8FE0;
+      --accent-btn:    #3D6FBF;   /* logo swoosh. white text on it = 4.97, passes AA */
+      --accent-text:   #5D92E7;   /* lifted for small accent text = 4.55, passes AA */
+      --accent-glow:   rgba(74,127,212,0.10);
+      --heading:       #F4F5F7;
+      --body:          #A6ABB5;
+      --muted:         #8C929D;
+      --border:        rgba(255,255,255,0.09);
+      --border-hi:     rgba(255,255,255,0.18);
+      --radius:        4px;
+      --radius-btn:    4px;
+      --font-head:     'Archivo', sans-serif;
+      --font-body:     'Archivo', sans-serif;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -46,7 +50,7 @@
 
     .btn-primary {
       display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      background: var(--accent); color: #fff; border: none; cursor: pointer;
+      background: var(--accent-btn); color: #fff; border: none; cursor: pointer;
       font-family: var(--font-body); font-weight: 600; font-size: 1rem;
       padding: 14px 28px; border-radius: var(--radius-btn);
       transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
@@ -63,7 +67,7 @@
     }
     @media (hover: hover) and (pointer: fine) {
       .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 8px 24px var(--accent-glow); }
-      .btn-outline:hover { border-color: var(--accent); background: rgba(30,95,204,0.07); color: #F1F5F9; }
+      .btn-outline:hover { border-color: var(--accent-text); background: rgba(74,127,212,0.07); color: #F4F5F7; }
     }
 
     .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
@@ -71,7 +75,7 @@
     /* HEADER */
     .hdr {
       position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-      height: 64px; background: #0A1220;
+      height: 64px; background: #0D1B2A;
       border-bottom: 1px solid var(--border);
       display: flex; align-items: center; padding: 0 24px;
     }
@@ -85,13 +89,13 @@
       display: flex; align-items: center; gap: 7px;
       font-weight: 600; font-size: 0.95rem; color: var(--heading);
     }
-    .hdr-phone-icon { color: var(--accent); width: 16px; height: 16px; flex-shrink: 0; }
+    .hdr-phone-icon { color: var(--accent-text); width: 16px; height: 16px; flex-shrink: 0; }
     @media (max-width: 600px) { .hdr-phone-num { display: none; } }
     .hdr-cta { padding: 10px 20px; font-size: 0.9rem; width: auto; }
     @keyframes hdr-pulse {
-      0%   { box-shadow: 0 0 0 0 rgba(30,95,204,0.6), 0 4px 14px rgba(30,95,204,0.35); }
-      65%  { box-shadow: 0 0 0 10px rgba(30,95,204,0), 0 4px 14px rgba(30,95,204,0.35); }
-      100% { box-shadow: 0 0 0 0 rgba(30,95,204,0), 0 4px 14px rgba(30,95,204,0.35); }
+      0%   { box-shadow: 0 0 0 0 rgba(74,127,212,0.6), 0 4px 14px rgba(74,127,212,0.35); }
+      65%  { box-shadow: 0 0 0 10px rgba(74,127,212,0), 0 4px 14px rgba(74,127,212,0.35); }
+      100% { box-shadow: 0 0 0 0 rgba(74,127,212,0), 0 4px 14px rgba(74,127,212,0.35); }
     }
     .hdr-cta { animation: hdr-pulse 2.6s ease-out infinite; }
     .hdr-cta:hover { animation-play-state: paused; }
@@ -131,7 +135,7 @@
     .pkg-tab {
       flex: 1;
       padding: 15px 24px;
-      border-radius: 10px;
+      border-radius: 4px;
       border: 2px solid var(--border-hi);
       background: transparent;
       color: var(--body);
@@ -143,10 +147,10 @@
       transition: all 0.2s;
     }
     .pkg-tab.active {
-      background: var(--accent);
-      border-color: var(--accent);
+      background: var(--accent-btn);
+      border-color: var(--accent-text);
       color: #fff;
-      box-shadow: 0 4px 16px rgba(30,95,204,0.35);
+      box-shadow: 0 4px 16px rgba(74,127,212,0.35);
     }
 
     /* Keep the Exterior/Interior switcher visible while scrolling on phones,
@@ -183,9 +187,9 @@
 
     /* PACKAGE CARD */
     .pkg-card {
-      background: #0A1220;
+      background: #0D1B2A;
       border: 1.5px solid var(--border-hi);
-      border-radius: 12px;
+      border-radius: 4px;
       padding: 20px 18px;
       position: relative;
       transition: border-color 0.2s;
@@ -193,20 +197,20 @@
       flex-direction: column;
     }
     .pkg-card.selected {
-      border-color: var(--accent);
-      background: rgba(30,95,204,0.07);
+      border-color: var(--accent-text);
+      background: rgba(74,127,212,0.07);
     }
     .pkg-badge {
       position: absolute;
       top: -1px; right: 16px;
-      background: var(--accent);
+      background: var(--accent-btn);
       color: #fff;
       font-size: 0.75rem;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       padding: 4px 10px;
-      border-radius: 0 0 6px 6px;
+      border-radius: 0 0 4px 4px;
     }
     .pkg-tag {
       display: inline-block;
@@ -215,9 +219,9 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: #fff;
-      background: var(--accent);
+      background: var(--accent-btn);
       padding: 5px 12px;
-      border-radius: 6px;
+      border-radius: 4px;
       margin-bottom: 10px;
       align-self: flex-start;
     }
@@ -250,17 +254,17 @@
       justify-content: space-between;
       align-items: center;
       padding: 12px 10px;
-      border-radius: 6px;
+      border-radius: 4px;
       cursor: pointer;
       transition: background 0.15s;
       font-size: 1.02rem;
       min-height: 46px;
       user-select: none;
     }
-    .pkg-price-row:hover { background: rgba(30,95,204,0.1); }
-    .pkg-price-row.selected { background: rgba(30,95,204,0.18); }
+    .pkg-price-row:hover { background: rgba(74,127,212,0.1); }
+    .pkg-price-row.selected { background: rgba(74,127,212,0.18); }
     .pkg-price-row.selected .pkg-price-size { color: var(--heading); }
-    .pkg-price-row.selected .pkg-price-val { color: var(--accent); font-weight: 700; }
+    .pkg-price-row.selected .pkg-price-val { color: var(--accent-text); font-weight: 700; }
     .pkg-price-size { color: var(--body); }
     .pkg-price-val { color: var(--heading); font-weight: 600; }
 
@@ -283,7 +287,7 @@
     }
     .pkg-features li::before {
       content: '✓';
-      color: var(--accent);
+      color: var(--accent-text);
       font-weight: 700;
       flex-shrink: 0;
     }
@@ -309,20 +313,20 @@
       align-items: flex-start;
       padding: 14px 16px;
       border: 1.5px solid var(--border-hi);
-      border-radius: 8px;
+      border-radius: 4px;
       cursor: pointer;
-      background: #0A1220;
+      background: #0D1B2A;
       transition: border-color 0.2s, background 0.2s;
       gap: 12px;
     }
     .addon-opt input:checked + .addon-btn {
-      border-color: var(--accent);
-      background: rgba(30,95,204,0.08);
+      border-color: var(--accent-text);
+      background: rgba(74,127,212,0.08);
     }
     .addon-info { flex: 1; }
     .addon-name { font-size: 0.92rem; font-weight: 600; color: var(--heading); margin-bottom: 3px; }
     .addon-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.4; }
-    .addon-price { font-size: 0.95rem; font-weight: 700; color: var(--accent); flex-shrink: 0; padding-top: 1px; }
+    .addon-price { font-size: 0.95rem; font-weight: 700; color: var(--accent-text); flex-shrink: 0; padding-top: 1px; }
 
     /* CONTACT FIELDS */
     .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -334,9 +338,9 @@
     .flbl { font-size: 0.88rem; font-weight: 600; color: var(--heading); }
 
     .finp, .fsel {
-      background: #0A1220;
+      background: #0D1B2A;
       border: 1.5px solid var(--border-hi);
-      border-radius: 8px;
+      border-radius: 4px;
       color: var(--heading);
       font-family: var(--font-body);
       font-size: 0.95rem;
@@ -346,7 +350,7 @@
       outline: none;
       -webkit-appearance: none;
     }
-    .finp:focus, .fsel:focus { border-color: var(--accent); }
+    .finp:focus, .fsel:focus { border-color: var(--accent-text); }
     .finp::placeholder { color: var(--muted); }
 
     /* CONSENT */
@@ -361,7 +365,7 @@
       height: 18px;
       margin-top: 2px;
       flex-shrink: 0;
-      accent-color: var(--accent);
+      accent-color: var(--accent-text);
       cursor: pointer;
     }
     .consent-text {
@@ -378,9 +382,9 @@
     /* PREP NOTE */
     .prep-note {
       margin-top: 28px;
-      background: rgba(30,95,204,0.08);
-      border: 1px solid rgba(30,95,204,0.22);
-      border-radius: 12px;
+      background: rgba(74,127,212,0.08);
+      border: 1px solid rgba(74,127,212,0.10);
+      border-radius: 4px;
       padding: 18px 20px;
     }
     .prep-note h4 {
@@ -406,9 +410,9 @@
 
     /* SELECTION SUMMARY */
     .selection-summary {
-      background: rgba(30,95,204,0.08);
-      border: 1px solid rgba(30,95,204,0.2);
-      border-radius: 8px;
+      background: rgba(74,127,212,0.08);
+      border: 1px solid rgba(74,127,212,0.2);
+      border-radius: 4px;
       padding: 12px 16px;
       font-size: 0.88rem;
       color: var(--body);
@@ -422,7 +426,7 @@
     .error-msg {
       background: rgba(220,50,50,0.10);
       border: 1px solid rgba(220,50,50,0.3);
-      border-radius: 8px;
+      border-radius: 4px;
       color: #F87171;
       font-size: 0.88rem;
       padding: 10px 14px;
@@ -452,6 +456,127 @@
     }
     .mobile-sticky a { flex: 1; text-align: center; font-size: 0.92rem; padding: 12px 16px; width: auto; }
     @media (max-width: 640px) { .mobile-sticky { display: flex; } }
+    /* ── TYPE CALIBRATION for Archivo (anti-slop pass 2026-09-18) ──
+       One superfamily. Hierarchy from weight and tracking, not two fonts. */
+    h1, h2, h3, h4 { letter-spacing: -0.025em; font-weight: 800; }
+    body { font-weight: 400; letter-spacing: -0.005em; }
+    .btn-primary, .btn-ghost { font-weight: 700; letter-spacing: -0.005em; }
+    .pkg-note {
+      font-size: 0.84rem; line-height: 1.55; color: var(--muted);
+      background: rgba(255,255,255,0.03); border-left: 2px solid var(--border-hi);
+      padding: 9px 11px; margin: 10px 0 4px; border-radius: 4px;
+    }
+    .fee-notice {
+      background: rgba(255,255,255,0.035); border: 1px solid var(--border);
+      border-left: 3px solid var(--accent); border-radius: 4px;
+      padding: 13px 15px; margin-top: 14px;
+      font-size: 0.9rem; line-height: 1.6; color: var(--body);
+    }
+    .fee-notice strong { color: var(--heading); }
+    /* Readability pass 2026-09-18. Most of his customers are older, and a previous
+       customer told him grey text is hard to read. Notes and size labels move up to
+       body/heading colour with real weight, not muted. */
+    .pkg-note {
+      color: var(--body) !important; font-size: 0.92rem; line-height: 1.6;
+      background: rgba(74,127,212,0.10); border-left: 3px solid var(--accent);
+      padding: 12px 14px;
+    }
+    .pkg-note strong { color: var(--heading); font-weight: 800; }
+    .pkg-price-size { display: flex; flex-direction: column; gap: 2px; text-align: left; }
+    .pkg-price-eg {
+      font-size: 0.78rem; font-weight: 600; line-height: 1.35;
+      color: var(--body); letter-spacing: 0;
+    }
+    .pkg-price-row { align-items: flex-start; }
+
+    /* ── VEHICLE SIZE GUIDE ── */
+    .size-guide {
+      border: 1px solid var(--border-hi); border-radius: var(--radius);
+      background: var(--card); margin: 0 0 20px;
+    }
+    .size-guide summary {
+      cursor: pointer; padding: 13px 16px; list-style: none;
+      font-size: 0.92rem; font-weight: 700; color: var(--accent-text);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .size-guide summary::-webkit-details-marker { display: none; }
+    .size-guide summary::after {
+      content: '+'; margin-left: auto; font-size: 1.15rem;
+      font-weight: 700; line-height: 1; color: var(--muted);
+      transition: transform .18s ease;
+    }
+    .size-guide[open] summary::after { transform: rotate(45deg); }
+    .size-guide[open] summary { border-bottom: 1px solid var(--border); }
+    .size-guide-body { padding: 16px; }
+    .size-guide-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+    }
+    .sg-col {
+      border-left: 2px solid var(--accent-btn); padding-left: 12px;
+    }
+    .sg-name {
+      font-family: var(--font-head); font-weight: 700;
+      font-size: 0.95rem; color: var(--heading); margin-bottom: 5px;
+    }
+    .sg-rule { font-size: 0.83rem; line-height: 1.45; color: var(--body); margin-bottom: 5px; }
+    .sg-rule strong { color: var(--heading); }
+    .sg-eg { font-size: 0.79rem; line-height: 1.4; color: var(--muted); }
+    .sg-note {
+      font-size: 0.82rem; line-height: 1.5; color: var(--body);
+      margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border);
+    }
+    .sg-help { font-size: 0.85rem; line-height: 1.5; color: var(--body); margin-top: 8px; }
+    .sg-help a { color: var(--accent-text); font-weight: 700; }
+    @media (max-width: 720px) {
+      .size-guide-grid { grid-template-columns: 1fr; gap: 14px; }
+    }
+    /* Notices are warnings, not brand moments, so they get their own colour.
+       #F5C542 on the card is 8.76:1, well past AA. */
+    :root { --warn: #F5C542; }
+    .fee-notice {
+      border-left-color: var(--warn) !important;
+      border-color: rgba(245,197,66,0.34) !important;
+      background: rgba(245,197,66,0.07) !important;
+    }
+    .fee-notice strong { color: var(--warn) !important; }
+    .fee-notice-choice {
+      border-left-color: var(--accent) !important;
+      border-color: var(--border) !important;
+      background: rgba(74,127,212,0.07) !important;
+    }
+    .fee-notice-choice strong { color: var(--heading) !important; }
+    .addon-note {
+      margin-top: 5px; font-size: 0.79rem; font-weight: 700;
+      letter-spacing: 0.04em; text-transform: uppercase; color: var(--accent-text);
+    }
+    /* The prep note sits directly above the submit button, so it is the last thing
+       read before booking. It gets the same warning colour as the fee notices. */
+    .prep-note {
+      border: 1px solid rgba(245,197,66,0.34) !important;
+      border-left: 3px solid var(--warn) !important;
+      background: rgba(245,197,66,0.08) !important;
+      border-radius: 4px; padding: 15px 17px;
+    }
+    .prep-note h4 {
+      color: var(--warn) !important; font-size: 1.02rem; font-weight: 800;
+      margin-bottom: 8px; letter-spacing: -0.01em;
+    }
+    .prep-note p { color: var(--body) !important; font-size: 0.92rem; line-height: 1.6; }
+    .prep-note p + p { margin-top: 9px; }
+    .prep-note strong { color: var(--heading); font-weight: 800; }
+    .addon-empty {
+      border: 1px solid var(--border); border-left: 3px solid var(--accent);
+      border-radius: 4px; padding: 15px 17px;
+      font-size: 0.92rem; line-height: 1.6; color: var(--body);
+    }
+    .addon-empty strong { display: block; color: var(--heading); margin-bottom: 5px; }
+
+
+
+
+
+
+
   </style>
 </head>
 <body>
@@ -485,89 +610,54 @@
       <div class="form-section-label" style="margin-bottom:16px">Select your package</div>
 
       <div class="pkg-tabs">
-        <button class="pkg-tab active" data-tab="exterior" type="button">Exterior</button>
-        <button class="pkg-tab" data-tab="interior" type="button">Interior</button>
+        <button class="pkg-tab active" data-tab="interior" type="button">Interior</button>
+        <button class="pkg-tab" data-tab="exterior" type="button">Exterior</button>
       </div>
 
-      <!-- Exterior -->
-      <div class="pkg-grid" id="tab-exterior">
-
-        <div class="pkg-card" data-pkg="Basic Exterior">
-          <div class="pkg-tag">Exterior</div>
-          <div class="pkg-name">Basic Wash</div>
-          <div class="pkg-starting"><strong>$60</strong> Sedan / up to $95 Large SUV</div>
-          <div class="pkg-price-head">Click your vehicle size</div>
-          <div class="pkg-price-row" data-size="Sedan" data-price="$60"><span class="pkg-price-size">Sedan</span><span class="pkg-price-val">$60</span></div>
-          <div class="pkg-price-row" data-size="Mid-Size SUV" data-price="$75"><span class="pkg-price-size">Mid-SUV</span><span class="pkg-price-val">$75</span></div>
-          <div class="pkg-price-row" data-size="Truck" data-price="$85"><span class="pkg-price-size">Truck</span><span class="pkg-price-val">$85</span></div>
-          <div class="pkg-price-row" data-size="Large SUV" data-price="$95"><span class="pkg-price-size">Large SUV</span><span class="pkg-price-val">$95</span></div>
-          <ul class="pkg-features">
-            <li>Pre-rinse pressure wash</li>
-            <li>Two-bucket hand wash with Meguiar's Gold Class</li>
-            <li>Wheels + tires with Koch Chemie Green Star</li>
-            <li>Woolie brush on wheel faces + wells rinsed</li>
-            <li>Hand dry + Hot Shine Foam tire shine</li>
-          </ul>
+      <!-- Vehicle size reference. Three tiers, matching the prices below. -->
+      <details class="size-guide">
+        <summary>Which size is my vehicle?</summary>
+        <div class="size-guide-body">
+          <div class="size-guide-grid">
+            <div class="sg-col">
+              <div class="sg-name">Small</div>
+              <p class="sg-rule">Cars, coupes, hatchbacks and convertibles.</p>
+              <p class="sg-eg">Civic, Corolla, Camry, Accord, Model 3</p>
+            </div>
+            <div class="sg-col">
+              <div class="sg-name">Medium</div>
+              <p class="sg-rule">Two-row SUVs and crossovers, and mid-size pickups.</p>
+              <p class="sg-eg">RAV4, CR-V, Escape, Equinox, CX-5, Tacoma, Ranger</p>
+            </div>
+            <div class="sg-col">
+              <div class="sg-name">Large</div>
+              <p class="sg-rule">Anything with <strong>three rows</strong>, whatever its size class, plus minivans and full-size pickups.</p>
+              <p class="sg-eg">Explorer, Highlander, Pilot, Telluride, Tahoe, Odyssey, F-150, Silverado, Ram</p>
+            </div>
+          </div>
+          <p class="sg-note">Going by rows is the quickest way to tell. A three-row Highlander is Large even though it is a mid-size SUV.</p>
+          <p class="sg-help">Not sure which one fits your vehicle? <a href="sms:+15172003253">Text us your year, make and model</a> before booking and we will confirm it.</p>
         </div>
-
-        <div class="pkg-card" data-pkg="Premium Exterior">
-          <div class="pkg-badge">Most Popular</div>
-          <div class="pkg-tag">Exterior</div>
-          <div class="pkg-name">Premium Wash</div>
-          <div class="pkg-starting"><strong>$90</strong> Sedan / up to $125 Large SUV</div>
-          <div class="pkg-price-head">Click your vehicle size</div>
-          <div class="pkg-price-row" data-size="Sedan" data-price="$90"><span class="pkg-price-size">Sedan</span><span class="pkg-price-val">$90</span></div>
-          <div class="pkg-price-row" data-size="Mid-Size SUV" data-price="$105"><span class="pkg-price-size">Mid-SUV</span><span class="pkg-price-val">$105</span></div>
-          <div class="pkg-price-row" data-size="Truck" data-price="$115"><span class="pkg-price-size">Truck</span><span class="pkg-price-val">$115</span></div>
-          <div class="pkg-price-row" data-size="Large SUV" data-price="$125"><span class="pkg-price-size">Large SUV</span><span class="pkg-price-val">$125</span></div>
-          <ul class="pkg-features">
-            <li>Everything in Basic Wash</li>
-            <li>Foam cannon pre-soak with Koch Chemie Green Star</li>
-            <li>Bug &amp; tar treatment on front bumper and lower panels</li>
-            <li>Wheel wells deep cleaned</li>
-            <li>Koch Chemie ProtectorWax spray-on protection layer for hydrophobic water beading</li>
-            <li>Exterior windows cleaned + trim wiped</li>
-          </ul>
-        </div>
-
-        <div class="pkg-card" data-pkg="Elite Exterior">
-          <div class="pkg-tag">Exterior</div>
-          <div class="pkg-name">Elite Detail</div>
-          <div class="pkg-starting"><strong>$105</strong> Sedan / up to $150 Large SUV</div>
-          <div class="pkg-price-head">Click your vehicle size</div>
-          <div class="pkg-price-row" data-size="Sedan" data-price="$105"><span class="pkg-price-size">Sedan</span><span class="pkg-price-val">$105</span></div>
-          <div class="pkg-price-row" data-size="Mid-Size SUV" data-price="$130"><span class="pkg-price-size">Mid-SUV</span><span class="pkg-price-val">$130</span></div>
-          <div class="pkg-price-row" data-size="Truck" data-price="$140"><span class="pkg-price-size">Truck</span><span class="pkg-price-val">$140</span></div>
-          <div class="pkg-price-row" data-size="Large SUV" data-price="$150"><span class="pkg-price-size">Large SUV</span><span class="pkg-price-val">$150</span></div>
-          <ul class="pkg-features">
-            <li>Everything in Premium Wash</li>
-            <li>Full wash with Suds.lab Ceramic Protective Wash for an extra hydrophobic base layer</li>
-            <li>Koch Chemie ProtectorWax sealant applied after wash</li>
-            <li>Full wheel detail: faces, barrels, and wells</li>
-            <li>Maximum paint protection without a full correction</li>
-          </ul>
-        </div>
-
-      </div>
+      </details>
 
       <!-- Interior -->
-      <div class="pkg-grid hidden" id="tab-interior">
+      <div class="pkg-grid" id="tab-interior">
 
-        <div class="pkg-card" data-pkg="Basic Interior">
+        <div class="pkg-card" data-pkg="Maintenance Interior">
           <div class="pkg-tag">Interior</div>
-          <div class="pkg-name">Basic Interior</div>
-          <div class="pkg-starting"><strong>$75</strong> Sedan / up to $105 Large SUV</div>
+          <div class="pkg-name">Maintenance Interior</div>
+          <div class="pkg-starting"><strong>$60 to $80</strong> a month, by vehicle size</div>
           <div class="pkg-price-head">Click your vehicle size</div>
-          <div class="pkg-price-row" data-size="Sedan" data-price="$75"><span class="pkg-price-size">Sedan</span><span class="pkg-price-val">$75</span></div>
-          <div class="pkg-price-row" data-size="Mid-Size SUV" data-price="$90"><span class="pkg-price-size">Mid-SUV</span><span class="pkg-price-val">$90</span></div>
-          <div class="pkg-price-row" data-size="Truck" data-price="$95"><span class="pkg-price-size">Truck</span><span class="pkg-price-val">$95</span></div>
-          <div class="pkg-price-row" data-size="Large SUV" data-price="$105"><span class="pkg-price-size">Large SUV</span><span class="pkg-price-val">$105</span></div>
+          <div class="pkg-price-row" data-size="Small" data-price="$60/mo"><span class="pkg-price-size">Small<span class="pkg-price-eg">Cars, coupes, hatchbacks. Civic, Camry, Model 3</span></span><span class="pkg-price-val">$60/mo</span></div>
+          <div class="pkg-price-row" data-size="Medium" data-price="$70/mo"><span class="pkg-price-size">Medium<span class="pkg-price-eg">2-row SUVs and mid-size trucks. RAV4, CR-V, Tacoma</span></span><span class="pkg-price-val">$70/mo</span></div>
+          <div class="pkg-price-row" data-size="Large" data-price="$80/mo"><span class="pkg-price-size">Large<span class="pkg-price-eg">3-row SUVs, minivans, full-size trucks. Explorer, Odyssey, F-150</span></span><span class="pkg-price-val">$80/mo</span></div>
+          <div class="pkg-note"><strong>Monthly subscription, built for cars already in good shape.</strong> If we have detailed your car within the last month, you are set. If not, contact us first or book one of the other details.</div>
           <ul class="pkg-features">
-            <li>Full vacuum of all surfaces</li>
-            <li>Dashboard + door panels wiped down</li>
-            <li>Interior windows cleaned</li>
-            <li>Trash removal</li>
-            <li>Cup holders + console wiped</li>
+            <li>Air blowout of vents, seams and seat rails</li>
+            <li>Full vacuum, seats, carpets, mats and trunk</li>
+            <li>Surface wipe down, Pol Star and Top Star</li>
+            <li>Interior glass and mirrors</li>
+            <li>Final walkthrough before we hand it back</li>
           </ul>
         </div>
 
@@ -575,41 +665,41 @@
           <div class="pkg-badge">Most Popular</div>
           <div class="pkg-tag">Interior</div>
           <div class="pkg-name">Premium Interior</div>
-          <div class="pkg-starting"><strong>$105</strong> Sedan / up to $140 Large SUV</div>
+          <div class="pkg-starting"><strong>$135 to $165</strong> by vehicle size</div>
           <div class="pkg-price-head">Click your vehicle size</div>
-          <div class="pkg-price-row" data-size="Sedan" data-price="$105"><span class="pkg-price-size">Sedan</span><span class="pkg-price-val">$105</span></div>
-          <div class="pkg-price-row" data-size="Mid-Size SUV" data-price="$120"><span class="pkg-price-size">Mid-SUV</span><span class="pkg-price-val">$120</span></div>
-          <div class="pkg-price-row" data-size="Truck" data-price="$130"><span class="pkg-price-size">Truck</span><span class="pkg-price-val">$130</span></div>
-          <div class="pkg-price-row" data-size="Large SUV" data-price="$140"><span class="pkg-price-size">Large SUV</span><span class="pkg-price-val">$140</span></div>
+          <div class="pkg-price-row" data-size="Small" data-price="$135"><span class="pkg-price-size">Small<span class="pkg-price-eg">Cars, coupes, hatchbacks. Civic, Camry, Model 3</span></span><span class="pkg-price-val">$135</span></div>
+          <div class="pkg-price-row" data-size="Medium" data-price="$150"><span class="pkg-price-size">Medium<span class="pkg-price-eg">2-row SUVs and mid-size trucks. RAV4, CR-V, Tacoma</span></span><span class="pkg-price-val">$150</span></div>
+          <div class="pkg-price-row" data-size="Large" data-price="$165"><span class="pkg-price-size">Large<span class="pkg-price-eg">3-row SUVs, minivans, full-size trucks. Explorer, Odyssey, F-150</span></span><span class="pkg-price-val">$165</span></div>
           <ul class="pkg-features">
-            <li>Everything in Basic Interior</li>
-            <li>Carpet + upholstery spot-treated with Bissell</li>
-            <li>Dashboard deep cleaned + dressed</li>
-            <li>Door jambs wiped down</li>
-            <li>Interior glass polished</li>
-            <li>Seat rails + under-seat cleaned</li>
+            <li>Everything in Maintenance, plus:</li>
+            <li>Floor mats out, scrubbed, dried before they go back</li>
+            <li>Detail brush work on vents, buttons and seams</li>
+            <li>Leather conditioned with Koch Chemie Leather Star</li>
+            <li>Pol Star spot treatment on carpet and upholstery</li>
+            <li>Steam on stubborn marks</li>
+            <li>Door jambs cleaned and seat belts wiped</li>
+            <li>Final quality inspection</li>
           </ul>
         </div>
 
         <div class="pkg-card" data-pkg="Elite Interior">
           <div class="pkg-tag">Interior</div>
           <div class="pkg-name">Elite Interior</div>
-          <div class="pkg-starting"><strong>$150</strong> Sedan / up to $185 Large SUV</div>
+          <div class="pkg-starting"><strong>$210 to $240</strong> by vehicle size</div>
           <div class="pkg-price-head">Click your vehicle size</div>
-          <div class="pkg-price-row" data-size="Sedan" data-price="$150"><span class="pkg-price-size">Sedan</span><span class="pkg-price-val">$150</span></div>
-          <div class="pkg-price-row" data-size="Mid-Size SUV" data-price="$165"><span class="pkg-price-size">Mid-SUV</span><span class="pkg-price-val">$165</span></div>
-          <div class="pkg-price-row" data-size="Truck" data-price="$175"><span class="pkg-price-size">Truck</span><span class="pkg-price-val">$175</span></div>
-          <div class="pkg-price-row" data-size="Large SUV" data-price="$185"><span class="pkg-price-size">Large SUV</span><span class="pkg-price-val">$185</span></div>
+          <div class="pkg-price-row" data-size="Small" data-price="$210"><span class="pkg-price-size">Small<span class="pkg-price-eg">Cars, coupes, hatchbacks. Civic, Camry, Model 3</span></span><span class="pkg-price-val">$210</span></div>
+          <div class="pkg-price-row" data-size="Medium" data-price="$225"><span class="pkg-price-size">Medium<span class="pkg-price-eg">2-row SUVs and mid-size trucks. RAV4, CR-V, Tacoma</span></span><span class="pkg-price-val">$225</span></div>
+          <div class="pkg-price-row" data-size="Large" data-price="$240"><span class="pkg-price-size">Large<span class="pkg-price-eg">3-row SUVs, minivans, full-size trucks. Explorer, Odyssey, F-150</span></span><span class="pkg-price-val">$240</span></div>
           <ul class="pkg-features">
-            <li>Everything in Premium Interior</li>
-            <li>Full carpet extraction — every inch with Bissell</li>
-            <li>Koch Chemie Leather Star clean + condition</li>
-            <li>Koch Chemie Top Star on all plastic + rubber</li>
-            <li>Full odor elimination: OdoBan + steam + Dark Ice</li>
+            <li>Everything in Premium, plus:</li>
+            <li>Seats moved for the rails and underneath</li>
+            <li>Dry agitation twice before any water</li>
+            <li>Every carpeted section worked, not just the marks</li>
             <li>Headliner spot cleaning</li>
+            <li>Interior plastics and rubber dressed</li>
+            <li>Full odor treatment</li>
           </ul>
         </div>
-
       </div>
 
       <!-- Selection feedback -->
@@ -624,30 +714,71 @@
 
       <div class="divider"></div>
 
-      <!-- STEP 2: ADD-ONS -->
+            <!-- Exterior -->
+      <div class="pkg-grid hidden" id="tab-exterior">
+
+        <div class="pkg-card" data-pkg="Premium Wash">
+          <div class="pkg-tag">Exterior</div>
+          <div class="pkg-name">Premium Wash</div>
+          <div class="pkg-starting"><strong>$105 to $135</strong> by vehicle size</div>
+          <div class="pkg-price-head">Click your vehicle size</div>
+          <div class="pkg-price-row" data-size="Small" data-price="$105"><span class="pkg-price-size">Small<span class="pkg-price-eg">Cars, coupes, hatchbacks. Civic, Camry, Model 3</span></span><span class="pkg-price-val">$105</span></div>
+          <div class="pkg-price-row" data-size="Medium" data-price="$120"><span class="pkg-price-size">Medium<span class="pkg-price-eg">2-row SUVs and mid-size trucks. RAV4, CR-V, Tacoma</span></span><span class="pkg-price-val">$120</span></div>
+          <div class="pkg-price-row" data-size="Large" data-price="$135"><span class="pkg-price-size">Large<span class="pkg-price-eg">3-row SUVs, minivans, full-size trucks. Explorer, Odyssey, F-150</span></span><span class="pkg-price-val">$135</span></div>
+          <ul class="pkg-features">
+            <li>Pressure pre-rinse, then foam pre-soak</li>
+            <li>Bug and tar treatment on the front end</li>
+            <li>Wheels, tires and wheel wells</li>
+            <li>Two bucket hand wash with Meguiar's Gold Class</li>
+            <li>Koch Chemie ProtectorWax protection layer</li>
+            <li>Door jambs, glass, trim and tire dressing</li>
+            <li>Final quality inspection</li>
+          </ul>
+        </div>
+
+        <div class="pkg-card" data-pkg="Elite Detail">
+          <div class="pkg-tag">Exterior</div>
+          <div class="pkg-name">Elite Detail</div>
+          <div class="pkg-starting"><strong>$130 to $160</strong> by vehicle size</div>
+          <div class="pkg-price-head">Click your vehicle size</div>
+          <div class="pkg-price-row" data-size="Small" data-price="$130"><span class="pkg-price-size">Small<span class="pkg-price-eg">Cars, coupes, hatchbacks. Civic, Camry, Model 3</span></span><span class="pkg-price-val">$130</span></div>
+          <div class="pkg-price-row" data-size="Medium" data-price="$140"><span class="pkg-price-size">Medium<span class="pkg-price-eg">2-row SUVs and mid-size trucks. RAV4, CR-V, Tacoma</span></span><span class="pkg-price-val">$140</span></div>
+          <div class="pkg-price-row" data-size="Large" data-price="$160"><span class="pkg-price-size">Large<span class="pkg-price-eg">3-row SUVs, minivans, full-size trucks. Explorer, Odyssey, F-150</span></span><span class="pkg-price-val">$160</span></div>
+          <ul class="pkg-features">
+            <li>Everything in Premium Wash, plus:</li>
+            <li>Suds.lab CP Ceramic wash soap instead of standard</li>
+            <li>Full wheel detail, faces, barrels and wells</li>
+            <li>Final quality inspection</li>
+          </ul>
+        </div>
+      </div>
+
+<!-- STEP 2: ADD-ONS -->
       <div class="form-section-label" style="margin-bottom:4px">
         Add-ons
         <span style="font-size:0.75rem;font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted);margin-left:8px">Optional</span>
       </div>
-      <p style="font-size:0.85rem;color:var(--muted);margin-bottom:16px">Select any extras you want added to your service.</p>
+      <p style="font-size:0.85rem;color:var(--muted);margin-bottom:16px">Select any extras you want added to your service. Add-ons apply to interior packages.</p>
 
+      <div class="addon-set" id="addons-interior">
       <div class="addon-grid">
         <label class="addon-opt">
-          <input type="checkbox" name="addons" value="Pet Hair Removal (+$30)">
+          <input type="checkbox" name="addons" value="Pet Hair Removal (from $40)">
           <div class="addon-btn">
             <div class="addon-info">
               <div class="addon-name">Pet Hair Removal</div>
-              <div class="addon-desc">Full pet hair extraction — rubber brush, drill brush, vacuum combo.</div>
+              <div class="addon-desc">Rubber brush, drill brush and vacuum worked over every fabric surface. Embedded pet hair is the most variable job in detailing, so send photos and we will confirm before you book.</div>
             </div>
-            <div class="addon-price">+$30</div>
+            <div class="addon-price">from $40</div>
           </div>
         </label>
         <label class="addon-opt">
-          <input type="checkbox" name="addons" value="Full Carpet Extraction (+$40)">
+          <input type="checkbox" name="addons" value="Full Carpet &amp; Upholstery Clean (+$40)">
           <div class="addon-btn">
             <div class="addon-info">
-              <div class="addon-name">Full Carpet Extraction</div>
-              <div class="addon-desc">Bissell on every inch of carpet + upholstery, not just spot areas.</div>
+              <div class="addon-name">Full Carpet &amp; Upholstery Clean</div>
+              <div class="addon-desc">Koch Chemie Pol Star and the drill brush worked across all the carpet and upholstery section by section, then extracted, rather than only on the stained spots.</div>
+          <div class="addon-note">Already included in Elite Interior.</div>
             </div>
             <div class="addon-price">+$40</div>
           </div>
@@ -657,7 +788,7 @@
           <div class="addon-btn">
             <div class="addon-info">
               <div class="addon-name">Odor Elimination Treatment</div>
-              <div class="addon-desc">OdoBan + steam + Dark Ice — for smoker cars or serious odors.</div>
+              <div class="addon-desc">OdoBan through the cabin, then steam worked into the specific spots the smell is coming from, spills, stains and seams, rather than the whole interior. Finished with Dark Ice. Built for smoker cars and serious odors, not everyday freshening.</div>
             </div>
             <div class="addon-price">+$25</div>
           </div>
@@ -667,7 +798,7 @@
           <div class="addon-btn">
             <div class="addon-info">
               <div class="addon-name">Leather Deep Condition</div>
-              <div class="addon-desc">Clean + condition all leather surfaces with 3D Leather Cleaner + conditioner.</div>
+              <div class="addon-desc">Every leather surface cleaned with Pol Star, then conditioned with Koch Chemie Leather Star, worked in and buffed off. Keeps the leather supple and helps stop it drying out.</div>
             </div>
             <div class="addon-price">+$20</div>
           </div>
@@ -677,11 +808,39 @@
           <div class="addon-btn">
             <div class="addon-info">
               <div class="addon-name">Steam Clean Upgrade</div>
-              <div class="addon-desc">Steam on all surfaces including vents, buttons, and tight spots.</div>
+              <div class="addon-desc">Steam taken over every surface, including vents, buttons, seams and the tight spots a cloth or brush cannot reach.</div>
             </div>
             <div class="addon-price">+$20</div>
           </div>
         </label>
+      </div>
+      </div>
+
+      <div class="addon-set hidden" id="addons-exterior">
+        <div class="addon-empty">
+          <strong>No add-ons on exterior packages right now.</strong>
+          Everything we can do to the outside of your car is already inside Premium Wash
+          or Elite Detail. Nothing is held back to sell you separately.
+        </div>
+      </div>
+
+      <div class="fee-notice">
+        <strong>Please empty your vehicle before your appointment.</strong>
+        Loose bottles and receipts will not trigger the fee, but please take them out anyway. More than a grocery bag's worth, or any
+        food waste, liquids or biohazard, and a <strong>$25 removal fee</strong> applies.
+        Photos are taken before anything is moved.
+      </div>
+
+      <div class="fee-notice">
+        <strong>Your package may need to be upgraded on arrival.</strong>
+        If the interior is worse than the package covers, we will tell you what it needs
+        and what it costs before we start. Nothing gets added without your say so.
+      </div>
+
+      <div class="fee-notice fee-notice-choice">
+        <strong>You decide what gets done.</strong>
+        If there is an add-on you would rather skip, just say so and we will leave it off.
+        We will still get the car as clean as it can get with what you booked.
       </div>
 
       <div class="divider"></div>
@@ -731,12 +890,15 @@
 
       <div class="prep-note">
         <h4>Please empty your car before we arrive</h4>
-        <p>Glove box, center console, cup holders, door pockets, seat backs, and trunk. We clean around anything left in the car rather than moving it, so items still inside mean those spots do not get cleaned.</p>
-        <p>An empty car is the difference between a good detail and a great one, and it keeps your belongings your own.</p>
+        <p>Glove box, center console, cup holders, door pockets, seat backs, and trunk. We clean
+        around anything left in the car rather than moving it, so items still inside mean those
+        spots do not get cleaned.</p>
+        <p><strong>More than a grocery bag's worth of trash, or any food waste, liquids or
+        biohazard, and a $25 removal fee applies.</strong> Loose bottles and receipts will not trigger the fee, but please take them out anyway.</p>
       </div>
 
       <div class="submit-area">
-        <button class="btn-primary" id="submitBtn" type="button">Next — Pick Your Date &amp; Time &rarr;</button>
+        <button class="btn-primary" id="submitBtn" type="button">Next: Pick Your Date &amp; Time &rarr;</button>
         <p class="submit-note">We'll confirm your slot by phone or text.</p>
       </div>
 
@@ -754,7 +916,7 @@
 </div>
 
 <script>
-  const WEBHOOK = 'https://services.leadconnectorhq.com/hooks/acunfnwDS929TNnWHNgx/webhook-trigger/16f8b4c6-1e85-4803-8ce0-05c9ba30294e';
+  const WEBHOOK = 'https://services.leadconnectorhq.com/hooks/acunfnwDS929TNnWHNgx/webhook-trigger/cDcmyd2Oy5LE0B3iqtE1';
 
   let selectedPkg  = '';
   let selectedSize = '';
@@ -767,6 +929,8 @@
       tab.classList.add('active');
       document.querySelectorAll('.pkg-grid').forEach(g => g.classList.add('hidden'));
       document.getElementById('tab-' + tab.dataset.tab).classList.remove('hidden');
+      document.querySelectorAll('.addon-set').forEach(s => s.classList.add('hidden'));
+      document.getElementById('addons-' + tab.dataset.tab).classList.remove('hidden');
       clearSelection();
     });
   });
@@ -781,14 +945,14 @@
   function updateSummary() {
     const el = document.getElementById('selectionSummary');
     if (selectedPkg && selectedSize) {
-      document.getElementById('summaryText').textContent = selectedPkg + ' — ' + selectedSize + ' (' + selectedPrice + ')';
+      document.getElementById('summaryText').textContent = selectedPkg + ' / ' + selectedSize + ' (' + selectedPrice + ')';
       el.classList.add('visible');
     } else {
       el.classList.remove('visible');
     }
   }
 
-  // VEHICLE SIZE ROW CLICK — selects package + size
+  // VEHICLE SIZE ROW CLICK, selects package + size
   document.querySelectorAll('.pkg-price-row').forEach(row => {
     row.addEventListener('click', () => {
       document.querySelectorAll('.pkg-card').forEach(c => c.classList.remove('selected'));
