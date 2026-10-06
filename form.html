@@ -126,6 +126,30 @@
       margin-top: 0;
     }
 
+    /* OFFER BANNER */
+    .offer-bar {
+      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+      background: var(--accent-btn);
+      border-radius: 4px;
+      padding: 13px 18px;
+      margin-bottom: 24px;
+    }
+    .offer-amt {
+      font-family: var(--font-head);
+      font-size: 1.4rem; font-weight: 800; color: #fff; line-height: 1;
+    }
+    .offer-txt { font-size: 1rem; color: #fff; line-height: 1.4; }
+    .offer-when {
+      font-size: 0.82rem; font-weight: 600; color: #fff;
+      background: rgba(0,0,0,0.22);
+      padding: 4px 11px; border-radius: 100px; white-space: nowrap;
+    }
+    @media (max-width: 560px) {
+      .offer-bar { gap: 8px; padding: 14px 16px; }
+      .offer-amt { font-size: 1.25rem; }
+      .offer-txt { font-size: 0.95rem; }
+    }
+
     /* TAB SWITCHER */
     .pkg-tabs {
       display: flex;
@@ -605,6 +629,12 @@
     <div class="form-shell">
 
       <div id="errorMsg" class="error-msg"></div>
+
+      <div class="offer-bar">
+        <span class="offer-amt">$25 OFF</span>
+        <span class="offer-txt">your first interior detail</span>
+        <span class="offer-when">Book by Nov 30</span>
+      </div>
 
       <!-- STEP 1: PACKAGE -->
       <div class="form-section-label" style="margin-bottom:16px">Select your package</div>

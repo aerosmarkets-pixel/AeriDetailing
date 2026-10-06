@@ -209,6 +209,31 @@
       display: flex; flex-direction: column; justify-content: center;
       padding: 64px 48px 64px max(24px, calc((100vw - 1100px) / 2 + 24px));
     }
+    /* OFFER BANNER */
+    .offer-bar {
+      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+      background: var(--accent-btn);
+      border-radius: 6px;
+      padding: 13px 18px;
+      margin-bottom: 20px;
+    }
+    .offer-amt {
+      font-family: var(--font-head);
+      font-size: 1.45rem; font-weight: 800; color: #fff;
+      letter-spacing: -0.01em; line-height: 1;
+    }
+    .offer-txt { font-size: 1rem; color: #fff; line-height: 1.4; }
+    .offer-when {
+      font-size: 0.82rem; font-weight: 600; color: #fff;
+      background: rgba(0,0,0,0.22);
+      padding: 4px 11px; border-radius: 100px; white-space: nowrap;
+    }
+    @media (max-width: 560px) {
+      .offer-bar { gap: 8px; padding: 14px 16px; }
+      .offer-amt { font-size: 1.3rem; }
+      .offer-txt { font-size: 0.95rem; }
+    }
+
     .hero-badge {
       display: inline-flex; align-items: center; gap: 8px;
       align-self: flex-start;
@@ -1019,6 +1044,11 @@
   <div class="hero-glow"></div>
   <div class="hero-grid">
     <div class="hero-content">
+      <div class="offer-bar reveal">
+        <span class="offer-amt">$25 OFF</span>
+        <span class="offer-txt">your first interior detail</span>
+        <span class="offer-when">Book by Nov 30</span>
+      </div>
       <div class="pill-row reveal">
         <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 17h2a2 2 0 0 0 2-2V9l-3-3H6a2 2 0 0 0-2 2v9h2"/><circle cx="8" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>Mobile. We Come To You.</span>
         <span class="pill pill-quiet">South Lyon, MI</span>
