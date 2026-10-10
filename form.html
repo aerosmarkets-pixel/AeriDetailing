@@ -1006,10 +1006,33 @@
   });
 
   // SUBMIT
+  // ── PHONE FORMATTING ──
+  // Typed as digits, shown back as (517) 200-3253 once the field loses focus.
+  // Anything that is not a recognisable 10-digit US number is left exactly as typed,
+  // so we never mangle what someone meant to write.
+  function phoneDigits(v) {
+    var d = String(v || '').replace(/\D/g, '');
+    if (d.length === 11 && d.charAt(0) === '1') d = d.slice(1);
+    return d;
+  }
+  function formatPhone(v) {
+    var d = phoneDigits(v);
+    if (d.length !== 10) return v;
+    return '(' + d.slice(0, 3) + ') ' + d.slice(3, 6) + '-' + d.slice(6);
+  }
+  var phoneEl = document.getElementById('fphone');
+  if (phoneEl) {
+    phoneEl.addEventListener('blur', function () { this.value = formatPhone(this.value); });
+  }
+
   document.getElementById('submitBtn').addEventListener('click', async () => {
     const fname    = document.getElementById('fname').value.trim();
     const flname   = document.getElementById('flname').value.trim();
-    const fphone   = document.getElementById('fphone').value.trim();
+    const fphoneIn = document.getElementById('fphone').value.trim();
+    const fphoneD  = phoneDigits(fphoneIn);
+    const phoneOk  = fphoneD.length === 10;
+    // GHL and Twilio both dedupe and send more reliably against E.164.
+    const fphone   = phoneOk ? '+1' + fphoneD : fphoneIn;
     const femail   = document.getElementById('femail').value.trim();
     const faddress = document.getElementById('faddress').value.trim();
     const addons   = [...document.querySelectorAll('input[name="addons"]:checked')].map(i => i.value);
@@ -1036,6 +1059,16 @@
       return;
     }
 
+    if (!phoneOk) {
+      errEl.textContent = 'Please enter a 10-digit phone number so we can confirm your booking.';
+      errEl.style.display = 'block';
+      const pe = document.getElementById('fphone');
+      pe.style.borderColor = 'rgba(220,50,50,0.5)';
+      setTimeout(() => pe.style.borderColor = '', 2000);
+      errEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
     errEl.style.display = 'none';
 
     const btn = document.getElementById('submitBtn');
@@ -1045,10 +1078,39 @@
     const smsConsentService   = document.getElementById('smsConsentService').checked;
     const smsConsentMarketing = document.getElementById('smsConsentMarketing').checked;
 
+    // Price maths. The package price and every add-on price are already written into the
+    // option values ("$150", "Odor Elimination Treatment (+$25)"), so pull the numbers back out
+    // and total them. Without this the job always reports the package price and every add-on
+    // is invisible in the CRM and to Meta.
+    const moneyIn = function (s) {
+      var m = String(s || '').match(/\$\s*([0-9]+(?:\.[0-9]{1,2})?)/);
+      return m ? parseFloat(m[1]) : 0;
+    };
+    const pkgNum    = moneyIn(selectedPrice);
+    const addonNum  = addons.reduce(function (sum, a) { return sum + moneyIn(a); }, 0);
+    const totalNum  = Math.round((pkgNum + addonNum) * 100) / 100;
+    const isMonthly = /\/\s*mo/i.test(selectedPrice);
+    // Maintenance is a monthly sub, so a "total" would be misleading. Leave it as the package price.
+    const priceDisplay = isMonthly
+      ? selectedPrice
+      : (totalNum > 0 ? '$' + totalNum : selectedPrice);
+    const breakdown = isMonthly
+      ? selectedPkg + ' ' + selectedSize + ' ' + selectedPrice
+      : [selectedPkg + ' ' + selectedSize + ' $' + pkgNum]
+          .concat(addons.map(function (a) {
+            var n = moneyIn(a);
+            return a.replace(/\s*\((?:from\s*)?\+?\$[0-9.]+\)/i, '').trim() + ' $' + n;
+          }))
+          .join(' + ');
+
     const payload = {
-      service:      selectedPkg,
-      vehicle_size: selectedSize,
-      price:        selectedPrice,
+      service:        selectedPkg,
+      vehicle_size:   selectedSize,
+      price:          priceDisplay,
+      price_numeric:  isMonthly ? pkgNum : totalNum,
+      price_package:  pkgNum,
+      price_addons:   addonNum,
+      price_breakdown: breakdown,
       addons:       addons.length ? addons.join(', ') : 'None',
       name:         fname + ' ' + flname,
       first_name:   fname,
@@ -1072,7 +1134,7 @@
     // Meta: they handed over contact details and picked a package. That is a lead.
     // Stash the package so /thank-you can report the booking value after the calendar step.
     var pkgLabel = (selectedPkg || '') + (selectedSize ? ' - ' + selectedSize : '');
-    var pkgValue = parseFloat(String(selectedPrice || '').replace(/[^0-9.]/g, '')) || 0;
+    var pkgValue = isMonthly ? pkgNum : totalNum;   // add-ons included, see price maths above
     try {
       sessionStorage.setItem('aero_pkg', JSON.stringify({ pkg: pkgLabel, value: pkgValue }));
     } catch (e) {}
