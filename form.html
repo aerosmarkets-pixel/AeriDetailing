@@ -1147,7 +1147,13 @@
       fbq('track', 'Lead', leadPayload);
     }
 
+    // The GHL calendar widget wants first_name and last_name as SEPARATE params. Passing only
+    // "name" leaves both name boxes empty and the customer has to type their name a second time.
+    // full_name is kept as well because some GHL widget versions read that instead.
     const bookUrl = '/book?email=' + encodeURIComponent(femail)
+      + '&first_name=' + encodeURIComponent(fname)
+      + '&last_name=' + encodeURIComponent(flname)
+      + '&full_name=' + encodeURIComponent(fname + ' ' + flname)
       + '&name=' + encodeURIComponent(fname + ' ' + flname)
       + '&phone=' + encodeURIComponent(fphone);
     window.location.href = bookUrl;

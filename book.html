@@ -248,6 +248,22 @@
 
     <div class="calendar-wrap">
       <iframe src="https://api.leadconnectorhq.com/widget/booking/KwKnI2kAIQ2jybl3Rrn1" style="width:100%;border:none;overflow:hidden;min-height:600px;" scrolling="no" id="KwKnI2kAIQ2jybl3Rrn1_1781164795889"></iframe>
+      <script>
+        // Push the details the customer already gave us on /form straight into the calendar
+        // widget so they never type their name twice. Relying on GHL's embed script to read the
+        // parent URL is not dependable, so set the iframe src explicitly.
+        (function () {
+          var p = new URLSearchParams(window.location.search);
+          var pass = ['first_name', 'last_name', 'full_name', 'name', 'email', 'phone'];
+          var out = new URLSearchParams();
+          pass.forEach(function (k) { var v = p.get(k); if (v) out.set(k, v); });
+          if (![...out].length) return;
+          var f = document.getElementById('KwKnI2kAIQ2jybl3Rrn1_1781164795889');
+          if (!f) return;
+          var base = f.getAttribute('src').split('?')[0];
+          f.setAttribute('src', base + '?' + out.toString());
+        })();
+      </script>
       <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
     </div>
 
@@ -257,6 +273,7 @@
         <li>An outdoor power outlet we can plug into</li>
         <li>Access to a hose or water source nearby</li>
         <li><strong>Everything cleared out of the car.</strong> Glove box, center console, cup holders, door pockets, seat backs, and trunk.</li>
+        <li><strong>A way to pay when we finish.</strong> Card, Apple Pay or Google Pay tapped at the car, or Zelle. No cash.</li>
       </ul>
       <p class="prep-warn">We clean around whatever is left in the car rather than moving it, so anything still inside means that spot does not get cleaned. An empty car is the difference between a good detail and a great one.</p>
     </div>
