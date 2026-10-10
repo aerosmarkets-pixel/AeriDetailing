@@ -12,6 +12,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
 
+  <!-- META PIXEL — dataset "AERO DETAILING", live 2026-10-09 -->
+  <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1056774377399885');fbq('track','PageView');</script>
+  <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1056774377399885&ev=PageView&noscript=1"/></noscript>
+
   <style>
     :root {
       --bg:            #0D1B2A;
@@ -1064,6 +1068,19 @@
         body: JSON.stringify(payload)
       });
     } catch (e) {}
+
+    // Meta: they handed over contact details and picked a package. That is a lead.
+    // Stash the package so /thank-you can report the booking value after the calendar step.
+    var pkgLabel = (selectedPkg || '') + (selectedSize ? ' - ' + selectedSize : '');
+    var pkgValue = parseFloat(String(selectedPrice || '').replace(/[^0-9.]/g, '')) || 0;
+    try {
+      sessionStorage.setItem('aero_pkg', JSON.stringify({ pkg: pkgLabel, value: pkgValue }));
+    } catch (e) {}
+    if (typeof fbq !== 'undefined') {
+      var leadPayload = { content_name: pkgLabel || 'Detail enquiry' };
+      if (pkgValue > 0) { leadPayload.value = pkgValue; leadPayload.currency = 'USD'; }
+      fbq('track', 'Lead', leadPayload);
+    }
 
     const bookUrl = '/book?email=' + encodeURIComponent(femail)
       + '&name=' + encodeURIComponent(fname + ' ' + flname)
