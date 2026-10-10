@@ -950,7 +950,10 @@
 </div>
 
 <script>
-  const WEBHOOK = 'https://services.leadconnectorhq.com/hooks/acunfnwDS929TNnWHNgx/webhook-trigger/cDcmyd2Oy5LE0B3iqtE1';
+  // Must match the Inbound Webhook URL on the "Detailing" workflow in GHL exactly.
+  // GHL returns 200 for any well-formed hook POST, so a stale ID fails silently and
+  // the form still looks like it submitted. Verified against the live trigger 2026-10-10.
+  const WEBHOOK = 'https://services.leadconnectorhq.com/hooks/acunfnwDS929TNnWHNgx/webhook-trigger/16f8b4c6-1e85-4803-8ce0-05c9ba30294e';
 
   let selectedPkg  = '';
   let selectedSize = '';
